@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">jungle</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Dwstination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text"> <span> It's time for a new</span><br>Adventure</h2>
+        <img src="bird1.png" id="bird1">
+        <img src="bird2.png" id="bird2">
+        <img src="forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="rocks.png" id="rocks">
+        <img src="water.png" id="water">
+    </section>
+    <div class="sec1">
+        <h1>Parallax Scrolling Effects</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex quae eveniet similique officiis quos veniam
+            vitae dolore, <br> <br> necessitatibus autem deserunt! Vero obcaecati odio sint veniam nulla laboriosam voluptatem
+            doloribus repellendus fugiat quidem distinctio aliquid, cupiditate iusto reiciendis praesentium perferendis
+            quas non id, vitae dicta eaque repellat asperiores. Sequi eaque nam doloribus qui ipsa dolor eligendi minus
+            adipisci voluptates. Odit adipisci quisquam earum nesciunt cumque magni repellendus corrupti libero <br><br>
+            inventore voluptatum laudantium, culpa eum neque esse ipsum veritatis perferendis dolor nam! Optio neque
+            obcaecati ducimus id eveniet nesciunt corrupti blanditiis qui, dolores maxime provident omnis perspiciatis
+            delectus. Nesciunt eos tempora sunt quidem repellendus architecto neque, nostrum vel. Saepe iure itaque eum,
+            modi beatae aspernatur <br><br> praesentium doloremque dolor sequi eveniet, nam eaque id accusantium incidunt placeat
+            voluptas vero dicta culpa voluptate commodi ipsam facilis blanditiis ea reprehenderit! Repellendus culpa
+            laborum beatae possimus sed praesentium eum eveniet quibusdam impedit, rerum, dicta excepturi deleniti
+            facilis illum neque optio deserunt doloremque facere amet aut repudiandae tenetur quod aliquid placeat? Qui
+            fugit vitae minima accusamus hic vero at saepe quod nesciunt. Incidunt numquam accusantium excepturi sunt
+            facere. Ut quibusdam aspernatur dolorem velit commodi non officiis. Nobis quis minima culpa? Architecto,
+            rem? Aspernatur excepturi praesentium illum suscipit earum. Sunt enim facere ducimus modi ad rem aliquid,
+            natus inventore iusto? Tenetur ipsum non vel id dolore molestias repudiandae mollitia natus modi. Veniam
+            illum cum, porro reiciendis, sit cumque adipisci consectetur accusantium ad eius possimus et dolores
+            incidunt modi iusto voluptatum quidem ex quibusdam magni qui architecto recusandae eaque deleniti <br><br>
+            laudantium! Ullam veritatis ducimus architecto cumque? Rerum expedita eius cumque laudantium suscipit cum
+            reprehenderit sapiente temporibus nulla sed qui dolore tempore voluptate doloribus officiis reiciendis, nemo
+            ullam dolores maxime rem voluptates sunt ipsam. Aspernatur similique modi quis atque dolorum ullam
+            voluptatem dolor minima aut veniam libero, corrupti accusamus aliquid suscipit nam sapiente. Neque qui ut
+            velit culpa. Nam nihil necessitatibus earum suscipit ea cum numquam hic impedit ad quibusdam, error ullam
+            facere nesciunt aliquam saepe sint! Quisquam alias unde quas labore voluptates tenetur fugiat placeat
+            molestias modi facere aperiam, <br> <br> consequatur temporibus expedita sunt nihil nesciunt tempora eligendi quis eos
+            omnis qui provident. Magni architecto atque quasi reprehenderit ex sapiente, laudantium quisquam!
+            Dignissimos officiis vitae sapiente voluptate ipsa totam excepturi illo libero mollitia rerum nulla dicta,
+            placeat in illum quo vel porro beatae, pariatur enim blanditiis veniam? Quisquam amet qui tempore dicta
+            magni, exercitationem ut deleniti fuga eum velit blanditiis nesciunt dolore vel, earum, voluptas labore
+            saepe repellat! Tempore fugiat, architecto natus temporibus cupiditate soluta voluptatibus magni unde
+            tenetur debitis nostrum. Nihil, distinctio fugiat asperiores ducimus eligendi corrupti laborum eveniet quae
+           
+        </p>
+    </div>
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let forest = document.getElementById('forest');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * -0.5 + 'px';
+        })
+
+    </script>
+
+</body>
+
+</html>

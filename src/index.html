@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="output.css">
+  <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch  -->
+</head>
+
+<body class="flex w-full h-screen ">
+  <!-- nav bar section  -->
+
+  <!-- SideBar  -->
+  <div
+    class="navigation h-screen z-40 w-0 bg-white fixed sm:relative flex justify-center overflow-hidden items-center transition-all duration-700 border-r-2 dark:bg-[#000] dark:text-white">
+    <ul class="relative under ">
+      <li class="pb-8"><a href="#home" data-text="&nbsp;HOME"
+          class="text-black text-4xl font-bold tracking-wide text-transparent">&nbsp;HOME</a></li>
+      <li class="pb-8"><a href="#about" data-text="&nbsp;ABOUT"
+          class="text-black text-4xl font-bold tracking-wide text-transparent">&nbsp;ABOUT</a></li>
+      <li class="pb-8"><a href="#service" data-text="&nbsp;SERVICE"
+          class="text-black text-4xl font-bold tracking-wide text-transparent">&nbsp;SERVICE</a></li>
+      <li class="pb-8"><a href="#project" data-text="&nbsp;PROJECT"
+          class="text-black text-4xl font-bold tracking-wide text-transparent">&nbsp;PROJECT</a></li>
+      <li class="pb-8"><a href="#contact" data-text="&nbsp;CONTACT"
+          class="text-black text-4xl font-bold tracking-wide text-transparent">&nbsp;CONTACT</a>
+      </li>
+    </ul>
+
+    <div
+      class="absolute top-20 right-20 w-10 md:w-12 h-5 md:h-6 rounded-2xl bg-blue-200 flex items-center transition duration-300 focus:outline-none "
+      onclick="toggleTheme()">
+      <div
+        class="w-6 h-6 md:w-7 md:h-7 relative rounded-full transition duration-500 transform bg bg-yellow-500 -translate-x-2 p-1 text-white"
+        id="switch-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Side bar end -->
+
+  <!-- Right Container -->
+  <div class="w-full overflow-hidden main">
+
+    <!-- Porfolio Navbar Top -->
+    <div
+      class="topbar absolute z-50 sm:relative w-screen sm:w-auto flex justify-between h-14 px-10 items-center sm:border-b-2 transition-all duration-700 bg-white dark:bg-[#000] text-[#278ea5]">
+      <a href="#" class="font-bold uppercase tracking-wider">Protfolio</a>
+      <div class="toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 cursor-pointer" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+    </div>
+    <!-- Portfolio Navbar Top end -->
+
+
+
+
+    <div
+      class="h-screen overflow-y-scroll w-full scroll-smooth transition-all duration-700 dark:bg-[#000] dark:text-white"
+      id="scrolly">
+
+      <!-- Body Start -->
+      <div id="progressbar" class="fixed top-0 right-0 w-2 "></div>
+      <div id="scrollpath" class="fixed top-0 right-0 w-2 h-full "></div>
+      <section class=" body-font flex-row text-[#293462] dark:text-white" id="home">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col ">
+          <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded-full h-96 overflow-hidden"
+            alt="hero" src="images/user.jpg">
+          <div class="text-center lg:w-2/3 w-full">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-bold  tracking-wide">Syed
+              Faiz</h1>
+            <p class="mb-8 leading-relaxed tracking-widest font-light">I'm a Creative Front End Web Developer.</p>
+            <div class="flex justify-center">
+              <a href="/src/cv.html"
+                class=" relative z-10 text-black hover:text-white bg-slate-200 border-0 py-4 px-10 rounded-xl text-2xl btn">Download
+                My CV</a>
+
+            </div>
+          </div>
+          <div class=" -z-50 flex items-center justify-center">
+            <div class="">
+              <div
+                class="absolute sm:top-32 sm:right-44 w-40 h-40 top-1/1 right-24 sm:w-72 sm:h-72 bg-purple-400 rounded-full filter blur-xl animate-blob delay-700 mix-blend-multiply">
+              </div>
+              <div
+                class="absolute sm:top-1/3 sm:right-48 w-60 h-60 top-1/3 right-12 sm:w-96 sm:h-96 bg-yellow-300 rounded-full filter blur-xl animate-blob mix-blend-multiply">
+              </div>
+              <div
+                class="absolute sm:top-2/4 sm:left-2/4 w-40 h-40 top-2/3  right-48 sm:w-72 sm:h-72 bg-pink-300 rounded-full filter blur-xl animate-blob mix-blend-multiply">
+              </div>
+
+            </div>
+
+          </div>
+          <div class="mediaicon flex w-72 mt-20 relative">
+            <div class=" text-[#222] sm:mx-5 mx-2 relative">
+              <a href="https://www.facebook.com/faizmiyaa/" target="blank">
+                <i class="fa fa-facebook text-6xl p-3" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="text-[#222] sm:mx-9 mx-2 relative">
+              <a href="https://www.instagram.com/syed_faizz/" target="blank">
+                <i class="fa fa-instagram text-6xl p-3" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="text-[#222] sm:mx-5 mx-1 relative">
+              <a href="#">
+                <i class="fa fa-youtube-play text-6xl p-3" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+
+
+        </div>
+      </section>
+      <!-- About section  -->
+      <section class="text-gray-600 body-font mt-10 dark:text-white" id="about">
+        <div class="flex justify-center">
+          <h1 class="sm:text-4xl border-b-2 pb-5">ABOUT ME</h1>
+        </div>
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="/src/images/about.jpg">
+          </div>
+          <div
+            class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <p class="mb-8 text-black  text-xl tracking-wide leading-relaxed dark:text-white">Professional customer service  and sales & marketing specialist with extensive experience resolving escalated customer complaints and sales. Strong interpersonal skills proven through customer satisfaction and peer recognition awards. Creative problem solver who built a new customer retention program that increased customer loyalty and company sales.Seeking a position as a Web Development to continue career growth into management.</p>
+
+          </div>
+        </div>
+      </section>
+      <!-- servicer section  -->
+      <section class="text-gray-600 body-font dark:text-white" id="service">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 dark:text-white border-b-2 pb-5">
+              Our Services</h1>
+            <p class="lg:w-1/2 w-full leading-relaxed text-gray-500 dark:text-white">Whatever cardigan tote bag tumblr
+              hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="xl:w-1/3 md:w-1/2 p-4 ">
+              <div class="border border-gray-200 p-6 bg-white rounded-lg text-center">
+                <div
+                  class="w-28 h-28 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <img src="/src/images/computer.gif" alt="">
+                </div>
+                <h2 class="text-lg  dark:text-black font-medium title-font mb-2 uppercase">web design</h2>
+                <p class="leading-relaxed text-base dark:text-black">Fingerstache flexitarian street art 8-bit waist co,
+                  subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 bg-white p-6 rounded-lg text-center">
+                <div
+                  class="w-28 h-28 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <img src="/src/images/walking.gif" alt="">
+                </div>
+                <h2 class="text-lg  dark:text-black font-medium title-font mb-2">WEB DEVELOPMENT</h2>
+                <p class="leading-relaxed text-base dark:text-black">Fingerstache flexitarian street art 8-bit waist co,
+                  subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 bg-white rounded-lg text-center">
+                <div
+                  class="w-28 h-28 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <img src="/src/images/android.gif" alt="">
+                </div>
+                <h2 class="text-lg  dark:text-black font-medium title-font mb-2">ANDROID APPS</h2>
+                <p class="leading-relaxed text-base dark:text-black">Fingerstache flexitarian street art 8-bit waist co,
+                  subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 bg-white rounded-lg text-center">
+                <div
+                  class="w-28 h-28 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <img src="/src/images/camera.gif" alt="">
+                </div>
+                <h2 class="text-lg  dark:text-black font-medium title-font mb-2">PHOTOGRAPHY</h2>
+                <p class="leading-relaxed text-base dark:text-black">Fingerstache flexitarian street art 8-bit waist co,
+                  subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 bg-white rounded-lg text-center">
+                <div
+                  class="w-28 h-28 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <img src="/src/images/edit.gif" alt="">
+                </div>
+                <h2 class="text-lg  dark:text-black font-medium title-font mb-2">CONTENT WRITING</h2>
+                <p class="leading-relaxed text-base dark:text-black">Fingerstache flexitarian street art 8-bit waist co,
+                  subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 bg-white rounded-lg text-center">
+                <div
+                  class="w-28 h-28 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <img src="/src/images/vlog.gif" alt="">
+                </div>
+                <h2 class="text-lg  dark:text-black font-medium title-font mb-2">VIDEO EDITING</h2>
+                <p class="leading-relaxed text-base dark:text-black">Fingerstache flexitarian street art 8-bit waist co,
+                  subway tile
+                  poke farm.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROJECT SECTION  -->
+      <section class="text-gray-600 body-font " id="project">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2  dark:text-white border-b-2 pb-5">RECENT WORK
+            </h1>
+            <p class="lg:w-1/2 w-full leading-relaxed text-xl text-gray-500 dark:text-white">This Project Are Only Practical And Polish My Skills</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="lg:w-1/3 sm:w-1/2 p-4 w-full">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                  src="/src/images/whatsapp.PNG">
+                <div
+                  class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">WhatsApp</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Clone !</h1>
+                  <p class="leading-relaxed pb-3">The WhatsApp Chat Clone !</p>
+                  <a href="/src/web/whatsapp-chat design/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4 w-full">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                  src="/src/images/animation.PNG">
+                <div
+                  class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Animation Design </h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Responsive</h1>
+                  <p class="leading-relaxed pb-3">Protfolio Scoroll Effect And Good design !</p>
+                  <a href="/src/web/Animation On Page Scroll/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4 w-full">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                  src="/src/images/smoke.PNG">
+                <div
+                  class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">TAILWIND CSS</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Practice</h1>
+                  <p class="leading-relaxed pb-3">Responsive Design Clone W3School</p>
+                    <a href="/src/web/pro-1/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4 w-full">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                  src="/src/images/netflix.PNG">
+                <div
+                  class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Cool !</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Netflix Clone </h1>
+                  <p class="leading-relaxed pb-3">Try To Practice On Video Play And Enjoy.</p>
+                    <a href="/src/web/netfilx page/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4 w-full">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                  src="/src/images/pralex.PNG">
+                <div
+                  class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Cool !</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3 ">Parallax Effect</h1>
+                  <p class="leading-relaxed pb-3">Only Open Leptop Not Open To Phone </p>
+                    <a href="/src/web/effect-3/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4 w-full">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                  src="/src/images/br.PNG">
+                <div
+                  class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">TAILWIND CSS</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Practice</h1>
+                  <p class="leading-relaxed pb-3">Responsive Design Clone W3School</p>
+                  <a href="/src/web/pro-2/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- contact section  -->
+      <section class="text-gray-600 dark:text-white body-font relative" id="contact">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 dark:text-white border-b-2 pb-5">
+              LET'S SAY HI</h1>
+            <p class="lg:w-1/2 w-full leading-relaxed text-gray-500 dark:text-white">Dont't Hesitate To Contact Me!</p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-gray-600 dark:text-white">First Name</label>
+                  <input type="text" id="name" name="name"
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-gray-600 dark:text-white">Last Name</label>
+                  <input type="text" id="name" name="name"
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-gray-600 dark:text-white">number</label>
+                  <input type="text" id="name" name="name"
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="email" class="leading-7 text-sm text-gray-600 dark:text-white">Email</label>
+                  <input type="email" id="email" name="email"
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm text-gray-600 dark:text-white">Message</label>
+                  <textarea id="message" name="message"
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+              </div>
+              <div class="p-2 w-10 sm:w-full">
+                <button
+                  class="flex mx-auto relative z-10 text-black hover:text-white bg-slate-200 border-0 py-2 px-14 sm:py-4 sm:px-28 rounded-xl text-2xl btn">Button</button>
+              </div>
+              <!-- <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+               
+
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <footer class="text-gray-600 body-font mb-40">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            
+            <span class="ml-3 text-xl">Profolio</span>
+          </a>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022 Syed Faiz
+            <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank"></a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+      <!-- footer section  -->
+      <!-- <footer class="text-gray-600 body-font mb-20">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <span class="ml-3 text-3xl">Portfolio</span>
+          </a>
+          
+          <div class="mediaicon flex w-96 ml-60 mt-20 relative ">
+            <div class=" text-[#222] ml-20 sm:mx-5 relative">
+              <a href="https://www.facebook.com/faizmiyaa/" target="blank">
+                <i class="fa fa-facebook text-6xl m-3" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="text-[#222] sm:mx-9 relative">
+              <a href="https://www.instagram.com/syed_faizz/" target="blank">
+                <i class="fa fa-instagram text-6xl m-3" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="text-[#222] sm:mx-5 relative">
+              <a href="#">
+                <i class="fa fa-youtube-play text-6xl m-3" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer> -->
+
+
+      <!-- Body End -->
+    </div>
+  </div>
+
+  <!-- Right Container end -->
+
+
+
+
+
+
+
+
+
+  <script>
+    let toggle = document.querySelector('.toggle');
+    let topbar = document.querySelector('.topbar');
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+    toggle.onclick = function () {
+      toggle.classList.toggle('active');
+      topbar.classList.toggle('active');
+      if (navigation.classList.contains('w-96')) {
+        navigation.classList.add('w-0')
+        navigation.classList.remove('w-96')
+      } else {
+        navigation.classList.add('w-96')
+        navigation.classList.remove('w-0')
+      }
+      main.classList.toggle('active');
+    }
+    //yo 
+    function toggleMenu() {
+      let navigation = document.querySelector('.navigation')
+      let main = document.querySelector('.main')
+      navigation.classList.remove('active')
+      main.classList.remove('active')
+    }
+    // dark mode
+
+    const switchToggle = document.querySelector('#switch-toggle');
+    const html = document.querySelector('html');
+    let isDarkmode = false;
+    const localDarkmode = JSON.parse(localStorage.getItem('isDarkmode'))
+
+
+    const darkIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>`
+    const LightIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>`
+    if (localDarkmode) {
+      isDarkmode = localDarkmode
+      html.classList.add('dark')
+    } else {
+      html.classList.remove('dark')
+    }
+
+
+    function toggleTheme() {
+      isDarkmode = !isDarkmode
+      localStorage.setItem('isDarkmode', isDarkmode)
+      switchTheme()
+    }
+    function switchTheme() {
+      if (isDarkmode) {
+        html.classList.add('dark')
+        switchToggle.classList.remove('bg-yellow-500', '-translate-x-2')
+        switchToggle.classList.add('bg-gray-700', 'translate-x-full')
+        setTimeout(() => {
+          switchToggle.innerHTML = darkIcon
+        }, 250);
+      } else {
+        html.classList.remove('dark')
+        switchToggle.classList.add('bg-yellow-500', '-translate-x-2')
+        switchToggle.classList.remove('bg-gray-700', 'translate-x-full')
+        setTimeout(() => {
+          switchToggle.innerHTML = LightIcon
+        }, 250);
+      }
+    }
+
+
+    // bar 
+    let progress = document.getElementById('progressbar');
+    let scry = document.getElementById('scrolly')
+
+    let totalHeight = scry.scrollHeight - window.innerHeight;
+
+    // scry.onscroll = function(){
+    //   let progressHeight = (scry.offsetHeight / totalHeight) * 100;
+
+    //   progress.style.height = progressHeight + "%";
+    //   console.log(scry.clientTop  );
+    // }
+
+
+    scry.addEventListener("scroll", event => {
+      let progressHeight = (scry.scrollTop / totalHeight) * 100;
+
+      progress.style.height = progressHeight + "%";
+      console.log(scry.scrollTop);
+    }, { passive: true });
+  </script>
+</body>
+
+</html>

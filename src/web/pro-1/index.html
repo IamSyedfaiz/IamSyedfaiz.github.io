@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <title>Document</title>
+    <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch  -->
+</head>
+
+<body class="bg-black">
+    <!-- navbar -->
+    <nav
+        class="flex justify-between font-mono bg-black w-full text-gray-500 bg-opacity-70 sm:w-32 sm:h-full fixed top-0 hover:bg-black hover:text-white sm:text-white sm:bg-faiz-400 sm:hover:bg-faiz-400 ">
+        <ul class="flex  sm:flex-col">
+            <img src="images/avatar_smoke.jpg" class="hidden sm:flex sm:w-32 ">
+            <li class="px-12 py-1 sm:px-6 sm:py-4 sm:pl-10 hover:bg-slate-200 hover:text-black sm:bg-black">
+                <ion-icon name="home" class="text-4xl hidden sm:flex"></ion-icon>HOME
+            </li>
+            <li
+                class="px-12 py-1 sm:px-6 sm:py-4 sm:pl-10 hover:bg-slate-200 hover:text-black sm:hover:bg-black sm:hover:text-white">
+                <ion-icon name="person" class="text-4xl hidden sm:flex"></ion-icon>ABOUT
+            </li>
+            <li
+                class="px-12 py-1 sm:px-6 sm:py-4 sm:pl-10 hover:bg-slate-200 hover:text-black sm:hover:bg-black sm:hover:text-white">
+                <ion-icon name="eye" class="text-4xl hidden sm:flex"></ion-icon>PHOTOS
+            </li>
+            <li
+                class="px-12 py-1 sm:px-6 sm:py-4 sm:pl-10 hover:bg-slate-200 hover:text-black sm:hover:bg-black sm:hover:text-white">
+                <ion-icon name="mail" class="text-4xl hidden sm:flex"></ion-icon>CONTACT
+            </li>
+        </ul>
+    </nav>
+    <!-- home section -->
+    <section class="mt-20 sm:ml-32 duration-500">
+        <div class="">
+            <h1 class=" bg-black text-white text-6xl flex justify-center font-mono mb-10"> <span
+                    class=" bg-black text-white hidden text-6xl sm:flex font-mono ml-3">I'm</span> John Doe.</h1>
+            <p class=" font-mono bg-black text-white flex justify-center">Photographer and Web Designer.</p>
+            <img src="images/man_smoke.jpg" class="px-10">
+        </div>
+
+    </section>
+    <!-- 2nd section -->
+    <section class="mx-6 mt-10 sm:ml-40 duration-500">
+        <div class="text-white">
+            <h1 class="text-4xl font-mono">My Name</h1>
+            <div class="border-b my-8 w-48 border-white"></div>
+            <p class=" font-mono text-gray-500">Some text about me. Some text about me. I am lorem ipsum consectetur
+                adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </section>
+    <!-- my skills -->
+    <section class="mx-6 mt-10 sm:ml-40 duration-500">
+        <div class=" text-white">
+            <h1 class="text-3xl font-mono">My Skills</h1>
+            <h1 class="my-5 text-xl font-mono text-gray-500 ">Photography</h1>
+            <div class="bg-gray-500 w-full h-7 flex justify-end">
+                <div class="bg-white w-5 h-7 "></div>
+            </div>
+            <h1 class="my-5 text-xl font-mono text-gray-500 ">Web Design</h1>
+            <div class="bg-gray-500 w-full h-7 flex justify-end">
+                <div class="bg-white w-24 h-7 "></div>
+            </div>
+            <h1 class="my-5 text-xl font-mono text-gray-500 ">Photoshop</h1>
+            <div class="bg-gray-500 w-full h-7 flex justify-end">
+                <div class="bg-white w-60 h-7 "></div>
+            </div>
+        </div>
+        <div class="w-full bg-slate-100 my-8 h-96 sm:flex sm:h-28 sm:justify-between sm:px-10">
+            <div class="py-5">
+                <p class="flex justify-center  text-2xl ">11+</p>
+                <p class="flex justify-center"> Partners</p>
+            </div>
+            <div class="py-5">
+                <p class="flex justify-center  text-2xl">55+</p>
+                <p class="flex justify-center"> Projects Done</p>
+            </div>
+            <div class="py-5">
+                <p class="flex justify-center  text-2xl">89+</p>
+                <p class="flex justify-center"> Happy Clients</p>
+            </div>
+            <div class="py-5">
+                <p class="flex justify-center  text-2xl">150+</p>
+                <p class="flex justify-center"> Meetings</p>
+            </div>
+        </div>
+
+        <button class="w-52 font-mono p-3 bg-slate-100 cursor-pointer hover:bg-slate-400 text-lg">
+            <ion-icon name="download"></ion-icon>Download
+            Resume
+        </button>
+
+    </section>
+
+    <!-- price -->
+    <section class="mx-6 mt-10 sm:ml-40 duration-500">
+        <h1 class="text-white text-3xl font-mono">My Price</h1>
+        <div class="sm:grid sm:grid-cols-2">
+            <div class="w-full bg-gray-400 my-8 hover:bg-white ">
+                <div
+                    class="w-full h-28 backdrop-brightness-50 text-white text-3xl font-mono flex justify-center items-center ">
+                    Basic</div>
+                <div class="flex justify-center items-center p-3 text-xl border-b border-slate-500">Web Design</div>
+                <div class="flex justify-center items-center p-3 text-xl border-b border-slate-500">Photography</div>
+                <div class="flex justify-center items-center p-3 text-xl border-b border-slate-500">5GB Storage</div>
+                <div class="flex justify-center items-center p-3 text-xl border-b border-slate-500">Mail Support</div>
+                <div class=" flex justify-center items-center  text-3xl pt-5">$ 10</div>
+                <div class="border-b border-slate-500 flex justify-center items-center p-3 text-xl ">per month</div>
+                <div class="flex justify-center items-center p-3 text-xl h-28 backdrop-brightness-75"><button
+                        class="backdrop-brightness-100 bg-gray-400 w-28 h-10 hover:bg-black hover:text-white">Sign
+                        Up</button></div>
+            </div>
+            <div class="w-full bg-gray-400 my-8 hover:bg-white sm:ml-3">
+                <div
+                    class="w-full h-28 backdrop-brightness-50 text-white text-3xl font-mono flex justify-center items-center ">
+                    Pro</div>
+                <div class="flex justify-center items-center p-3 text-xl border-b border-slate-500">Web Design</div>
+                <div class="flex justify-center items-center p-3 text-xl border-b border-slate-500">Photography</div>
+                <div class="flex justify-center items-center p-3 text-xl border-b border-slate-500">50GB Storage</div>
+                <div class="flex justify-center items-center p-3 text-xl border-b border-slate-500">Endless Support
+                </div>
+                <div class=" flex justify-center items-center  text-3xl pt-5">$ 25</div>
+                <div class="border-b border-slate-500 flex justify-center items-center p-3 text-xl ">per month</div>
+                <div class="flex justify-center items-center p-3 text-xl h-28 backdrop-brightness-75"><button
+                        class="backdrop-brightness-100 bg-gray-400 w-28 h-10 hover:bg-black hover:text-white">Sign
+                        Up</button></div>
+            </div>
+        </div>
+    </section>
+    <!-- MY REputation -->
+    <section class="mx-6 mt-10 sm:ml-40 duration-500">
+        <h1 class="text-white text-3xl font-mono">My Reputation</h1>
+        <div class="mt-10 grid grid-cols-6 sm:mt-9">
+            <img src="images/bandmember.jpg" class=" rounded-full w-80 ">
+            <h1 class="text-gray-500 w-28 h-6 ml-3 text-xl">Chris Fox.</h1>
+            <h2 class="text-gray-500 w-52 h-6 mx-9 text-xl">CEO at Mighty Schools</h2>
+            <p class="text-gray-500 w-72 mt-10 -ml-32">John Doe saved us from a web disaster.</p>
+
+        </div>
+        <div class="mt-10 grid grid-cols-6">
+            <img src="images/avatar_g2.jpg" class=" rounded-full w-80 ">
+            <h1 class="text-gray-500 w-32 h-6 ml-3 text-xl">Rebecca Flex.</h1>
+            <h2 class="text-gray-500 w-52 h-6 mx-20 text-xl"> CEO at Company.</h2>
+            <p class="text-gray-500 w-72 mt-10 -ml-32">No one is better than John Doe.</p>
+
+        </div>
+    </section>
+    <!-- My  photo-->
+    <section class="mx-6 mt-40 sm:ml-40 duration-500">
+        <div class="text-white">
+            <h1 class="text-4xl font-mono">My Photo</h1>
+            <div class="border-b my-8 w-48 border-white "></div>
+            <div class="sm:flex sm:w-full ">
+                <div class="sm:w-1/2">
+
+                    <img src="images/wedding.jpg" class="my-3">
+                    <img src="images/rocks.jpg" class="my-3">
+                    <img src="images/sailboat.jpg" class=" my-3">
+
+                </div>
+                <div class=" sm:w-1/2 sm:ml-3">
+                    <img src="images/underwater.jpg" class="my-3">
+                    <img src="images/chef.jpg" class="my-3">
+                    <img src="images/wedding.jpg" class="my-3">
+                    <img src="images/p6.jpg" class="my-3 w-full">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Contact Me -->
+    <section class="mx-6 mt-40 sm:ml-40 duration-500">
+        <div class="text-white">
+            <h1 class="text-4xl font-mono">Contact Me</h1>
+            <div class="border-b my-8 w-48 border-white"></div>
+            <div class="font-mono ">
+                <div class="">
+                    <h2 class="text-lg my-5 text-gray-500">
+                        <ion-icon name="location-sharp" class="text-4xl mr-10 text-white"></ion-icon>Chicago, US
+                    </h2>
+                    <h2 class="text-lg my-5 text-gray-500">
+                        <ion-icon name="call-sharp" class="text-4xl mr-10 text-white"></ion-icon> Phone: +00 151515
+                    </h2>
+                    <h2 class="text-lg my-5 text-gray-500">
+                        <ion-icon name="mail-sharp" class="text-4xl mr-10 text-white"></ion-icon> Email: mail@mail.com
+                    </h2>
+                </div>
+                <div class="">
+                    <p class="text-gray-500">Let's get in touch. Send me a message:</p>
+                    <input type="text " placeholder="Name" class="w-full my-2 p-3 h-12 text-xl">
+                    <input type="text " placeholder="Email" class="w-full my-2 p-3 h-12 text-xl">
+                    <input type="text " placeholder="Subject" class="w-full my-2 p-3 h-12 text-xl">
+                    <input type="text " placeholder="Message" class="w-full my-2 p-3 h-12 text-xl">
+                    <button class=" w-52 h-14 p-4 bg-white text-black text-lg hover:bg-gray-400">
+                        <ion-icon name="send" class="text-2xl"></ion-icon>SEND MESSAGE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footar -->
+    <footer class="my-40 mx-6 sm:ml-40 duration-500">
+        <div class=" flex text-gray-400 text-3xl">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-snapchat"></ion-icon>
+            <ion-icon name="person-circle"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-icon name="logo-linkedin"></ion-icon>
+        </div>
+        <p class="text-gray-400 mt-10 ">Powered by w3.css</p>
+    </footer>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
