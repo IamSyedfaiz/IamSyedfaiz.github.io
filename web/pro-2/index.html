@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <title>Document</title>
+    <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch  -->
+</head>
+<body>
+
+    <body>
+        <!-- navbar start -->
+        <nav
+            class="flex bg-white-300 w-full h-14  justify-between items-center cursor-pointer fixed shadow-lg z-40 bg-white">
+            <h1 class="ml-3 font-mono text-lg  tracking-widest  py-1 px-5 hover:bg-slate-300 "> <span
+                    class="font-bold text-xl tracking-widest">BR</span> Architects </h1>
+            <ul class=" md:flex justify-end font-mono text-lg mr-5 tracking-widest hidden  ">
+                <li class="py-1 px-5 hover:bg-slate-300">Projects</li>
+                <li class="py-1 px-5 hover:bg-slate-300">About</li>
+                <li class=" py-1 px-5 hover:bg-slate-300">Contact</li>
+            </ul>
+        </nav>
+        <!-- navbar end -->
+    
+        <!-- home section -->
+        <section>
+            <div class="relative">
+                <h1 class=" absolute hidden w-full md:flex justify-center z-20 items-center top-1/2 leading-7  text-3xl tracking-widest text-white font-mono">
+                <span class="font-bold text-4xl tracking-widest py-3 px-5  bg-opacity-70 text-white bg-black m-3 ">BR</span>Architects
+                </h1>
+                <h1 class="absolute flex w-full md:hidden justify-center z-20 items-center top-1/2 leading-7  text-3xl tracking-widest text-white font-mono">
+                    <span class="font-bold text-4xl  tracking-widest py-3 px-5  bg-opacity-70 text-white bg-black m-3 ">BR</span>
+                    </h1>
+                <img src="images/architect.jpg" class="" alt="">
+            </div>
+        </section>
+    
+        <!-- Projects section -->
+        <section class="mt-20 mx-8 ">
+            <h1 class=" font-mono text-2xl ">Projects</h1>
+            <div class="border-b-2 mt-5 border-slate-200"></div>
+            <div class=" mt-20 relative lg:flex justify-between grid sm:grid-cols-2 grid-cols-1 gap-6 ">
+    
+                <div class="w-full mb-2  mx-1.5">
+                    <h1 class="absolute bg-black text-white px-5 py-3">Summer House</h1> <img src="images/house5.jpg" class="w-full">
+                </div>
+                <div class="w-full mb-2 mx-1.5 ">
+                    <h1 class="absolute bg-black text-white px-5 py-3">Brick House</h1> <img src="images/house2.jpg" alt="">
+                </div>
+                <div class="w-full mb-2 mx-1.5">
+                    <h1 class="absolute bg-black text-white px-5 py-3">Renovated</h1> <img src="images/house3.jpg" alt="">
+                </div>
+                <div class="w-full mb-2 mx-1.5">
+                    <h1 class="absolute bg-black text-white px-5 py-3">Barn House</h1> <img src="images/house4.jpg" alt="">
+                </div>
+            </div>
+            <div class="  relative lg:flex justify-between lg:justify-center grid sm:grid-cols-2 grid-cols-1 gap-6">
+    
+                <div class="w-full  mx-1.5">
+                    <h1 class="absolute bg-black text-white px-5 py-3">Summer House</h1> <img src="images/house5.jpg" alt="">
+                </div>
+                <div class="w-full  mx-1.5 ">
+                    <h1 class="absolute bg-black text-white px-5 py-3">Brick House</h1> <img src="images/house2.jpg" alt="">
+                </div>
+                <div class="w-full mx-1.5">
+                    <h1 class="absolute bg-black text-white px-5 py-3">Renovated</h1> <img src="images/house3.jpg" alt="">
+                </div>
+                <div class="w-full mx-1.5">
+                    <h1 class="absolute bg-black text-white px-5 py-3">Barn House</h1> <img src="images/house4.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    
+        <!-- About -->
+    
+        <section class="mt-20 mx-8 ">
+            <h1 class=" font-mono text-2xl ">About</h1>
+            <div class="border-b-2 mt-5 border-slate-400"></div>
+    
+            <p class="mt-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+            <div class=" mt-6  lg:flex justify-between grid sm:grid-cols-2 grid-cols-1 gap-2">
+                <div class=" md:w-80 w-full h-4/6  m-1 ">
+                    <img class="w-full" src="images/team1.jpg">
+                    <h2 class="text-2xl my-3">John Doe</h2>
+                    <p class="text-slate-400">CEO & Founder</p>
+                    <p class="my-3 ">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                        elementum.</p>
+                    <button class="w-full bg-slate-200 py-2 hover:bg-slate-300">Contact</button>
+                </div>
+                <div class="md:w-80 w-full h-4/6  m-1 ">
+                    <img class="w-full" src="images/team2.jpg">
+                    <h2 class="text-2xl my-3">Jane Doe</h2>
+                    <p class="text-slate-400">Architect</p>
+                    <p class="my-3 ">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                        elementum.</p>
+                    <button class="w-full bg-slate-200 py-2 hover:bg-slate-300">Contact</button>
+                </div>
+                <div class="  md:w-80 w-full h-4/6  m-1 ">
+                    <img class="w-full" src="images/team3.jpg">
+                    <h2 class="text-2xl my-3">Mike Ross</h2>
+                    <p class="text-slate-400">Architect</p>
+                    <p class="my-3 ">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                        elementum.</p>
+                    <button class="w-full bg-slate-200 py-2 hover:bg-slate-300">Contact</button>
+                </div>
+                <div class="    md:w-80 w-full h-4/6  m-2 ">
+                    <img class="w-full" src="images/team4.jpg">
+                    <h2 class="text-2xl my-3">Dan Star</h2>
+                    <p class="text-slate-400">Architect</p>
+                    <p class="my-3 ">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                        elementum.</p>
+                    <button class="w-full bg-slate-200 py-2 hover:bg-slate-300">Contact</button>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Contact -->
+        <section class="mt-20 mx-8 ">
+            <h1 class=" font-mono text-2xl ">Contact</h1>
+            <div class="border-b-2 mt-5 border-slate-400"></div>
+            <p class="my-4">Lets get in touch and talk about your next project.</p>
+            <input type="text " placeholder="Name" class="w-full border-2 p-2   text-xl">
+            <input type="text " placeholder="Email" class="w-full border-2 p-2 mt-2 text-xl">
+            <input type="text " placeholder="Subject" class="w-full border-2 p-2 mt-2 text-xl">
+            <input type="text " placeholder="Comment" class="w-full border-2 p-2 mt-2 text-xl">
+            <button class="py-2 px-6 mt-6 bg-black text-white hover:bg-slate-400">SEND MASSAGE</button>
+        </section>
+        <!-- map -->
+        <div class="mt-20 mx-8"> <img src="images/map.jpg" alt=""></div>
+    
+        <!-- footer -->
+        <div class="h-20 flex justify-center items-center bg-black text-white">Powered by w3.css</div>
+    </body>
+</body>
+</html>
