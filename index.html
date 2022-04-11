@@ -9,7 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
   <link rel="stylesheet" href="output.css">
   <!-- npx tailwindcss -i ./input.css -o ./output.css --watch  -->
 </head>
@@ -108,21 +111,28 @@
 
           </div>
           <div class="mediaicon flex w-72 mt-20 relative">
-            <div class=" text-[#222] sm:mx-5 mx-2 relative">
-              <a href="https://www.facebook.com/faizmiyaa/" target="blank">
-                <i class="fa fa-facebook text-6xl p-3" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div class="text-[#222] sm:mx-9 mx-2 relative">
-              <a href="https://www.instagram.com/syed_faizz/" target="blank">
-                <i class="fa fa-instagram text-6xl p-3" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div class="text-[#222] sm:mx-5 mx-1 relative">
-              <a href="#">
-                <i class="fa fa-youtube-play text-6xl p-3" aria-hidden="true"></i>
-              </a>
-            </div>
+            <!--Facebook Button -->
+
+            <button id="facebook"
+              class="bg-white  sticky m-2 duration-500 border-2 border-blue-600 fixed  w-12 transform hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-[#1877f2] hover:text-white text-blue-600 shadow-xl hover:shadow-blue-500/50">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            <!--İnstagram Button -->
+            <button id="instagram"
+              class=" border-2 m-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 w-12 h-12  transform hover:-translate-y-3 rounded-full duration-500 shadow-xl hover:shadow-pink-500/50">
+              <i class="fab fa-instagram"></i>
+            </button>
+
+            <!--Whatsapp Button -->
+            <button id="whatsapp"
+              class="bg-white m-2 duration-500    w-12 h-12 border-2 rounded-full border-[#25D366] transform hover:-translate-y-3  text-2xl text-green-500 hover:bg-[#25D366] hover:text-white shadow-xl hover:shadow-green-500/50">
+              <i class="fab fa-whatsapp"></i>
+            </button>
+            <!--YouTube Button -->
+            <button id="youtube"
+              class="bg-white m-2 transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 text-red-500 border-red-500 hover:bg-red-500 hover:text-white text-2xl shadow-xl hover:shadow-red-500/50">
+              <i class="fab fa-youtube"></i>
+            </button>
           </div>
 
 
@@ -141,7 +151,11 @@
           </div>
           <div
             class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <p class="mb-8 text-black  text-xl tracking-wide leading-relaxed dark:text-white">Professional customer service  and sales & marketing specialist with extensive experience resolving escalated customer complaints and sales. Strong interpersonal skills proven through customer satisfaction and peer recognition awards. Creative problem solver who built a new customer retention program that increased customer loyalty and company sales.Seeking a position as a Web Development to continue career growth into management.</p>
+            <p class="mb-8 text-black  text-xl tracking-wide leading-relaxed dark:text-white">Professional customer
+              service and sales & marketing specialist with extensive experience resolving escalated customer complaints
+              and sales. Strong interpersonal skills proven through customer satisfaction and peer recognition awards.
+              Creative problem solver who built a new customer retention program that increased customer loyalty and
+              company sales.Seeking a position as a Web Development to continue career growth into management.</p>
 
           </div>
         </div>
@@ -237,7 +251,8 @@
           <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2  dark:text-white border-b-2 pb-5">RECENT WORK
             </h1>
-            <p class="lg:w-1/2 w-full leading-relaxed text-xl text-gray-500 dark:text-white">This Project Are Only Practical And Polish My Skills</p>
+            <p class="lg:w-1/2 w-full leading-relaxed text-xl text-gray-500 dark:text-white">This Project Are Only
+              Practical And Polish My Skills</p>
           </div>
           <div class="flex flex-wrap -m-4">
             <div class="lg:w-1/3 sm:w-1/2 p-4 w-full">
@@ -249,7 +264,8 @@
                   <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">WhatsApp</h2>
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Clone !</h1>
                   <p class="leading-relaxed pb-3">The WhatsApp Chat Clone !</p>
-                  <a href="/web/whatsapp-chat design/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                  <a href="/web/whatsapp-chat design/index.html" target="_blanck"
+                    class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
                 </div>
               </div>
             </div>
@@ -262,7 +278,8 @@
                   <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Animation Design </h2>
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Responsive</h1>
                   <p class="leading-relaxed pb-3">Protfolio Scoroll Effect And Good design !</p>
-                  <a href="/web/Animation On Page Scroll/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                  <a href="/web/Animation On Page Scroll/index.html" target="_blanck"
+                    class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
                 </div>
               </div>
             </div>
@@ -275,7 +292,8 @@
                   <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">TAILWIND CSS</h2>
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Practice</h1>
                   <p class="leading-relaxed pb-3">Responsive Design Clone W3School</p>
-                    <a href="/web/pro-1/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                  <a href="/web/pro-1/index.html" target="_blanck"
+                    class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
                 </div>
               </div>
             </div>
@@ -288,7 +306,8 @@
                   <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Cool !</h2>
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Netflix Clone </h1>
                   <p class="leading-relaxed pb-3">Try To Practice On Video Play And Enjoy.</p>
-                    <a href="/web/netfilx page/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                  <a href="/web/netfilx page/index.html" target="_blanck"
+                    class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
                 </div>
               </div>
             </div>
@@ -301,7 +320,8 @@
                   <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Cool !</h2>
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3 ">Parallax Effect</h1>
                   <p class="leading-relaxed pb-3">Only Open Leptop Not Open To Phone </p>
-                    <a href="/web/effect-3/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                  <a href="/web/effect-3/index.html" target="_blanck"
+                    class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
                 </div>
               </div>
             </div>
@@ -314,7 +334,8 @@
                   <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">TAILWIND CSS</h2>
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Practice</h1>
                   <p class="leading-relaxed pb-3">Responsive Design Clone W3School</p>
-                  <a href="/web/pro-2/index.html" target="_blanck" class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
+                  <a href="/web/pro-2/index.html" target="_blanck"
+                    class="p-3 rounded-md bg-[#278ea5] text-white text-lg"> Click To See !</a>
                 </div>
               </div>
             </div>
@@ -419,31 +440,39 @@
         </div>
       </footer> -->
       <!-- footer section  -->
-     <footer class="text-gray-600 body-font mb-20">
-        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <footer class="text-gray-600 body-font mb-20">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col justify-between">
           <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <span class="ml-3 text-3xl">Portfolio</span>
           </a>
-          
+
           <div class="mediaicon flex w-72 mt-20 relative">
-            <div class=" text-[#222] sm:mx-5 mx-2 relative">
-              <a href="https://www.facebook.com/faizmiyaa/" target="blank">
-                <i class="fa fa-facebook text-6xl p-3" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div class="text-[#222] sm:mx-9 mx-2 relative">
-              <a href="https://www.instagram.com/syed_faizz/" target="blank">
-                <i class="fa fa-instagram text-6xl p-3" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div class="text-[#222] sm:mx-5 mx-1 relative">
-              <a href="#">
-                <i class="fa fa-youtube-play text-6xl p-3" aria-hidden="true"></i>
-              </a>
-            </div>
+            <!--Facebook Button -->
+
+            <button id="facebook"
+              class="bg-white  sticky m-2 duration-500 border-2 border-blue-600 fixed  w-12 transform hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-[#1877f2] hover:text-white text-blue-600 shadow-xl hover:shadow-blue-500/50">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            <!--İnstagram Button -->
+            <button id="instagram"
+              class=" border-2 m-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 w-12 h-12  transform hover:-translate-y-3 rounded-full duration-500 shadow-xl hover:shadow-pink-500/50">
+              <i class="fab fa-instagram"></i>
+            </button>
+
+            <!--Whatsapp Button -->
+            <button id="whatsapp"
+              class="bg-white m-2 duration-500    w-12 h-12 border-2 rounded-full border-[#25D366] transform hover:-translate-y-3  text-2xl text-green-500 hover:bg-[#25D366] hover:text-white shadow-xl hover:shadow-green-500/50">
+              <i class="fab fa-whatsapp"></i>
+            </button>
+            <!--YouTube Button -->
+            <button id="youtube"
+              class="bg-white m-2 transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 text-red-500 border-red-500 hover:bg-red-500 hover:text-white text-2xl shadow-xl hover:shadow-red-500/50">
+              <i class="fab fa-youtube"></i>
+            </button>
           </div>
+
         </div>
-      </footer> 
+      </footer>
 
 
       <!-- Body End -->
@@ -550,6 +579,35 @@
       progress.style.height = progressHeight + "%";
       console.log(scry.scrollTop);
     }, { passive: true });
+
+// media icons 
+tippy('#facebook',{
+      content:'Facebook',
+      animation:'fade',
+      delay:[200,200]
+    });
+    tippy('#instagram',{
+      content:'Instagram',
+      animation:'fade',
+      delay:[200,200]
+    });
+    tippy('#whatsapp',{
+      content:'Whatsapp',
+      animation:'fade',
+      delay:[200,200]
+    });
+    tippy('#youtube',{
+      content:'Youtube',
+      animation:'fade',
+      delay:[200,200]
+    });
+
+
+
+
+
+
+
   </script>
 </body>
 
