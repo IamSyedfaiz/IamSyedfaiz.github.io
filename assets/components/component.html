@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/output.css" rel="stylesheet">
+    <title>Div-zi</title>
+    <!-- cd assets/js && npx tailwindcss -i ../css/input.css -o ../css/output.css --watch -->
+</head>
+
+
+<body>
+    <!-- header  -->
+    <div class="fixed inset-0 z-50 w-full bg-white h-20">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 lg:py-7">
+            <div class="inline-flex items-center space-x-2">
+                <span>
+                    <svg width="30" height="30" viewBox="0 0 50 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.2732 0.2528C20.8078 1.18964 2.12023 12.2346 1.08477 13.3686C0 14.552 0 14.7493 0 27.7665C0 39.6496 0.0986153 41.1289 0.83823 42.0164C2.12023 43.5449 23.2239 55.4774 24.6538 55.5267C25.9358 55.576 46.1027 44.3832 48.2229 42.4602C49.3077 41.474 49.3077 41.3261 49.3077 27.8158C49.3077 14.3055 49.3077 14.1576 48.2229 13.1714C46.6451 11.7415 27.1192 0.450027 25.64 0.104874C24.9497 -0.0923538 23.9142 0.00625992 23.2732 0.2528ZM20.2161 21.8989C20.2161 22.4906 18.9835 23.8219 17.0111 25.3997C15.2361 26.7803 13.8061 27.9637 13.8061 28.0623C13.8061 28.1116 15.2361 29.0978 16.9618 30.2319C18.6876 31.3659 20.2655 32.6479 20.4134 33.0917C20.8078 34.0286 19.871 35.2119 18.8355 35.2119C17.8001 35.2119 9.0233 29.3936 8.67815 28.5061C8.333 27.6186 9.36846 26.5338 14.3485 22.885C17.6521 20.4196 18.4904 20.0252 19.2793 20.4196C19.7724 20.7155 20.2161 21.3565 20.2161 21.8989ZM25.6893 27.6679C23.4211 34.9161 23.0267 35.7543 22.1391 34.8668C21.7447 34.4723 22.1391 32.6479 23.6677 27.9637C26.2317 20.321 26.5275 19.6307 27.2671 20.3703C27.6123 20.7155 27.1685 22.7864 25.6893 27.6679ZM36.0932 23.2302C40.6788 26.2379 41.3198 27.0269 40.3337 28.1609C39.1503 29.5909 31.6555 35.2119 30.9159 35.2119C29.9298 35.2119 28.9436 33.8806 29.2394 33.0424C29.3874 32.6479 30.9652 31.218 32.7403 29.8867L35.9946 27.4706L32.5431 25.1532C30.6201 23.9205 29.0915 22.7371 29.0915 22.5892C29.0915 21.7509 30.2256 20.4196 30.9159 20.4196C31.3597 20.4196 33.6771 21.7016 36.0932 23.2302Z"
+                            fill="black"></path>
+                    </svg>
+                </span>
+                <span class="font-bold">DevUI</span>
+            </div>
+            <div class="hidden grow items-start lg:flex">
+                <ul class="ml-12 inline-flex space-x-8">
+                    <li>
+                        <a href="#" class="text-sm font-semibold text-gray-800 hover:text-gray-900">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/about/about.html"
+                            class="text-sm font-semibold text-gray-800 hover:text-gray-900">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="assets/Components/component.html"
+                            class="text-sm font-semibold text-gray-800 hover:text-gray-900">
+                            Components
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hidden lg:block">
+                <button type="button"
+                    class="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                    Button text
+                </button>
+            </div>
+            <div class="lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="h-6 w-6 cursor-pointer">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- header  -->
+
+
+
+
+    <div id="component" class="flex flex-col my-20 mx-10">
+        <div class="relative flex flex-col h-full border border-gray-200 opacity-100 dark:border-gray-700 overflow-hidden rounded-lg"
+            style="height: 80vh;">
+            <div
+                class="flex flex-col items-end justify-between p-2 pr-4 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800 sm:flex-row sm:items-center">
+                <div class="hidden xl:block">
+                    <button type="button"
+                        class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none tab-btn active"
+                        data-tab="xs">
+                        <svg width="8.57142857142857" height="24" viewBox="0 0 10 28" xmlns="http://www.w3.org/2000/svg"
+                            class="block mx-auto mb-1 fill-current">
+                            <path
+                                d="M1.5 12h7a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 8.5 28h-7A1.5 1.5 0 0 1 0 26.5v-13A1.5 1.5 0 0 1 1.5 12zM1 15v10h8V15H1zm4 12.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM4 13v1h2v-1H4z"
+                                fill-rule="evenodd"></path>
+                        </svg>xs
+                    </button>
+                    <button type="button"
+                        class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none tab-btn"
+                        data-tab="sm">
+                        <svg width="11.999999999999998" height="24" viewBox="0 0 14 28"
+                            xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
+                            <path
+                                d="M1.5 6h11A1.5 1.5 0 0 1 14 7.5v19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 0 26.5v-19A1.5 1.5 0 0 1 1.5 6zM1 9v16h12V9H1zm6 18.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"
+                                fill-rule="evenodd"></path>
+                        </svg>sm
+                    </button>
+                    <button type="button"
+                        class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none tab-btn"
+                        data-tab="md">
+                        <svg width="22.28571428571428" height="24" viewBox="0 0 26 28"
+                            xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
+                            <path
+                                d="M26 26.5a1.5 1.5 0 0 1-1.5 1.5h-23A1.5 1.5 0 0 1 0 26.5v-14A1.5 1.5 0 0 1 1.5 11h23a1.5 1.5 0 0 1 1.5 1.5v14zm-3 .5V12H3v15h20zm1.5-6.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-23-.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"
+                                fill-rule="evenodd"></path>
+                        </svg>md
+                    </button>
+                    <button type="button"
+                        class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none tab-btn"
+                        data-tab="lg">
+                        <svg width="32.57142857142856" height="24" viewBox="0 0 38 28"
+                            xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
+                            <path
+                                d="M34 26h4v1c-1.333.667-2.667 1-4 1H4c-1.333 0-2.667-.333-4-1v-1h4V7.5A1.5 1.5 0 0 1 5.5 6h27A1.5 1.5 0 0 1 34 7.5V26zM6 8v18h26V8H6z"
+                                fill-rule="evenodd"></path>
+                        </svg>lg
+                    </button>
+                    <button type="button"
+                        class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none tab-btn"
+                        data-tab="xl">
+                        <svg width="30.85714285714285" height="24" viewBox="0 0 36 28"
+                            xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
+                            <path
+                                d="M20.857 24l.857 3H24v1H12v-1h2.286l.857-3H1.5A1.5 1.5 0 0 1 0 22.5v-21A1.5 1.5 0 0 1 1.5 0h33A1.5 1.5 0 0 1 36 1.5v21a1.5 1.5 0 0 1-1.5 1.5H20.857zM2 2v18h32V2H2z">
+                            </path>
+                        </svg>xl
+                    </button>
+                </div>
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <button type="button" data-tab="xl"
+                        class="flex items-center px-4 py-2 tab-btn space-x-3 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:text-gray-200 dark:border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                        <span class="hidden md:inline">Preview</span>
+                    </button>
+                    <button type="button" data-tab="code"
+                        class="flex tab-btn items-center px-4 py-2 space-x-3 text-gray-600 transition-colors duration-300 transform border rounded-lg focus:border-teal-500 focus:ring focus:ring-primary focus:ring-opacity-40 dark:text-gray-200 dark:border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none show-code-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        <span class="hidden md:inline">
+                            Show Code
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="px-4 py-2 text-gray-500 transition-colors duration-300 transform border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200 dark:border-gray-200 focus:outline-none focus:border-teal-500 focus:ring focus:ring-primary focus:ring-opacity-40"
+                        id="expand-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative z-0 flex justify-center h-full overflow-hidden bg-gray-100">
+                <div class="tab-content hidden border" id="xs" style="width: 20%;">
+                    <p>This is the content for XS tab.</p>
+                </div>
+                <div class="tab-content hidden border" id="sm" style="width: 40%;">
+                    <p>This is the content for SM tab.</p>
+                </div>
+                <div class="tab-content hidden border" id="md" style="width: 60%;">
+                    <p>This is the content for MD tab.</p>
+                </div>
+                <div class="tab-content hidden border" id="lg" style="width: 80%;">
+                    <p>This is the content for LG tab.</p>
+                </div>
+                <div class="tab-content  border" id="xl" style="width: 100%;">
+                    <p>This is the content for XL tab.</p>
+                </div>
+                <div class="tab-content hidden" data-tab="code">
+                    <!-- Code Tab Content -->
+                    <h2 class="text-2xl font-semibold text-black">Show Code</h2>
+                    <!-- Insert your code content here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="relative transform scale-x-[-1]">
+        <div id="container">
+            <canvas id="canvas"></canvas>
+            <div class="man" id="man1">
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="feet">
+                    <div class="foot"></div>
+                    <div class="foot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <span>
+                    <svg width="30" height="30" viewBox="0 0 50 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.2732 0.2528C20.8078 1.18964 2.12023 12.2346 1.08477 13.3686C0 14.552 0 14.7493 0 27.7665C0 39.6496 0.0986153 41.1289 0.83823 42.0164C2.12023 43.5449 23.2239 55.4774 24.6538 55.5267C25.9358 55.576 46.1027 44.3832 48.2229 42.4602C49.3077 41.474 49.3077 41.3261 49.3077 27.8158C49.3077 14.3055 49.3077 14.1576 48.2229 13.1714C46.6451 11.7415 27.1192 0.450027 25.64 0.104874C24.9497 -0.0923538 23.9142 0.00625992 23.2732 0.2528ZM20.2161 21.8989C20.2161 22.4906 18.9835 23.8219 17.0111 25.3997C15.2361 26.7803 13.8061 27.9637 13.8061 28.0623C13.8061 28.1116 15.2361 29.0978 16.9618 30.2319C18.6876 31.3659 20.2655 32.6479 20.4134 33.0917C20.8078 34.0286 19.871 35.2119 18.8355 35.2119C17.8001 35.2119 9.0233 29.3936 8.67815 28.5061C8.333 27.6186 9.36846 26.5338 14.3485 22.885C17.6521 20.4196 18.4904 20.0252 19.2793 20.4196C19.7724 20.7155 20.2161 21.3565 20.2161 21.8989ZM25.6893 27.6679C23.4211 34.9161 23.0267 35.7543 22.1391 34.8668C21.7447 34.4723 22.1391 32.6479 23.6677 27.9637C26.2317 20.321 26.5275 19.6307 27.2671 20.3703C27.6123 20.7155 27.1685 22.7864 25.6893 27.6679ZM36.0932 23.2302C40.6788 26.2379 41.3198 27.0269 40.3337 28.1609C39.1503 29.5909 31.6555 35.2119 30.9159 35.2119C29.9298 35.2119 28.9436 33.8806 29.2394 33.0424C29.3874 32.6479 30.9652 31.218 32.7403 29.8867L35.9946 27.4706L32.5431 25.1532C30.6201 23.9205 29.0915 22.7371 29.0915 22.5892C29.0915 21.7509 30.2256 20.4196 30.9159 20.4196C31.3597 20.4196 33.6771 21.7016 36.0932 23.2302Z"
+                            fill="black"></path>
+                    </svg>
+                </span>
+                <span class="font-bold">DevUI</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">©
+                2020
+                Tailblocks —
+                <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer"
+                    target="_blank">@knyttneve</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path stroke="none"
+                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                        </path>
+                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                </a>
+            </span>
+        </div>
+    </footer>
+    <!-- footer -->
+
+
+    <script>
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const tab = btn.getAttribute('data-tab');
+
+                tabBtns.forEach((btn) => {
+                    btn.classList.remove('active');
+                });
+
+                tabContents.forEach((content) => {
+                    content.classList.add('hidden');
+                });
+
+                btn.classList.add('active');
+                document.getElementById(tab).classList.remove('hidden');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
