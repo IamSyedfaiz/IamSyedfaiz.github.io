@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="assets/img/favicon_io/favicon-32x32.png" href="favicon.ico">
+  <link href="assets/css/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Div-zi</title>
+  <!-- cd assets/js && npx tailwindcss -i ../css/input.css -o ../css/output.css --watch -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.css">
+
+
+</head>
+
+
+<body class="bg-white" data-scroll-container>
+  <!-- header  -->
+  <div class="fixed inset-0 z-50 w-full bg-white h-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 lg:py-7">
+      <div class="inline-flex items-center space-x-2">
+        <span>
+          <img src="assets/img/5960967.png" alt="" class="w-10">
+        </span>
+        <span class="font-bold">ZI</span>
+      </div>
+      <div class="hidden grow items-start lg:flex">
+        <ul class="ml-12 inline-flex space-x-8">
+          <li>
+            <a href="index.html" class="text-sm font-semibold text-gray-800 hover:text-gray-900 hoverable">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="text-sm font-semibold text-gray-800 hover:text-gray-900">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="component.html" class="text-sm font-semibold text-gray-800 hover:text-gray-900">
+              Components
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="hidden lg:block">
+        <button type="button"
+          class="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+          Button text
+        </button>
+      </div>
+      <div class="lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="h-6 w-6 cursor-pointer">
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- header  -->
+
+
+  <!-- cursor -->
+  <!-- <div class="cursor">
+    <div class="cursor__ball cursor__ball--big">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+    </div>
+    <div class="cursor__ball cursor__ball--small">
+      <svg height="8" width="8">
+        <circle cx="4" cy="4" r="2" stroke-width="0"></circle>
+      </svg>
+    </div>
+  </div> -->
+  <!-- cursor -->
+
+
+
+  <!-- hero  -->
+  <div class="relative w-full h-[85%] flex justify-center items-center bg-white" data-scroll-section>
+    <div class="relative isolate z-0  px-6 pt-14 lg:px-8 " data-scroll data-scroll-speed="1">
+      <div class="relative mx-auto  py-24">
+        <div class="absolute inset-x-0 -top-[4rem] -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
+          <svg
+            class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+            viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
+            <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3"
+              d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z">
+            </path>
+            <defs>
+              <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#9089FC"></stop>
+                <stop offset="1" stop-color="#FF80B5"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="text-center">
+          <h1 data-scroll data-scroll-speed="1"
+            class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl font-pano ">
+            The world’s destination <br> for design
+          </h1>
+          <p data-scroll data-scroll-speed="1" class="mt-6 text-lg leading-8 text-gray-600 font-Nunito">
+            Get inspired by the work of millions of top-rated designers & agencies around the world.
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-2" data-scroll data-scroll-speed="1">
+            <button type="button"
+              class="rounded-full border hoverable border-black px-8 py-6 text-sm font-MaisonBold text-white bg-black shadow-sm">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ==================================== -->
+
+  <!-- ==================================== -->
+
+  <!-- click on the walking man to know what's in his head -->
+  <!-- <div class="relative">
+    <div id="container">
+      <canvas id="canvas"></canvas>
+      <div class="man" id="man1">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="feet">
+          <div class="foot"></div>
+          <div class="foot"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- hero  -->
+  <div class="2xl:container mx-auto" data-scroll-section>
+    <div class="swiper-container swiper mySwiper" data-scroll data-scroll-speed="1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+    </div>
+  </div>
+  <section id="services" class="relative py-60 bg-green-50" data-scroll-section>
+    <div class="transform rotate-6 ">
+      <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="20" data-scroll-target="#services">
+        <span class="text-3xl sm:text-4xl md:text-6xl 2xl:text-7xl bg-green-400 p-5 whitespace-nowrap">Social
+          Media — Email Marketing — Digital Advertising</span>
+      </div>
+    </div>
+    <div class="transform -rotate-6 -skew-x-12 mt-40">
+      <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="-20" data-scroll-target="#services">
+        <span class="text-3xl sm:text-4xl md:text-6xl 2xl:text-7xl bg-green-400 p-5 whitespace-nowrap">Web
+          Development - Motion Design - Graphic Design</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="relative w-full h-screen flex justify-center items-center bg-white" data-scroll-section>
+    <div class="container mx-auto relative isolate z-0  px-6 py-24 lg:px-8 h-full">
+      <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-black border-dotted w-1/2 h-1/2 rounded-full">
+      </div>
+      <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-black border-dotted  w-1/3 h-1/3 rounded-full">
+      </div>
+      <div data-scroll data-scroll-speed="1"
+        class="absolute top-96 left-40  bg-black/50 py-3 px-5 text-white font-bold rounded-full backdrop-blur-sm rotate-90">
+        TailwindCss
+      </div>
+      <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"
+        class="absolute top-80 right-60  bg-black/50  py-3 px-5 text-white font-bold rounded-full backdrop-blur-sm rotate-45">
+        Laravel
+      </div>
+      <div data-scroll data-scroll-speed="1"
+        class="absolute top-1/3 right-1/2  bg-black/50  py-3 px-5 text-white font-bold rounded-full backdrop-blur-sm rotate-12">
+        WordPress
+      </div>
+      <div data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"
+        class="absolute top-3/4 right-1/2  bg-black/50  py-3 px-5 text-white font-bold rounded-full backdrop-blur-sm">
+        Figma
+      </div>
+      <div data-scroll data-scroll-speed="1"
+        class="absolute top-1/3 right-1/4  bg-black/50  py-3 px-5 text-white font-bold rounded-full backdrop-blur-sm">
+        webflow
+      </div>
+      <div data-scroll data-scroll-speed="2"
+        class="absolute top-1/3 right-1/6  bg-black/50  py-3 px-5 text-white font-bold rounded-full backdrop-blur-sm">
+        webflow
+      </div>
+      <div class="absolute inset-x-0 -top-[4rem] -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
+        <svg
+          class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+          viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
+          <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3"
+            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z">
+          </path>
+          <defs>
+            <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="#9089FC"></stop>
+              <stop offset="1" stop-color="#FF80B5"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="flex justify-center items-center h-full text-center">
+        <h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl font-pano ">
+          3+ YEARS OF <br>
+          EXPERIENCE IN <br>
+          WEB DEVELOPMENT
+        </h1>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    data-scroll-section>
+    <div class="max-w-xl relative mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2
+        class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+        <span class="relative inline-block">
+          <span class="relative">Let's</span>
+        </span>
+        launch a rocket into outer space
+      </h2>
+      <p class="text-base text-gray-700 md:text-lg">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa
+        quae.
+      </p>
+      <div class="absolute -top-[4rem] right-1 -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
+        <svg
+          class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+          viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
+          <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3"
+            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z">
+          </path>
+          <defs>
+            <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="#9089FC"></stop>
+              <stop offset="1" stop-color="#FF80B5"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="grid gap-8 row-gap-5 lg:grid-cols-3">
+        <div
+          class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
+          <div
+            class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+          </div>
+          <div
+            class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+          </div>
+          <div
+            class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+          </div>
+          <div class="relative p-5 bg-white rounded-sm">
+            <div class="flex flex-col mb-2 lg:items-center lg:flex-row">
+              <div class="flex items-center justify-center w-14 h-14 mb-4 mr-2 rounded-full bg-indigo-50 lg:mb-0">
+                <img src="assets/img/5960963.png" alt="" class="w-10">
+              </div>
+              <h6 class="font-semibold leading-5">The quick, brown fox</h6>
+            </div>
+            <p class="mb-2 text-sm text-gray-900">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam.
+            </p>
+            <a href="/" aria-label=""
+              class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+              more</a>
+          </div>
+        </div>
+        <div
+          class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
+          <div
+            class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+          </div>
+          <div
+            class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+          </div>
+          <div
+            class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+          </div>
+          <div class="relative p-5 bg-white rounded-sm">
+            <div class="flex flex-col mb-2 lg:items-center lg:flex-row">
+              <div class="flex items-center justify-center w-14 h-14 mb-4 mr-2 rounded-full bg-indigo-50 lg:mb-0">
+                <img src="assets/img/5960965.png" alt="" class="w-10">
+
+              </div>
+              <h6 class="font-semibold leading-5">Smooth as an android</h6>
+            </div>
+            <p class="mb-2 text-sm text-gray-900">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam.
+            </p>
+            <a href="/" aria-label=""
+              class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+              more</a>
+          </div>
+        </div>
+        <div
+          class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
+          <div
+            class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+          </div>
+          <div
+            class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+          </div>
+          <div
+            class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+          </div>
+          <div class="relative p-5 bg-white rounded-sm">
+            <div class="flex flex-col mb-2 lg:items-center lg:flex-row">
+              <div class="flex items-center justify-center w-14 h-14 mb-4 mr-2 rounded-full bg-indigo-50 lg:mb-0">
+                <img src="assets/img/5960964.png" alt="" class="w-10">
+
+              </div>
+              <h6 class="font-semibold leading-5">This is about justice</h6>
+            </div>
+            <p class="mb-2 text-sm text-gray-900">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam.
+            </p>
+            <a href="/" aria-label=""
+              class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+              more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative transform scale-x-[-1]" data-scroll-section>
+    <div id="container">
+      <canvas id="canvas"></canvas>
+      <div class="man" id="man1">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="feet">
+          <div class="foot"></div>
+          <div class="foot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="px-4 py-16 mx-auto sm:w-full md:w-full lg:w-full h-full group bg-black" data-scroll-section>
+    <div
+      class="p-8 rounded shadow-xl sm:p-16 peer group-hover:scale-110 hover:bg-black transition-transform duration-700">
+      <div class="flex flex-col lg:flex-row">
+        <div class="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">
+          <h2 class="font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            The quick, brown fox<br class="hidden md:block" />
+            jumps over
+            <span class="inline-block text-deep-purple-accent-400">a lazy dog</span>
+          </h2>
+        </div>
+        <div class="lg:w-1/2">
+          <p class="mb-4 text-base text-gray-700">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque
+            ipsa quae. Sed ut perspiciatis unde omnis iste. Sed ut perspiciatis unde omnis iste error sit voluptatem
+            accusantium
+            doloremque rem aperiam.
+          </p>
+          <a href="/" aria-label=""
+            class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+            more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="max-w-xl relative mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <h2
+          class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-myGray sm:text-4xl md:mx-auto">
+          <span class="relative inline-block">
+            <span class="relative">Let's</span>
+          </span>
+          launch a rocket into outer space
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem
+          aperiam, eaque ipsa
+          quae.
+        </p>
+        <div class="absolute -top-[4rem] right-1 -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
+          <svg
+            class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+            viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
+            <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3"
+              d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z">
+            </path>
+            <defs>
+              <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#9089FC"></stop>
+                <stop offset="1" stop-color="#FF80B5"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="grid gap-8 row-gap-5 lg:grid-cols-3">
+          <div
+            class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
+            <div
+              class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+            </div>
+            <div
+              class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+            </div>
+            <div
+              class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+            </div>
+            <div class="relative p-5 bg-myWhite rounded-sm">
+              <div class="flex flex-col mb-2 lg:items-center lg:flex-row">
+                <div class="flex items-center justify-center w-14 h-14 mb-4 mr-2 rounded-full bg-indigo-50 lg:mb-0">
+                  <img src="assets/img/5960963.png" alt="" class="w-10">
+                </div>
+                <h6 class="font-semibold leading-5">The quick, brown fox</h6>
+              </div>
+              <p class="mb-2 text-sm text-myGray">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque rem aperiam.
+              </p>
+              <a href="/" aria-label=""
+                class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+                more</a>
+            </div>
+          </div>
+          <div
+            class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
+            <div
+              class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+            </div>
+            <div
+              class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+            </div>
+            <div
+              class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+            </div>
+            <div class="relative p-5 bg-myWhite rounded-sm">
+              <div class="flex flex-col mb-2 lg:items-center lg:flex-row">
+                <div class="flex items-center justify-center w-14 h-14 mb-4 mr-2 rounded-full bg-indigo-50 lg:mb-0">
+                  <img src="assets/img/5960965.png" alt="" class="w-10">
+
+                </div>
+                <h6 class="font-semibold leading-5">Smooth as an android</h6>
+              </div>
+              <p class="mb-2 text-sm text-myGray">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque rem aperiam.
+              </p>
+              <a href="/" aria-label=""
+                class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+                more</a>
+            </div>
+          </div>
+          <div
+            class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
+            <div
+              class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+            </div>
+            <div
+              class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100">
+            </div>
+            <div
+              class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-deep-purple-accent-400 group-hover:scale-y-100">
+            </div>
+            <div class="relative p-5 bg-myWhite rounded-sm">
+              <div class="flex flex-col mb-2 lg:items-center lg:flex-row">
+                <div class="flex items-center justify-center w-14 h-14 mb-4 mr-2 rounded-full bg-indigo-50 lg:mb-0">
+                  <img src="assets/img/5960964.png" alt="" class="w-10">
+
+                </div>
+                <h6 class="font-semibold leading-5">This is about justice</h6>
+              </div>
+              <p class="mb-2 text-sm text-myGray">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque rem aperiam.
+              </p>
+              <a href="/" aria-label=""
+                class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+                more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- click on the walking man to know what's in his head -->
+  <div class="relative" data-scroll-section>
+    <div id="container">
+      <canvas id="canvas"></canvas>
+      <div class="man" id="man1">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="feet">
+          <div class="foot"></div>
+          <div class="foot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="text-gray-600 body-font" data-scroll-section>
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <span>
+          <img src="assets/img/5960968.png" alt="" class="w-10">
+
+        </span>
+        <span class="font-bold">ZI</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020
+        Tailblocks —
+        <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer"
+          target="_blank">@knyttneve</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none"
+              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+  <!-- footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>;
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script> -->
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
