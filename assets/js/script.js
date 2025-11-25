@@ -21,7 +21,62 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+// JavaScript for toggling dark mode with persistence
+const toggleButton = document.getElementById("darkModeToggle");
+const bodyElement = document.body;
 
+if (localStorage.getItem("dark-mode") === "true") {
+  bodyElement.classList.add("dark");
+}
+
+toggleButton.addEventListener("click", () => {
+  bodyElement.classList.toggle("dark");
+  localStorage.setItem("dark-mode", bodyElement.classList.contains("dark"));
+});
+
+const items = document.querySelectorAll(".drag-item");
+
+items.forEach((item) => {
+  let originX = item.offsetLeft;
+  let originY = item.offsetTop;
+
+  let isDragging = false;
+  let startX, startY;
+
+  // smooth animation
+  item.style.transition = "transform 0.25s cubic-bezier(0.22, 1, 0.36, 1)";
+  item.style.transform = "translate(0px, 0px)";
+
+  item.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    item.style.transition = "none";
+
+    startX = e.clientX;
+    startY = e.clientY;
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+
+    const moveX = e.clientX - startX;
+    const moveY = e.clientY - startY;
+
+    // magnetic slow effect
+    item.style.transform = `translate(${moveX * 0.7}px, ${moveY * 0.7}px)`;
+  });
+
+  document.addEventListener("mouseup", () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    // enable smooth animation again
+    item.style.transition = "transform 0.25s cubic-bezier(0.22, 1, 0.36, 1)";
+
+    // snap back to original position
+    item.style.transform = `translate(0px, 0px)`;
+  });
+});
 // scroll
 document.addEventListener("DOMContentLoaded", () => {
   const scroller = new LocomotiveScroll({
@@ -72,20 +127,161 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // scroll
 
-// hover
-options = {
-  cursorOuter: "circle-basic",
-  hoverEffect: "circle-move",
-  hoverItemMove: true,
-  defaultCursor: false,
-  outerWidth: 30,
-  outerHeight: 30,
-};
-magicMouse(options);
+// btn
+//
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector(".view-resume-btn");
+  const finger = document.querySelector(".finger-overlay");
+  const cells = document.querySelectorAll(".grid-cell");
 
-$(".img-cursor").mouseover(function () {
-  $("#magicMouseCursor").addClass("change");
-}),
-  $(".img-cursor").mouseleave(function () {
-    $("#magicMouseCursor").removeClass("change");
+  // Initial state: Hidden off to the side (bottom-left)
+  // We use a class or direct style. Let's use a variable to track if we are hovering.
+  let isHovering = false;
+
+  // Function to set the "hidden" pose
+  const setHiddenPose = () => {
+    // Move down and left, rotate away
+    finger.style.transform = `translate(-80px, 100px) rotate(-45deg)`;
+    finger.classList.remove("opacity-100");
+    finger.classList.add("opacity-0");
+  };
+
+  // Set initial pose
+  setHiddenPose();
+
+  button.addEventListener("mouseenter", () => {
+    isHovering = true;
+    finger.classList.remove("opacity-0");
+    finger.classList.add("opacity-100");
+
+    // On enter, we might not be over a specific cell yet, or we are over the first one.
+    // The grid listeners will handle the specific position.
+    // But if we enter from a side not covered by a cell (unlikely with the layout),
+    // we want it to at least appear.
   });
+
+  button.addEventListener("mouseleave", () => {
+    isHovering = false;
+    setHiddenPose();
+  });
+
+  // Grid snapping logic
+  cells.forEach((cell) => {
+    cell.addEventListener("mouseenter", (e) => {
+      if (!isHovering) return;
+
+      const rect = cell.getBoundingClientRect();
+      const buttonRect = button.getBoundingClientRect();
+
+      // Calculate center of the cell relative to the button
+      const cellCenterX = rect.left + rect.width / 2 - buttonRect.left;
+      const cellCenterY = rect.top + rect.height / 2 - buttonRect.top;
+
+      // Offset for the finger to look natural (tip at center)
+      const offsetX = -50; // Center horizontally (width is 100)
+      const offsetY = -20; // Offset so the tip is near the center
+
+      finger.style.transform = `translate(${cellCenterX + offsetX}px, ${
+        cellCenterY + offsetY
+      }px) rotate(-10deg)`;
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector(".view-resume-btn-two");
+  const finger = document.querySelector(".finger-overlay-two");
+  const cells = document.querySelectorAll(".grid-cell-two");
+
+  // Initial state: Hidden off to the side (bottom-left)
+  // We use a class or direct style. Let's use a variable to track if we are hovering.
+  let isHovering = false;
+
+  // Function to set the "hidden" pose
+  const setHiddenPose = () => {
+    // Move down and left, rotate away
+    finger.style.transform = `translate(-80px, 100px) rotate(-45deg)`;
+    finger.classList.remove("opacity-100");
+    finger.classList.add("opacity-0");
+  };
+
+  // Set initial pose
+  setHiddenPose();
+
+  button.addEventListener("mouseenter", () => {
+    isHovering = true;
+    finger.classList.remove("opacity-0");
+    finger.classList.add("opacity-100");
+
+    // On enter, we might not be over a specific cell yet, or we are over the first one.
+    // The grid listeners will handle the specific position.
+    // But if we enter from a side not covered by a cell (unlikely with the layout),
+    // we want it to at least appear.
+  });
+
+  button.addEventListener("mouseleave", () => {
+    isHovering = false;
+    setHiddenPose();
+  });
+
+  // Grid snapping logic
+  cells.forEach((cell) => {
+    cell.addEventListener("mouseenter", (e) => {
+      if (!isHovering) return;
+
+      const rect = cell.getBoundingClientRect();
+      const buttonRect = button.getBoundingClientRect();
+
+      // Calculate center of the cell relative to the button
+      const cellCenterX = rect.left + rect.width / 2 - buttonRect.left;
+      const cellCenterY = rect.top + rect.height / 2 - buttonRect.top;
+
+      // Offset for the finger to look natural (tip at center)
+      const offsetX = -50; // Center horizontally (width is 100)
+      const offsetY = -20; // Offset so the tip is near the center
+
+      finger.style.transform = `translate(${cellCenterX + offsetX}px, ${
+        cellCenterY + offsetY
+      }px) rotate(-10deg)`;
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".wa-button");
+
+  buttons.forEach((button) => {
+    const finger = button.querySelector(".finger-overlay");
+    const cells = button.querySelectorAll(".grid-cell");
+
+    const hideFinger = () => {
+      finger.style.transform = `translate(-80px, 100px) rotate(-45deg)`;
+      finger.style.opacity = "0";
+    };
+
+    hideFinger();
+
+    button.addEventListener("mouseenter", () => {
+      finger.style.opacity = "1";
+    });
+
+    button.addEventListener("mouseleave", hideFinger);
+
+    cells.forEach((cell) => {
+      cell.addEventListener("mouseenter", () => {
+        const rect = cell.getBoundingClientRect();
+        const btnRect = button.getBoundingClientRect();
+
+        const centerX = rect.left + rect.width / 2 - btnRect.left;
+        const centerY = rect.top + rect.height / 2 - btnRect.top;
+
+        const offsetX = -50;
+        const offsetY = -20;
+
+        finger.style.transform = `translate(${centerX + offsetX}px, ${
+          centerY + offsetY
+        }px) rotate(-10deg)`;
+      });
+    });
+  });
+});
