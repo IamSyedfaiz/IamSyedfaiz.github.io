@@ -285,3 +285,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// navbar
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollContainer = document.querySelector("[data-scroll-container]");
+  const navbar = document.getElementById("navbar");
+
+  const scroll = new LocomotiveScroll({
+    el: scrollContainer,
+    smooth: true,
+    smartphone: {
+      smooth: true,
+    },
+    tablet: {
+      smooth: true,
+    },
+  });
+
+  let lastY = 0;
+
+  scroll.on("scroll", (args) => {
+    const currentY = args.scroll.y; // IMPORTANT: window.pageYOffset nahi, ye use karo
+
+    if (currentY > lastY && currentY > 80) {
+      // Scroll down → navbar hide
+      navbar.classList.add("-translate-y-full");
+    } else {
+      // Scroll up → navbar show
+      navbar.classList.remove("-translate-y-full");
+    }
+
+    lastY = currentY;
+  });
+});
