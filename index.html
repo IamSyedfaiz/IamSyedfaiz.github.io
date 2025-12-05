@@ -8,6 +8,8 @@
     <link href="assets/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/avtar/icon.png">
+
     <!-- cd assets/js && npx tailwindcss -i ../css/input.css -o ../css/output.css --watch -->
     <style>
         .shape-morph svg .morph-path {
@@ -47,57 +49,43 @@
             transform: rotate(360deg);
         }
 
-        html,
-        body {
-            height: 100%;
-        }
-
-        body {
-            overflow: hidden;
-            /* prevent double scrolling */
-        }
-
-        [data-scroll-container] {
-            min-height: 100vh;
-        }
+        /*  */
     </style>
 
 </head>
 
 <body class="bg-myWhite dark:bg-myGray">
     <!-- --=-=- -->
-    <div class="fixed top-0 z-50 w-full bg-myWhite dark:bg-myGray h-20" id="navbar">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 lg:py-7">
-            <div class="inline-flex items-center space-x-2">
-                <span>
-                    <img src="assets/img/5960967.png" alt class="w-10">
-                </span>
-                <span class="font-bold">ZI</span>
+    <div class="fixed top-6 left-0 w-full h-16 z-50  transform transition-transform duration-300" id="navbar">
+        <div
+            class="mx-auto flex max-w-xl backdrop-blur-md px-4 text-white border-4 border-black dark:border-white rounded-full items-center justify-between p-3">
+            <div class="inline-flex items-center relative">
+                <img src="assets/img/avtar/icon.png" alt class="w-10 z-10 border-2 rounded-full">
             </div>
             <div class="hidden grow items-start lg:flex">
                 <ul class="ml-12 inline-flex space-x-8">
                     <li>
                         <a href="index.html"
-                            class="text-sm font-semibold text-myGray dark:text-myWhite hover:text-myGray hoverable">
+                            class="text-sm font-semibold font-MaisonNeueExtended text-myGray dark:text-myWhite hover:text-myGray">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="/about2.html"
-                            class="text-sm font-semibold text-myGray dark:text-myWhite hover:text-myGray">
+                        <a href="/about.html"
+                            class="text-sm font-semibold font-MaisonNeueExtended text-myGray dark:text-myWhite hover:text-myGray">
                             About
                         </a>
                     </li>
                     <li>
-                        <a href="component.html"
-                            class="text-sm font-semibold text-myGray dark:text-myWhite hover:text-myGray">
+                        <a href="/component.html"
+                            class="text-sm font-semibold font-MaisonNeueExtended text-myGray dark:text-myWhite hover:text-myGray">
                             Components
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="hidden lg:block">
-                <button id="darkModeToggle" class="bg-myGray dark:bg-myWhite text-myWhite p-1 rounded-2xl group ">
+                <button id="darkModeToggle" class="bg-myGray dark:bg-myWhite text-myWhite p-1 rounded-full group ">
                     <div class="dark:hidden">
                         <svg class="w-7 h-7 transition-transform duration-300 group-hover:rotate-90" viewBox="0 0 24 24"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,85 +120,7 @@
                         </svg>
                     </div>
                 </button>
-                <!-- <div id="darkModeToggle" class="relative  overflow-hidden w-[100px] h-12 pb-3">
-                    <div
-                        class="view-resume-btn relative bg-[#05784F] rounded-me shadow-[0_10px_0_#0e4230] transition-all duration-100 w-full h-full active:translate-y-[10px] active:shadow-[0_0_0_#5da83b] group cursor-pointer">
 
-                        <div class="absolute inset-0 grid grid-cols-3 w-full h-full z-10">
-                            <div class="grid-cell" data-index="0"></div>
-                            <div class="grid-cell" data-index="1"></div>
-                            <div class="grid-cell" data-index="2"></div>
-                            <div class="grid-cell" data-index="3"></div>
-                            <div class="grid-cell" data-index="4"></div>
-                            <div class="grid-cell" data-index="5"></div>
-                        </div>
-
-                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-                            <div class="dark:hidden">
-                                <svg class="w-7 h-7 transition-transform duration-300 group-hover:rotate-90"
-                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M12 16C9.7944 16 8 14.2056 8 12C8 9.7944 9.7944 8 12 8C14.2056 8 16 9.7944 16 12C16 14.2056 14.2056 16 12 16Z"
-                                            stroke="#fff"></path>
-                                        <path d="M12 3.5V5.5" stroke="#fff" stroke-linecap="round"></path>
-                                        <path d="M20.5 12H18.5" stroke="#fff" stroke-linecap="round"></path>
-                                        <path d="M5.5 12H3.5" stroke="#fff" stroke-linecap="round"></path>
-                                        <path d="M12 18.5V20.5" stroke="#fff" stroke-linecap="round"></path>
-                                        <path d="M16.5 7.5L18 6" stroke="#fff" stroke-linecap="round"></path>
-                                        <path d="M6 18L7.5 16.5" stroke="#fff" stroke-linecap="round"></path>
-                                        <path d="M6 6L7.5 7.5" stroke="#fff" stroke-linecap="round"></path>
-                                        <path d="M16.5 16.5L18 18" stroke="#fff" stroke-linecap="round"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="dark:block hidden">
-                                <svg fill="#000000"
-                                    class="w-6 h-6 transition-transform duration-300 group-hover:rotate-90"
-                                    viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <title>moon</title>
-                                        <path
-                                            d="M29.223 24.178l-0.021-0.057c-0.116-0.274-0.383-0.463-0.694-0.463-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002c-1.272 0.542-2.752 0.857-4.306 0.857-6.213 0-11.25-5.037-11.25-11.25 0-4.66 2.833-8.658 6.871-10.366l0.074-0.028 0.211-0.089c0.267-0.118 0.45-0.381 0.45-0.687 0-0.375-0.276-0.686-0.635-0.74l-0.004-0.001c-0.653-0.103-1.407-0.161-2.174-0.161-8.145 0-14.748 6.603-14.748 14.748s6.603 14.748 14.748 14.748c4.748 0 8.973-2.244 11.67-5.73l0.025-0.034c0.097-0.125 0.155-0.285 0.155-0.458 0-0.127-0.031-0.246-0.086-0.351l0.002 0.004zM22.518 28.24c-1.497 0.637-3.238 1.007-5.066 1.007-7.317 0-13.249-5.932-13.249-13.249 0-7.074 5.543-12.853 12.523-13.23l0.034-0.001c-3.395 2.326-5.594 6.183-5.594 10.554 0 7.043 5.709 12.752 12.752 12.752 0.85 0 1.681-0.083 2.485-0.242l-0.081 0.013c-1.081 0.976-2.339 1.783-3.716 2.364l-0.087 0.033z">
-                                        </path>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div
-                            class="finger-overlay absolute top-0 left-0 w-[100px] h-[140px] z-30 pointer-events-none -rotate-[10deg] opacity-0 drop-shadow-md transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
-
-                            <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                                class="w-full h-full">
-                                <defs>
-                                    <linearGradient id="skinGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" style="stop-color:#f5d0b5;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#e0bfa5;stop-opacity:1" />
-                                    </linearGradient>
-
-                                    <linearGradient id="nailGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#ffece3;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#faddcf;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-
-                                <path d="M15,120 C15,80 10,50 30,25 C35,18 45,15 50,20 L30,120 Z"
-                                    fill="rgba(0,0,0,0.2)" />
-
-                                <path d="M25,120 C25,80 20,45 40,20 C50,8 80,8 90,25 C98,38 92,60 85,120 Z"
-                                    fill="url(#skinGradient)" />
-
-                                <path d="M42,22 C52,12 75,12 82,25 C84,30 78,38 65,40  C50,42 44,35 42,22 Z"
-                                    fill="url(#nailGradient)" />
-                            </svg>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <div class="lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -223,8 +133,11 @@
             </div>
         </div>
     </div>
-    <div class="container2 mx-auto" data-scroll-container>
-        <section class="bg-myWhite dark:bg-myGray">
+
+    <div class="container2 mx-auto relative" data-scroll-container>
+        <canvas id="canvas" class="absolute inset-0 z-0"></canvas>
+
+        <section class="bg-myWhite dark:bg-myGray ">
             <div class="2xl:container mx-auto relative w-full h-[85%] flex justify-center items-center">
                 <div class="relative isolate z-0  px-6 pt-14 lg:px-8 ">
                     <div class="relative mx-auto  py-24">
@@ -256,12 +169,7 @@
                             </p>
                             <div class="mt-10 flex items-center justify-center gap-x-2" data-scroll
                                 data-scroll-speed="1">
-                                <!-- <button type="button"
-                                    class="rounded-full border hoverable border-myGray dark:border-myWhite dark:bg-myWhite dark:text-myGray px-8 py-6 text-sm font-MaisonBold text-myWhite bg-myGray shadow-sm">
-                                    Get Started
-                                </button> -->
-
-                                <div class="relative  overflow-hidden w-[300px] h-24 pb-3">
+                                <div class="relative  overflow-hidden w-[300px] h-24 pb-3 z-40">
                                     <div
                                         class="view-resume-btn relative bg-[#05784F] rounded-[20px] shadow-[0_10px_0_#0e4230] transition-all duration-100 w-full h-full active:translate-y-[10px] active:shadow-[0_0_0_#5da83b] group cursor-pointer">
 
@@ -298,118 +206,122 @@
                 <div class="swiper-container swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div
-                            class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
+                            class="swiper-slide bg-myGray/5 lg:pt-3 lg:px-5 pt-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
                             <div class="h-4/6">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/1.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_1.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                         <div
-                            class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
-                            <div class="h-4/6">
+                            class="swiper-slide bg-myGray/5 lg:pt-3 lg:px-5 pt-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
+                            <div class="h-3/4">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/2.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_2.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                         <div style="height: 90% !important;"
                             class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
-                            <div class="h-4/6">
+                            <div class="h-3/4">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/3.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_3.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                         <div
                             class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
-                            <div class="h-4/6">
+                            <div class="h-full">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/4.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_4.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                         <div style="height: 80% !important;"
                             class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
-                            <div class="h-4/6">
+                            <div class="h-full">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/5.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_5.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                         <div
                             class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
-                            <div class="h-4/6">
+                            <div class="h-full">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/6.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_6.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                         <div style="height: 60% !important;"
                             class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
-                            <div class="h-4/6">
+                            <div class="h-full">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/7.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_7.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                         <div
                             class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
-                            <div class="h-4/6">
+                            <div class="h-full">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/8.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_8.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                         <div
                             class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
-                            <div class="h-4/6">
+                            <div class="h-full">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/9.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_9.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                         <div
                             class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
-                            <div class="h-4/6">
+                            <div class="h-full">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/10.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_10.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                         <div
                             class="swiper-slide bg-myGray/5 lg:py-3 lg:px-5 py-2 px-3 text-myWhite dark:bg-myWhite font-bold rounded-full backdrop-blur-sm  !flex justify-center items-center flex-col">
-                            <div class="h-4/6">
+                            <div class="h-full">
                                 <h1 class="text-black mb-2 font-pano font-bold">Hello
                                     World !</h1>
                                 <div class="flex justify-end items-end flex-col h-full">
-                                    <img src="assets/img/11.png" alt="icon" class="w-1/2">
+                                    <img src="assets/img/avtar/avtar_11.png" alt="icon" class="w-1/2">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Base Layer -->
+
+
         </section>
         <div class="bg-myWhite dark:bg-myGray text-myGray">
             <div class=" 2xl:container mx-auto flex items-center justify-center lg:py-36 lg:px-28 py-10 px-6">
@@ -444,13 +356,16 @@
             </div>
         </div>
         <section class="relative w-full lg:h-screen h-96 flex justify-center items-center bg-myWhite dark:bg-myGray">
-            <div class="container mx-auto relative isolate z-0 px-6 py-8 lg:px-8 h-full">
-                <div
-                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-myGray border-dotted lg:w-1/2 lg:h-1/2 w-9/12 h-2/6 rounded-full">
+            <div class="container mx-auto isolate z-0 px-6 py-8 lg:px-8 h-full">
+                <!-- <div class="absolute top-0 left-0 border-t-2 border-myGray border-dotted w-full">
                 </div>
-                <div
-                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-myGray border-dotted  lg:w-1/3 lg:h-1/3 w-2/3 h-1/6 rounded-full">
-                </div>
+                <div class="absolute bottom-0 left-0 border-t-2 border-myGray border-dotted w-full"></div>
+                <div class="absolute top-56 left-0 border-t-2 border-myGray border-dotted w-full"></div>
+                <div class="absolute top-72 left-0 border-t-2 border-myGray border-dotted w-full"></div>
+                <div class="absolute top-64 left-0 border-t-2 border-myGray border-dotted w-full"></div>
+                <div class="absolute top-80 left-0 border-t-2 border-myGray border-dotted w-full"></div> -->
+
+                <img src="assets/img/avtar/avtar_4.png" alt="my" class="absolute bottom-0 left-1/3">
                 <div data-scroll data-scroll-speed="1"
                     class="absolute lg:top-96 top-10 left-20 lg:left-40  bg-myGray/50 py-3 px-5 text-myWhite font-bold rounded-full backdrop-blur-sm w-auto">
                     TailwindCss
@@ -460,7 +375,7 @@
                     Laravel
                 </div>
                 <div data-scroll data-scroll-speed="1"
-                    class="absolute lg:top-1/3 top-40 right-2/6 lg:right-1/2  bg-myGray/50  py-3 px-5 text-myWhite font-bold rounded-full backdrop-blur-sm">
+                    class="absolute lg:top-1/3 top-40 right-2/6 lg:right-1/3  bg-myGray/50  py-3 px-5 text-myWhite font-bold rounded-full backdrop-blur-sm">
                     WordPress
                 </div>
                 <div data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"
@@ -468,7 +383,7 @@
                     Figma
                 </div>
                 <div data-scroll data-scroll-speed="1"
-                    class="absolute lg:top-1/2 top-6 right-6 lg:right-1/2  bg-myGray/50  py-3 px-5 text-myWhite font-bold rounded-full backdrop-blur-sm">
+                    class="absolute lg:top-1/2 top-6 right-6 lg:right-1/3  bg-myGray/50  py-3 px-5 text-myWhite font-bold rounded-full backdrop-blur-sm">
                     PHP
                 </div>
                 <div data-scroll data-scroll-speed="2"
@@ -491,7 +406,7 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="flex justify-center items-center h-full text-center">
+                <div class="flex justify-center mt-10 h-full text-center">
                     <h1 class="text-2xl font-bold tracking-tight text-myGray dark:text-white sm:text-6xl font-pano ">
                         3+ YEARS OF <br>
                         EXPERIENCE IN <br>
@@ -2704,10 +2619,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>;
 
+    <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="assets/js/script.js"></script>
 
 </body>
 
