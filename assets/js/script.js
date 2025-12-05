@@ -32,6 +32,9 @@ if (localStorage.getItem("dark-mode") === "true") {
 toggleButton.addEventListener("click", () => {
   bodyElement.classList.toggle("dark");
   localStorage.setItem("dark-mode", bodyElement.classList.contains("dark"));
+  setTimeout(() => {
+    window.location.reload();
+  }, 150);
 });
 
 const items = document.querySelectorAll(".drag-item");
@@ -305,16 +308,122 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastY = 0;
 
   scroll.on("scroll", (args) => {
-    const currentY = args.scroll.y; // IMPORTANT: window.pageYOffset nahi, ye use karo
+    const currentY = args.scroll.y;
 
     if (currentY > lastY && currentY > 80) {
-      // Scroll down → navbar hide
-      navbar.classList.add("-translate-y-full");
+      // Scroll down → hide
+      navbar.style.transform = "translateY(-150%)";
     } else {
-      // Scroll up → navbar show
-      navbar.classList.remove("-translate-y-full");
+      // Scroll up → show
+      navbar.style.transform = "translateY(0)";
     }
 
     lastY = currentY;
   });
 });
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let width,
+  height,
+  particles = [];
+const spacing = 40,
+  spotlightRadius = 300;
+const mouse = { x: -1000, y: -1000 };
+let particleColor = "0, 0, 0";
+function updateColors() {
+  particleColor = document.body.classList.contains("dark")
+    ? "255, 255, 255"
+    : "0, 0, 0";
+}
+class Particle {
+  constructor(originX, originY) {
+    this.originX = originX;
+    this.originY = originY;
+    this.x = originX;
+    this.y = originY;
+    this.baseSize = 2;
+    this.floatOffset = Math.random() * Math.PI * 2;
+    this.floatSpeed = 0.001 + Math.random() * 0.002;
+    this.floatRange = 3 + Math.random() * 3;
+    this.blinkOffset = Math.random() * Math.PI * 2;
+    this.shapeOffset = Math.random() * Math.PI * 2;
+    this.blinkSpeed = 0.002 + Math.random() * 0.003;
+    this.shapeSpeed = 0.002 + Math.random() * 0.003;
+  }
+  update(time) {
+    this.x =
+      this.originX +
+      Math.sin(time * this.floatSpeed + this.floatOffset) * this.floatRange;
+    this.y =
+      this.originY +
+      Math.cos(time * this.floatSpeed + this.floatOffset) * this.floatRange;
+  }
+  draw(time) {
+    const dx = mouse.x - this.x,
+      dy = mouse.y - this.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    if (dist < spotlightRadius) {
+      const fade = 1 - dist / spotlightRadius;
+      const blink =
+        0.3 +
+        0.7 * Math.abs(Math.sin(time * this.blinkSpeed + this.blinkOffset));
+      const opacity = fade * blink;
+      const shapePulse =
+        1 + 0.5 * Math.sin(time * this.shapeSpeed + this.shapeOffset);
+      const currentSize = this.baseSize * shapePulse;
+      ctx.fillStyle = `rgba(${particleColor}, ${opacity})`;
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.rotate(time * 0.001 + this.shapeOffset);
+      const w = currentSize * (1 + 0.3 * Math.sin(time * 0.005));
+      const h = currentSize * (1 + 0.3 * Math.cos(time * 0.005));
+      ctx.beginPath();
+      ctx.fillRect(-w / 2, -h / 2, w, h);
+      ctx.restore();
+    }
+  }
+}
+function init() {
+  resize();
+  updateColors();
+  window.addEventListener("resize", resize);
+  window.addEventListener("mousemove", (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+  requestAnimationFrame(animate);
+}
+function resize() {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
+  createParticles();
+}
+function createParticles() {
+  particles = [];
+  const centerX = width / 2;
+  const centerY = height / 2;
+  const maxRadius = Math.sqrt(width * width + height * height) / 2 + spacing;
+  for (let r = 0; r < maxRadius; r += spacing) {
+    const circumference = 2 * Math.PI * r;
+    let particleCount = Math.floor(circumference / spacing);
+    if (r === 0) particleCount = 1;
+    for (let i = 0; i < particleCount; i++) {
+      const angle = (i / particleCount) * Math.PI * 2;
+      const x = centerX + Math.cos(angle) * r;
+      const y = centerY + Math.sin(angle) * r;
+      particles.push(new Particle(x, y));
+    }
+  }
+}
+function animate(time) {
+  ctx.clearRect(0, 0, width, height);
+  particles.forEach((p) => {
+    p.update(time);
+    p.draw(time);
+  });
+  requestAnimationFrame(animate);
+}
+init();
