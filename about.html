@@ -17,9 +17,10 @@
 <body class="">
 
     <!-- header  -->
-    <div class="fixed top-6 left-0 w-full h-16 z-50  transform transition-transform duration-300 " id="navbar">
+    <div class="fixed lg:top-4 top-2 left-0 w-full lg:h-16 h-12 z-50  transform transition-transform duration-300"
+        id="navbar">
         <div
-            class="mx-auto flex max-w-xl backdrop-blur-md px-4 text-white border-4 border-black dark:border-white rounded-full items-center justify-between p-3">
+            class="mx-auto flex lg:max-w-xl w-1/2 backdrop-blur-md lg:p-4 p-2 text-white border-4 border-black dark:border-white rounded-full items-center justify-between">
             <div class="inline-flex items-center relative">
                 <img src="assets/img/avtar/icon.png" alt class="w-10 z-10 border-2 rounded-full">
             </div>
@@ -45,6 +46,52 @@
                     </li>
                 </ul>
             </div>
+            <div id="mobileMenu"
+                class="fixed top-20 left-0 w-full  bg-white dark:bg-myGray backdrop-blur-md border border-white/30 dark:border-white/10   text-myGray dark:text-white p-4 rounded-3xl z-40 opacity-0 scale-90 pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">
+                <ul class="flex flex-col gap-1 font-semibold text-lg">
+                    <a class="w-full p-2 rounded-xl" href="index.html">Home</a>
+                    <a class="w-full p-2 rounded-xl" href="about.html">About</a>
+                    <a class="w-full p-2 rounded-xl" href="component.html">Components</a>
+
+                    <button id="darkModeToggleMobile"
+                        class="bg-myGray dark:bg-myWhite text-myWhite p-1 rounded-full group block">
+                        <div class="dark:hidden">
+                            <svg class="w-7 h-7 transition-transform duration-300 group-hover:rotate-90"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M12 16C9.7944 16 8 14.2056 8 12C8 9.7944 9.7944 8 12 8C14.2056 8 16 9.7944 16 12C16 14.2056 14.2056 16 12 16Z"
+                                        stroke="#fff"></path>
+                                    <path d="M12 3.5V5.5" stroke="#fff" stroke-linecap="round"></path>
+                                    <path d="M20.5 12H18.5" stroke="#fff" stroke-linecap="round"></path>
+                                    <path d="M5.5 12H3.5" stroke="#fff" stroke-linecap="round"></path>
+                                    <path d="M12 18.5V20.5" stroke="#fff" stroke-linecap="round"></path>
+                                    <path d="M16.5 7.5L18 6" stroke="#fff" stroke-linecap="round"></path>
+                                    <path d="M6 18L7.5 16.5" stroke="#fff" stroke-linecap="round"></path>
+                                    <path d="M6 6L7.5 7.5" stroke="#fff" stroke-linecap="round"></path>
+                                    <path d="M16.5 16.5L18 18" stroke="#fff" stroke-linecap="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="dark:block hidden">
+                            <svg fill="#000000" class="w-6 h-6 transition-transform duration-300 group-hover:rotate-90"
+                                viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>moon</title>
+                                    <path
+                                        d="M29.223 24.178l-0.021-0.057c-0.116-0.274-0.383-0.463-0.694-0.463-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002c-1.272 0.542-2.752 0.857-4.306 0.857-6.213 0-11.25-5.037-11.25-11.25 0-4.66 2.833-8.658 6.871-10.366l0.074-0.028 0.211-0.089c0.267-0.118 0.45-0.381 0.45-0.687 0-0.375-0.276-0.686-0.635-0.74l-0.004-0.001c-0.653-0.103-1.407-0.161-2.174-0.161-8.145 0-14.748 6.603-14.748 14.748s6.603 14.748 14.748 14.748c4.748 0 8.973-2.244 11.67-5.73l0.025-0.034c0.097-0.125 0.155-0.285 0.155-0.458 0-0.127-0.031-0.246-0.086-0.351l0.002 0.004zM22.518 28.24c-1.497 0.637-3.238 1.007-5.066 1.007-7.317 0-13.249-5.932-13.249-13.249 0-7.074 5.543-12.853 12.523-13.23l0.034-0.001c-3.395 2.326-5.594 6.183-5.594 10.554 0 7.043 5.709 12.752 12.752 12.752 0.85 0 1.681-0.083 2.485-0.242l-0.081 0.013c-1.081 0.976-2.339 1.783-3.716 2.364l-0.087 0.033z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </button>
+                </ul>
+            </div>
+
             <div class="hidden lg:block">
                 <button id="darkModeToggle" class="bg-myGray dark:bg-myWhite text-myWhite p-1 rounded-full group ">
                     <div class="dark:hidden">
@@ -83,7 +130,7 @@
                 </button>
 
             </div>
-            <div class="lg:hidden">
+            <div class="lg:hidden text-myGray dark:text-myWhite" id="hamburgerBtn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="h-6 w-6 cursor-pointer">
@@ -102,23 +149,21 @@
             <div class="mx-auto max-w-7xl lg:px-8">
                 <div class="flex flex-col justify-center px-4 py-10 lg:px-6">
                     <div class="inline-flex items-center">
-                        <svg width="40" height="46" viewBox="0 0 50 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M23.2732 0.2528C20.8078 1.18964 2.12023 12.2346 1.08477 13.3686C0 14.552 0 14.7493 0 27.7665C0 39.6496 0.0986153 41.1289 0.83823 42.0164C2.12023 43.5449 23.2239 55.4774 24.6538 55.5267C25.9358 55.576 46.1027 44.3832 48.2229 42.4602C49.3077 41.474 49.3077 41.3261 49.3077 27.8158C49.3077 14.3055 49.3077 14.1576 48.2229 13.1714C46.6451 11.7415 27.1192 0.450027 25.64 0.104874C24.9497 -0.0923538 23.9142 0.00625992 23.2732 0.2528ZM20.2161 21.8989C20.2161 22.4906 18.9835 23.8219 17.0111 25.3997C15.2361 26.7803 13.8061 27.9637 13.8061 28.0623C13.8061 28.1116 15.2361 29.0978 16.9618 30.2319C18.6876 31.3659 20.2655 32.6479 20.4134 33.0917C20.8078 34.0286 19.871 35.2119 18.8355 35.2119C17.8001 35.2119 9.0233 29.3936 8.67815 28.5061C8.333 27.6186 9.36846 26.5338 14.3485 22.885C17.6521 20.4196 18.4904 20.0252 19.2793 20.4196C19.7724 20.7155 20.2161 21.3565 20.2161 21.8989ZM25.6893 27.6679C23.4211 34.9161 23.0267 35.7543 22.1391 34.8668C21.7447 34.4723 22.1391 32.6479 23.6677 27.9637C26.2317 20.321 26.5275 19.6307 27.2671 20.3703C27.6123 20.7155 27.1685 22.7864 25.6893 27.6679ZM36.0932 23.2302C40.6788 26.2379 41.3198 27.0269 40.3337 28.1609C39.1503 29.5909 31.6555 35.2119 30.9159 35.2119C29.9298 35.2119 28.9436 33.8806 29.2394 33.0424C29.3874 32.6479 30.9652 31.218 32.7403 29.8867L35.9946 27.4706L32.5431 25.1532C30.6201 23.9205 29.0915 22.7371 29.0915 22.5892C29.0915 21.7509 30.2256 20.4196 30.9159 20.4196C31.3597 20.4196 33.6771 21.7016 36.0932 23.2302Z"
-                                fill="black"></path>
-                        </svg>
-                        <span class="ml-4 text-2xl font-bold">DevUI</span>
+                        <img src="assets/img/avtar/icon.png" alt class="w-10 z-10 border-2 rounded-full">
+
+                        <span class="ml-4 text-2xl font-bold text-myGray dark:text-myWhite">Syed FAiz</span>
                     </div>
                     <div class="mt-10 flex max-w-max items-center space-x-2 rounded-full border p-2">
-                        <p class="text-xs font-medium md:text-sm">
+                        <p class="text-xs font-medium md:text-sm text-myGray dark:text-myWhite">
                             Lorem ipsum dolor sit amet consectetur.
                             <span class="ml-2 cursor-pointer font-bold">Read More →</span>
                         </p>
                     </div>
-                    <h1 class="mt-8 max-w-4xl text-3xl font-bold tracking-tight text-black md:text-4xl lg:text-6xl">
+                    <h1
+                        class="mt-8 max-w-4xl text-3xl font-bold tracking-tight text-myGray dark:text-myWhite md:text-4xl lg:text-6xl">
                         People who really cares about your business
                     </h1>
-                    <p class="mt-8 max-w-3xl text-lg text-gray-700">
+                    <p class="mt-8 max-w-3xl text-lg text-myGray dark:text-myWhite">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsam
                         nulla aperiam quo possimus, nihil molestiae modi tenetur esse qui
                         repudiandae cum fuga aspernatur ea?
@@ -132,8 +177,7 @@
                 </div>
                 <div class="rounded-lg bg-gray-200 p-4">
                     <img class="aspect-[3/2] w-full rounded-lg bg-gray-50 object-cover lg:aspect-auto lg:h-[400px]"
-                        src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc1fHx0ZWFtfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
-                        alt="" />
+                        src="assets/img/about.jpeg" alt="" />
                 </div>
             </div>
         </div>
@@ -142,10 +186,12 @@
             <div class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center">
                 <div
                     class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-myGray dark:text-myWhite">Before
+                        they sold out
                         <br class="hidden lg:inline-block">readymade gluten
                     </h1>
-                    <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
+                    <p class="mb-8 leading-relaxed text-myGray dark:text-myWhite">Copper mug try-hard pitchfork
+                        pour-over freegan heirloom neutra air
                         plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot
                         chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
                     <div class="flex justify-center">
@@ -156,22 +202,20 @@
                     </div>
                 </div>
                 <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                    <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+                    <img class="object-cover object-center rounded" alt="hero" src="assets/img/about_1.jpeg">
                 </div>
             </div>
         </div>
         <div class="pb-10">
             <div class="flex gap-10">
                 <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex justify-end items-end">
-                    <img class="object-cover object-center rounded w-9/12" alt="hero"
-                        src="https://dummyimage.com/720x600">
+                    <img class="object-cover object-center rounded w-9/12" alt="hero" src="assets/img/about_3.jpeg">
                 </div>
                 <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                    <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+                    <img class="object-cover object-center rounded" alt="hero" src="assets/img/about_4.jpeg">
                 </div>
                 <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                    <img class="object-cover object-center rounded w-4/6" alt="hero"
-                        src="https://dummyimage.com/720x600">
+                    <img class="object-cover object-center rounded w-4/6" alt="hero" src="assets/img/about_5.jpeg">
                 </div>
             </div>
         </div>

@@ -22,19 +22,44 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 // JavaScript for toggling dark mode with persistence
-const toggleButton = document.getElementById("darkModeToggle");
-const bodyElement = document.body;
+// const toggleButton = document.getElementById("darkModeToggle");
+// const bodyElement = document.body;
 
+// if (localStorage.getItem("dark-mode") === "true") {
+//   bodyElement.classList.add("dark");
+// }
+
+// toggleButton.addEventListener("click", () => {
+//   bodyElement.classList.toggle("dark");
+//   localStorage.setItem("dark-mode", bodyElement.classList.contains("dark"));
+//   setTimeout(() => {
+//     window.location.reload();
+//   }, 150);
+// });
+const bodyElement = document.body;
+const toggleButtons = document.querySelectorAll(
+  "#darkModeToggle, #darkModeToggleMobile"
+);
+
+// Apply saved theme on load
 if (localStorage.getItem("dark-mode") === "true") {
   bodyElement.classList.add("dark");
 }
 
-toggleButton.addEventListener("click", () => {
+// Function to toggle theme
+function toggleDarkMode() {
   bodyElement.classList.toggle("dark");
   localStorage.setItem("dark-mode", bodyElement.classList.contains("dark"));
+
+  // smooth reload for icon animation + theme apply
   setTimeout(() => {
     window.location.reload();
   }, 150);
+}
+
+// Add click event on both buttons
+toggleButtons.forEach((btn) => {
+  if (btn) btn.addEventListener("click", toggleDarkMode);
 });
 
 const items = document.querySelectorAll(".drag-item");
@@ -427,3 +452,36 @@ function animate(time) {
   requestAnimationFrame(animate);
 }
 init();
+
+// menu
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const icon = hamburgerBtn.querySelector("svg");
+
+let isOpen = false;
+
+const openMenu = () => {
+  mobileMenu.style.opacity = "1";
+  mobileMenu.style.transform = "scale(1)";
+  mobileMenu.style.pointerEvents = "auto";
+  icon.innerHTML = `
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+        `;
+};
+
+const closeMenu = () => {
+  mobileMenu.style.opacity = "0";
+  mobileMenu.style.transform = "scale(0.95)";
+  mobileMenu.style.pointerEvents = "none";
+  icon.innerHTML = `
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+        `;
+};
+
+hamburgerBtn.addEventListener("click", () => {
+  isOpen ? closeMenu() : openMenu();
+  isOpen = !isOpen;
+});
