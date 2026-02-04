@@ -60,7 +60,7 @@ var swiper = new Swiper(".mySwiperAbout", {
 // });
 const bodyElement = document.body;
 const toggleButtons = document.querySelectorAll(
-  "#darkModeToggle, #darkModeToggleMobile"
+  "#darkModeToggle, #darkModeToggleMobile",
 );
 
 // Apply saved theme on load
@@ -508,3 +508,134 @@ hamburgerBtn.addEventListener("click", () => {
   isOpen = !isOpen;
 });
 //
+
+/* ================= DATA ================= */
+const skills = {
+  frontend: {
+    icon: "⚛️",
+    title: "Frontend Development",
+    desc: "React ecosystem mein expert hoon — complex UIs banana mera passion hai.",
+    tools: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    fun: "Maine 40+ React projects deliver kiye hain! 🚀",
+  },
+  backend: {
+    icon: "🖥️",
+    title: "Backend Development",
+    desc: "Scalable APIs aur databases pe strong grip.",
+    tools: ["Node.js", "Express", "PostgreSQL", "MongoDB", "GraphQL"],
+    fun: "REST aur GraphQL dono aate hain 💪",
+  },
+  design: {
+    icon: "🎨",
+    title: "UI/UX Design",
+    desc: "Pixel-perfect aur user-first design banata hoon.",
+    tools: ["Figma", "Adobe XD", "Framer", "Design Systems"],
+    fun: "Design sirf dikhta nahi, feel hota hai 🎨",
+  },
+  database: {
+    icon: "💾",
+    title: "Database Management",
+    desc: "SQL aur NoSQL dono mein expert hoon.",
+    tools: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "Supabase"],
+    fun: "Data modeling mein maza aata hai 📊",
+  },
+  cloud: {
+    icon: "☁️",
+    title: "Cloud & DevOps",
+    desc: "AWS certified hoon — CI/CD aur infra handle karta hoon.",
+    tools: ["AWS", "Docker", "GitHub Actions", "Vercel", "Terraform"],
+    fun: "Deployment se darr nahi lagta 😎",
+  },
+  performance: {
+    icon: "⚡",
+    title: "Performance Optimization",
+    desc: "Slow apps se nafrat hai mujhe!",
+    tools: ["Lighthouse", "Web Vitals", "Bundle Analysis", "Caching"],
+    fun: "100 Lighthouse score possible hai ⚡",
+  },
+};
+
+const tabs = document.getElementById("tabs");
+const mobileDrop = document.getElementById("mobileDropdown");
+const mobileBtn = document.getElementById("mobileBtn");
+const mobileArrow = document.getElementById("mobileArrow");
+const mobileIcon = document.getElementById("mobileIcon");
+const mobileTitle = document.getElementById("mobileTitle");
+const detail = document.getElementById("detailBox");
+
+let active = "frontend";
+
+/* render */
+Object.keys(skills).forEach((key) => {
+  const b = document.createElement("button");
+  b.className = "skill-tab";
+  b.dataset.key = key;
+  b.innerHTML = `<div class="icon-box">${skills[key].icon}</div>
+               <span class="font-semibold">${skills[key].title}</span>
+               <span class="arrow">›</span>`;
+  b.onclick = () => setActive(key);
+  tabs.appendChild(b);
+
+  const m = document.createElement("button");
+  m.className = "w-full flex gap-4 p-4 hover:bg-green-50";
+  m.innerHTML = `<div class="icon-box">${skills[key].icon}</div><span>${skills[key].title}</span>`;
+  m.onclick = () => {
+    setActive(key);
+    toggleDrop(false);
+  };
+  mobileDrop.appendChild(m);
+});
+
+function setActive(key) {
+  active = key;
+  document
+    .querySelectorAll(".skill-tab")
+    .forEach((b) => b.classList.toggle("active", b.dataset.key === key));
+  mobileIcon.innerText = skills[key].icon;
+  mobileTitle.innerText = skills[key].title;
+  document.getElementById("skillIcon").innerText = skills[key].icon;
+  document.getElementById("skillTitle").innerText = skills[key].title;
+  document.getElementById("skillDesc").innerText = skills[key].desc;
+  document.getElementById("funText").innerText = `"${skills[key].fun}"`;
+  const tools = document.getElementById("tools");
+  tools.innerHTML = "";
+  skills[key].tools.forEach((t, i) => {
+    const s = document.createElement("span");
+    s.className = "tool-pill";
+    s.innerText = t;
+    s.dataset.dir = i % 2 ? 1 : -1;
+    tools.appendChild(s);
+  });
+}
+
+function toggleDrop(force) {
+  const open = force ?? mobileDrop.classList.contains("hidden");
+  mobileDrop.classList.toggle("hidden", !open);
+  mobileArrow.style.transform = open ? "rotate(180deg)" : "rotate(0deg)";
+}
+
+mobileBtn.onclick = () => toggleDrop();
+setActive(active);
+
+/* tilt */
+detail.addEventListener("mousemove", (e) => {
+  const r = detail.getBoundingClientRect();
+  const x = (e.clientX - r.left - r.width / 2) / 25;
+  const y = (e.clientY - r.top - r.height / 2) / 25;
+  detail.style.transform = `perspective(1200px) rotateY(${x}deg) rotateX(${-y}deg)`;
+  document.querySelectorAll(".tool-pill").forEach((p) => {
+    const d = p.dataset.dir || 1;
+    p.style.transform = `translate(${x * d}px,${y * -d}px)`;
+  });
+});
+detail.addEventListener("mouseleave", () => {
+  detail.style.transform = "none";
+  document
+    .querySelectorAll(".tool-pill")
+    .forEach((p) => (p.style.transform = "translate(0,0)"));
+});
+
+/* scroll */
+window.addEventListener("scroll", () => {
+  detail.classList.toggle("glass-scrolled", window.scrollY > 120);
+});
