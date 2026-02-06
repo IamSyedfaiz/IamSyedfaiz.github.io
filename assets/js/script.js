@@ -60,7 +60,7 @@ var swiper = new Swiper(".mySwiperAbout", {
 // });
 const bodyElement = document.body;
 const toggleButtons = document.querySelectorAll(
-  "#darkModeToggle, #darkModeToggleMobile"
+  "#darkModeToggle, #darkModeToggleMobile",
 );
 
 // Apply saved theme on load
@@ -74,9 +74,9 @@ function toggleDarkMode() {
   localStorage.setItem("dark-mode", bodyElement.classList.contains("dark"));
 
   // smooth reload for icon animation + theme apply
-  setTimeout(() => {
-    window.location.reload();
-  }, 150);
+  // setTimeout(() => {
+  //   window.location.reload();
+  // }, 150);
 }
 
 // Add click event on both buttons
@@ -369,6 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// canvas
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 let width,
@@ -474,7 +475,7 @@ function animate(time) {
   requestAnimationFrame(animate);
 }
 init();
-
+// canvas
 // menu
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -508,3 +509,140 @@ hamburgerBtn.addEventListener("click", () => {
   isOpen = !isOpen;
 });
 //
+
+/* ================= DATA ================= */
+const skills = {
+  frontend: {
+    icon: "⚛️",
+    title: "Frontend Development",
+    desc: "I specialize in building scalable, high-performance user interfaces using the modern React ecosystem, with a strong focus on usability and clean architecture.",
+    tools: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    fun: "Proven track record of delivering high-quality, production-ready React applications 🚀",
+  },
+
+  backend: {
+    icon: "🖥️",
+    title: "Backend Development",
+    desc: "Experienced in designing secure, scalable, and maintainable backend systems, APIs, and data-driven architectures.",
+    tools: ["Node.js", "Express", "PostgreSQL", "MongoDB", "GraphQL"],
+    fun: "Comfortable with both RESTful and GraphQL-based architectures 💪",
+  },
+
+  design: {
+    icon: "🎨",
+    title: "UI / UX Design",
+    desc: "I design intuitive, user-centric interfaces that balance aesthetics with functionality, ensuring a seamless digital experience.",
+    tools: ["Figma", "Adobe XD", "Framer", "Design Systems"],
+    fun: "Strong belief: great design is not just seen — it’s experienced 🎨",
+  },
+
+  database: {
+    icon: "💾",
+    title: "Database Management",
+    desc: "Proficient in relational and NoSQL databases, with expertise in data modeling, optimization, and performance tuning.",
+    tools: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "Supabase"],
+    fun: "I enjoy designing efficient data models and query optimizations 📊",
+  },
+
+  cloud: {
+    icon: "☁️",
+    title: "Cloud & DevOps",
+    desc: "Skilled in cloud infrastructure and DevOps workflows, focusing on automation, reliability, and scalable deployments.",
+    tools: ["AWS", "Docker", "GitHub Actions", "Vercel", "Terraform"],
+    fun: "Deployment challenges don’t scare me anymore 😎",
+  },
+
+  performance: {
+    icon: "⚡",
+    title: "Performance Optimization",
+    desc: "Dedicated to improving application speed, responsiveness, and Core Web Vitals through proven optimization techniques.",
+    tools: ["Lighthouse", "Web Vitals", "Bundle Analysis", "Caching"],
+    fun: "Achieving near-perfect Lighthouse scores is always the goal ⚡",
+  },
+};
+
+const tabs = document.getElementById("tabs");
+const mobileDrop = document.getElementById("mobileDropdown");
+const mobileBtn = document.getElementById("mobileBtn");
+const mobileArrow = document.getElementById("mobileArrow");
+const mobileIcon = document.getElementById("mobileIcon");
+const mobileTitle = document.getElementById("mobileTitle");
+const detail = document.getElementById("detailBox");
+
+let active = "frontend";
+
+/* render */
+Object.keys(skills).forEach((key) => {
+  const b = document.createElement("button");
+  b.className =
+    "skill-tab border dark:border-gray-600 flex px-5 py-8 gap-8 justify-between w-full rounded-3xl dark:bg-myGray dark:text-white";
+  b.dataset.key = key;
+  b.innerHTML = `<div class="flex gap-3"><div class="icon-box">${skills[key].icon}</div>
+               <span class="font-semibold text-left">${skills[key].title}</span></div>
+               <span class="arrow">›</span>`;
+  b.onclick = () => setActive(key);
+  tabs.appendChild(b);
+
+  const m = document.createElement("button");
+  m.className = "w-full flex gap-4 p-4 hover:bg-green-500";
+  m.innerHTML = `<div class="icon-box">${skills[key].icon}</div><span>${skills[key].title}</span>`;
+  m.onclick = () => {
+    setActive(key);
+    toggleDrop(false);
+  };
+  mobileDrop.appendChild(m);
+});
+
+function setActive(key) {
+  active = key;
+  document
+    .querySelectorAll(".skill-tab")
+    .forEach((b) => b.classList.toggle("active", b.dataset.key === key));
+  mobileIcon.innerText = skills[key].icon;
+  mobileTitle.innerText = skills[key].title;
+  document.getElementById("skillIcon").innerText = skills[key].icon;
+  document.getElementById("skillTitle").innerText = skills[key].title;
+  document.getElementById("skillDesc").innerText = skills[key].desc;
+  document.getElementById("funText").innerText = `"${skills[key].fun}"`;
+  const tools = document.getElementById("tools");
+  tools.innerHTML = "";
+  skills[key].tools.forEach((t, i) => {
+    const s = document.createElement("span");
+    s.className = "tool-pill bg-green-100 rounded-3xl px-3 py-2";
+    s.innerText = t;
+    s.dataset.dir = i % 2 ? 1 : -1;
+    tools.appendChild(s);
+  });
+}
+
+function toggleDrop(force) {
+  const open = force ?? mobileDrop.classList.contains("hidden");
+  mobileDrop.classList.toggle("hidden", !open);
+  mobileArrow.style.transform = open ? "rotate(180deg)" : "rotate(0deg)";
+}
+
+mobileBtn.onclick = () => toggleDrop();
+setActive(active);
+
+/* tilt */
+detail.addEventListener("mousemove", (e) => {
+  const r = detail.getBoundingClientRect();
+  const x = (e.clientX - r.left - r.width / 2) / 25;
+  const y = (e.clientY - r.top - r.height / 2) / 25;
+  detail.style.transform = `perspective(1200px) rotateY(${x}deg) rotateX(${-y}deg)`;
+  document.querySelectorAll(".tool-pill").forEach((p) => {
+    const d = p.dataset.dir || 1;
+    p.style.transform = `translate(${x * d}px,${y * -d}px)`;
+  });
+});
+detail.addEventListener("mouseleave", () => {
+  detail.style.transform = "none";
+  document
+    .querySelectorAll(".tool-pill")
+    .forEach((p) => (p.style.transform = "translate(0,0)"));
+});
+
+/* scroll */
+window.addEventListener("scroll", () => {
+  detail.classList.toggle("glass-scrolled", window.scrollY > 120);
+});

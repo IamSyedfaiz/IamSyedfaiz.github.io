@@ -1,289 +1,384 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/output.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/css/output.css" rel="stylesheet" />
 
     <!-- Other head elements -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/avtar/icon.png">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/avtar/icon.png"
+    />
     <title>Div-zi</title>
     <!-- cd assets/js && npx tailwindcss -i ../css/input.css -o ../css/output.css --watch -->
 
     <style>
-        .my-div {
-            width: 50px;
-            /* Default width */
-            height: 200px;
-            background-color: lightgray;
-            margin-bottom: 10px;
-        }
+      .my-div {
+        width: 50px;
+        /* Default width */
+        height: 200px;
+        background-color: lightgray;
+        margin-bottom: 10px;
+      }
 
-        .my-button {
-            margin-right: 10px;
-        }
+      .my-button {
+        margin-right: 10px;
+      }
     </style>
-</head>
+  </head>
 
-
-<body class="bg-myWhite dark:bg-myGray ">
+  <body class="bg-myWhite dark:bg-myGray">
     <!-- header  -->
-    <div class="fixed lg:top-6 top-2 left-0 w-full lg:h-16 h-12 z-50  transform transition-transform duration-300"
-        id="navbar">
-        <div
-            class="mx-auto flex lg:max-w-xl w-1/2 backdrop-blur-md lg:p-4 p-2 text-white border-4 border-black dark:border-white rounded-full items-center justify-between">
-            <div class="inline-flex items-center relative">
-                <img src="assets/img/avtar/icon.png" alt class="w-10 z-10 border-2 rounded-full">
-            </div>
-            <div class="hidden grow items-start lg:flex">
-                <ul class="ml-12 inline-flex space-x-8">
-                    <li>
-                        <a href="index.html"
-                            class="text-sm font-semibold font-MaisonNeueExtended text-myGray dark:text-myWhite hover:text-myGray">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/about.html"
-                            class="text-sm font-semibold font-MaisonNeueExtended text-myGray dark:text-myWhite hover:text-myGray">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/component.html"
-                            class="text-sm font-semibold font-MaisonNeueExtended text-myGray dark:text-myWhite hover:text-myGray">
-                            Components
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div id="mobileMenu"
-                class="fixed top-20 left-0 w-full  bg-white dark:bg-myGray backdrop-blur-md border border-white/30 dark:border-white/10   text-myGray dark:text-white p-4 rounded-3xl z-40 opacity-0 scale-90 pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">
-                <ul class="flex flex-col gap-1 font-semibold text-lg">
-                    <a class="w-full p-2 rounded-xl" href="index.html">Home</a>
-                    <a class="w-full p-2 rounded-xl" href="about.html">About</a>
-                    <a class="bg-white/30 w-full p-2 rounded-xl" href="component.html">Components</a>
+    <nav
+      id="navbar"
+      class="fixed top-6 left-0 z-50 transition-all duration-500 w-full flex justify-center items-center"
+    >
+      <div
+        class="boreder-4 rounded-full w-[90%] border-emerald-600 max-w-4xl px-6 py-3 flex items-center backdrop-blur-md justify-between shadow-lg shadow-black/5"
+      >
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img
+            src="assets/img/avtar_11.png"
+            alt="Logo"
+            class="w-10 h-10 rounded-full object-cover border-2 border-primary/20 group-hover:scale-110 transition-transform"
+          />
+          <span
+            class="font-outfit font-bold text-xl tracking-tight hidden sm:block dark:text-white"
+            >Syed Faiz</span
+          >
+        </a>
 
-                    <button id="darkModeToggle"
-                        class="bg-myGray dark:bg-myWhite text-myWhite p-1 rounded-full group block">
-                        <div class="dark:hidden">
-                            <svg class="w-7 h-7 transition-transform duration-300 group-hover:rotate-90"
-                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path
-                                        d="M12 16C9.7944 16 8 14.2056 8 12C8 9.7944 9.7944 8 12 8C14.2056 8 16 9.7944 16 12C16 14.2056 14.2056 16 12 16Z"
-                                        stroke="#fff"></path>
-                                    <path d="M12 3.5V5.5" stroke="#fff" stroke-linecap="round"></path>
-                                    <path d="M20.5 12H18.5" stroke="#fff" stroke-linecap="round"></path>
-                                    <path d="M5.5 12H3.5" stroke="#fff" stroke-linecap="round"></path>
-                                    <path d="M12 18.5V20.5" stroke="#fff" stroke-linecap="round"></path>
-                                    <path d="M16.5 7.5L18 6" stroke="#fff" stroke-linecap="round"></path>
-                                    <path d="M6 18L7.5 16.5" stroke="#fff" stroke-linecap="round"></path>
-                                    <path d="M6 6L7.5 7.5" stroke="#fff" stroke-linecap="round"></path>
-                                    <path d="M16.5 16.5L18 18" stroke="#fff" stroke-linecap="round"></path>
-                                </g>
-                            </svg>
-                        </div>
-                        <div class="dark:block hidden">
-                            <svg fill="#000000" class="w-6 h-6 transition-transform duration-300 group-hover:rotate-90"
-                                viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <title>moon</title>
-                                    <path
-                                        d="M29.223 24.178l-0.021-0.057c-0.116-0.274-0.383-0.463-0.694-0.463-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002c-1.272 0.542-2.752 0.857-4.306 0.857-6.213 0-11.25-5.037-11.25-11.25 0-4.66 2.833-8.658 6.871-10.366l0.074-0.028 0.211-0.089c0.267-0.118 0.45-0.381 0.45-0.687 0-0.375-0.276-0.686-0.635-0.74l-0.004-0.001c-0.653-0.103-1.407-0.161-2.174-0.161-8.145 0-14.748 6.603-14.748 14.748s6.603 14.748 14.748 14.748c4.748 0 8.973-2.244 11.67-5.73l0.025-0.034c0.097-0.125 0.155-0.285 0.155-0.458 0-0.127-0.031-0.246-0.086-0.351l0.002 0.004zM22.518 28.24c-1.497 0.637-3.238 1.007-5.066 1.007-7.317 0-13.249-5.932-13.249-13.249 0-7.074 5.543-12.853 12.523-13.23l0.034-0.001c-3.395 2.326-5.594 6.183-5.594 10.554 0 7.043 5.709 12.752 12.752 12.752 0.85 0 1.681-0.083 2.485-0.242l-0.081 0.013c-1.081 0.976-2.339 1.783-3.716 2.364l-0.087 0.033z">
-                                    </path>
-                                </g>
-                            </svg>
-                        </div>
-                    </button>
-                </ul>
-            </div>
-
-            <div class="hidden lg:block">
-                <button id="darkModeToggle" class="bg-myGray dark:bg-myWhite text-myWhite p-1 rounded-full group ">
-                    <div class="dark:hidden">
-                        <svg class="w-7 h-7 transition-transform duration-300 group-hover:rotate-90" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M12 16C9.7944 16 8 14.2056 8 12C8 9.7944 9.7944 8 12 8C14.2056 8 16 9.7944 16 12C16 14.2056 14.2056 16 12 16Z"
-                                    stroke="#fff"></path>
-                                <path d="M12 3.5V5.5" stroke="#fff" stroke-linecap="round"></path>
-                                <path d="M20.5 12H18.5" stroke="#fff" stroke-linecap="round"></path>
-                                <path d="M5.5 12H3.5" stroke="#fff" stroke-linecap="round"></path>
-                                <path d="M12 18.5V20.5" stroke="#fff" stroke-linecap="round"></path>
-                                <path d="M16.5 7.5L18 6" stroke="#fff" stroke-linecap="round"></path>
-                                <path d="M6 18L7.5 16.5" stroke="#fff" stroke-linecap="round"></path>
-                                <path d="M6 6L7.5 7.5" stroke="#fff" stroke-linecap="round"></path>
-                                <path d="M16.5 16.5L18 18" stroke="#fff" stroke-linecap="round"></path>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="dark:block hidden">
-                        <svg fill="#000000" class="w-6 h-6 transition-transform duration-300 group-hover:rotate-90"
-                            viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <title>moon</title>
-                                <path
-                                    d="M29.223 24.178l-0.021-0.057c-0.116-0.274-0.383-0.463-0.694-0.463-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002c-1.272 0.542-2.752 0.857-4.306 0.857-6.213 0-11.25-5.037-11.25-11.25 0-4.66 2.833-8.658 6.871-10.366l0.074-0.028 0.211-0.089c0.267-0.118 0.45-0.381 0.45-0.687 0-0.375-0.276-0.686-0.635-0.74l-0.004-0.001c-0.653-0.103-1.407-0.161-2.174-0.161-8.145 0-14.748 6.603-14.748 14.748s6.603 14.748 14.748 14.748c4.748 0 8.973-2.244 11.67-5.73l0.025-0.034c0.097-0.125 0.155-0.285 0.155-0.458 0-0.127-0.031-0.246-0.086-0.351l0.002 0.004zM22.518 28.24c-1.497 0.637-3.238 1.007-5.066 1.007-7.317 0-13.249-5.932-13.249-13.249 0-7.074 5.543-12.853 12.523-13.23l0.034-0.001c-3.395 2.326-5.594 6.183-5.594 10.554 0 7.043 5.709 12.752 12.752 12.752 0.85 0 1.681-0.083 2.485-0.242l-0.081 0.013c-1.081 0.976-2.339 1.783-3.716 2.364l-0.087 0.033z">
-                                </path>
-                            </g>
-                        </svg>
-                    </div>
-                </button>
-
-            </div>
-            <div class="lg:hidden text-myGray dark:text-myWhite" id="hamburgerBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="h-6 w-6 cursor-pointer">
-                    <line x1="4" y1="12" x2="20" y2="12"></line>
-                    <line x1="4" y1="6" x2="20" y2="6"></line>
-                    <line x1="4" y1="18" x2="20" y2="18"></line>
-                </svg>
-            </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="index.html"
+            class="group text-sm font-medium dark:text-gray-300 transition-colors relative"
+            >Home
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+          <a
+            href="about.html"
+            class="group text-sm font-medium dark:text-myPurple transition-colors relative"
+          >
+            About
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+          <a
+            href="component.html"
+            class="group text-sm font-medium dark:text-gray-300 transition-colors relative"
+            >Components
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"
+            ></span
+          ></a>
         </div>
-    </div>
+
+        <div class="flex items-center gap-4">
+          <button
+            id="darkModeToggle"
+            class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors group"
+          >
+            <svg
+              class="w-6 h-6 dark:hidden block text-slate-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M16.071 16.071l.707.707M7.757 7.757l.707.707M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+            <svg
+              class="w-5 h-5 hidden dark:block text-yellow-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              />
+            </svg>
+          </button>
+
+          <button
+            id="hamburgerBtn"
+            class="md:hidden p-2 rounded-lg text-slate-700 dark:text-gray-300"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+
+          <a
+            href="#contact"
+            class="hidden sm:inline-flex items-center px-5 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-emerald-700 transition-all shadow-md shadow-primary/20"
+            >Let's Talk</a
+          >
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="absolute top-20 left-0 w-full rounded-3xl backdrop-blur-md p-6 opacity-0 scale-95 pointer-events-none transition-all duration-300 md:hidden"
+      >
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="text-lg font-semibold dark:text-white"
+            >Home</a
+          >
+          <a href="about.html" class="text-lg font-semibold dark:text-white"
+            >About</a
+          >
+          <a href="component.html" class="text-lg font-semibold dark:text-white"
+            >Components</a
+          >
+          <hr class="border-black/5 dark:border-white/5" />
+          <button
+            id="darkModeToggleMobile"
+            class="flex items-center justify-between w-full"
+          >
+            <span class="font-medium dark:text-white">Theme</span>
+            <div class="dark:hidden">☀️</div>
+            <div class="hidden dark:block">🌙</div>
+          </button>
+        </div>
+      </div>
+    </nav>
 
     <!-- header  -->
-    <div class="container2 mx-auto relative bg-myWhite dark:bg-myGray " data-scroll-container>
+    <div
+      class="container2 mx-auto relative bg-myWhite dark:bg-myGray"
+      data-scroll-container
+    >
+      <div id="component" class="flex flex-col pt-40 mx-10">
+        <div
+          class="relative flex flex-col h-full border border-gray-200 opacity-100 dark:border-gray-700 overflow-hidden rounded-lg"
+        >
+          <div
+            class="flex flex-col items-end justify-between p-2 pr-4 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800 sm:flex-row sm:items-center"
+          >
+            <div class="hidden xl:block">
+              <button
+                type="button"
+                id="btn50"
+                class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none active"
+              >
+                <svg
+                  width="8.57142857142857"
+                  height="24"
+                  viewBox="0 0 10 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="block mx-auto mb-1 fill-current"
+                >
+                  <path
+                    d="M1.5 12h7a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 8.5 28h-7A1.5 1.5 0 0 1 0 26.5v-13A1.5 1.5 0 0 1 1.5 12zM1 15v10h8V15H1zm4 12.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM4 13v1h2v-1H4z"
+                    fill-rule="evenodd"
+                  ></path></svg
+                >xs
+              </button>
+              <button
+                type="button"
+                id="btn60"
+                class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none"
+              >
+                <svg
+                  width="11.999999999999998"
+                  height="24"
+                  viewBox="0 0 14 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="block mx-auto mb-1 fill-current"
+                >
+                  <path
+                    d="M1.5 6h11A1.5 1.5 0 0 1 14 7.5v19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 0 26.5v-19A1.5 1.5 0 0 1 1.5 6zM1 9v16h12V9H1zm6 18.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"
+                    fill-rule="evenodd"
+                  ></path></svg
+                >sm
+              </button>
+              <button
+                type="button"
+                id="btn70"
+                class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none"
+              >
+                <svg
+                  width="22.28571428571428"
+                  height="24"
+                  viewBox="0 0 26 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="block mx-auto mb-1 fill-current"
+                >
+                  <path
+                    d="M26 26.5a1.5 1.5 0 0 1-1.5 1.5h-23A1.5 1.5 0 0 1 0 26.5v-14A1.5 1.5 0 0 1 1.5 11h23a1.5 1.5 0 0 1 1.5 1.5v14zm-3 .5V12H3v15h20zm1.5-6.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-23-.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"
+                    fill-rule="evenodd"
+                  ></path></svg
+                >md
+              </button>
+              <button
+                type="button"
+                id="btn80"
+                class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none"
+              >
+                <svg
+                  width="32.57142857142856"
+                  height="24"
+                  viewBox="0 0 38 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="block mx-auto mb-1 fill-current"
+                >
+                  <path
+                    d="M34 26h4v1c-1.333.667-2.667 1-4 1H4c-1.333 0-2.667-.333-4-1v-1h4V7.5A1.5 1.5 0 0 1 5.5 6h27A1.5 1.5 0 0 1 34 7.5V26zM6 8v18h26V8H6z"
+                    fill-rule="evenodd"
+                  ></path></svg
+                >lg
+              </button>
+              <button
+                type="button"
+                id="btn100"
+                class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none"
+              >
+                <svg
+                  width="30.85714285714285"
+                  height="24"
+                  viewBox="0 0 36 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="block mx-auto mb-1 fill-current"
+                >
+                  <path
+                    d="M20.857 24l.857 3H24v1H12v-1h2.286l.857-3H1.5A1.5 1.5 0 0 1 0 22.5v-21A1.5 1.5 0 0 1 1.5 0h33A1.5 1.5 0 0 1 36 1.5v21a1.5 1.5 0 0 1-1.5 1.5H20.857zM2 2v18h32V2H2z"
+                  ></path></svg
+                >xl
+              </button>
+            </div>
+            <div class="flex items-center space-x-2 sm:space-x-3">
+              <button
+                type="button"
+                id="toggleButton"
+                class="flex items-center px-4 py-2 space-x-3 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:text-gray-200 dark:border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"
+                onclick="toggleDivs()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  ></path>
+                </svg>
+                <span id="buttonText1" class="hidden md:inline">Show Code</span>
+              </button>
+              <button
+                type="button1"
+                class="px-4 py-2 text-gray-500 transition-colors duration-300 transform border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200 dark:border-gray-200 focus:outline-none focus:border-teal-500 focus:ring focus:ring-primary focus:ring-opacity-40"
+                id="copyButton"
+                data-tippy-content="Code Copied"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
 
-        <div id="component" class="flex flex-col pt-40 mx-10">
-            <div
-                class="relative flex flex-col h-full border border-gray-200 opacity-100 dark:border-gray-700 overflow-hidden rounded-lg">
+          <div
+            class="relative z-0 flex justify-center h-full overflow-hidden bg-gray-100"
+          >
+            <div class="border" id="divA">
+              <!-- section -->
+              <section class="body-font md:px-32" id="about">
                 <div
-                    class="flex flex-col items-end justify-between p-2 pr-4 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800 sm:flex-row sm:items-center">
-                    <div class="hidden xl:block">
-                        <button type="button" id="btn50"
-                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none  active">
-                            <svg width="8.57142857142857" height="24" viewBox="0 0 10 28"
-                                xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
-                                <path
-                                    d="M1.5 12h7a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 8.5 28h-7A1.5 1.5 0 0 1 0 26.5v-13A1.5 1.5 0 0 1 1.5 12zM1 15v10h8V15H1zm4 12.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM4 13v1h2v-1H4z"
-                                    fill-rule="evenodd"></path>
-                            </svg>xs
-                        </button>
-                        <button type="button" id="btn60"
-                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none ">
-                            <svg width="11.999999999999998" height="24" viewBox="0 0 14 28"
-                                xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
-                                <path
-                                    d="M1.5 6h11A1.5 1.5 0 0 1 14 7.5v19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 0 26.5v-19A1.5 1.5 0 0 1 1.5 6zM1 9v16h12V9H1zm6 18.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"
-                                    fill-rule="evenodd"></path>
-                            </svg>sm
-                        </button>
-                        <button type="button" id="btn70"
-                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none ">
-                            <svg width="22.28571428571428" height="24" viewBox="0 0 26 28"
-                                xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
-                                <path
-                                    d="M26 26.5a1.5 1.5 0 0 1-1.5 1.5h-23A1.5 1.5 0 0 1 0 26.5v-14A1.5 1.5 0 0 1 1.5 11h23a1.5 1.5 0 0 1 1.5 1.5v14zm-3 .5V12H3v15h20zm1.5-6.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-23-.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"
-                                    fill-rule="evenodd"></path>
-                            </svg>md
-                        </button>
-                        <button type="button" id="btn80"
-                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none ">
-                            <svg width="32.57142857142856" height="24" viewBox="0 0 38 28"
-                                xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
-                                <path
-                                    d="M34 26h4v1c-1.333.667-2.667 1-4 1H4c-1.333 0-2.667-.333-4-1v-1h4V7.5A1.5 1.5 0 0 1 5.5 6h27A1.5 1.5 0 0 1 34 7.5V26zM6 8v18h26V8H6z"
-                                    fill-rule="evenodd"></path>
-                            </svg>lg
-                        </button>
-                        <button type="button" id="btn100"
-                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none ">
-                            <svg width="30.85714285714285" height="24" viewBox="0 0 36 28"
-                                xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
-                                <path
-                                    d="M20.857 24l.857 3H24v1H12v-1h2.286l.857-3H1.5A1.5 1.5 0 0 1 0 22.5v-21A1.5 1.5 0 0 1 1.5 0h33A1.5 1.5 0 0 1 36 1.5v21a1.5 1.5 0 0 1-1.5 1.5H20.857zM2 2v18h32V2H2z">
-                                </path>
-                            </svg>xl
-                        </button>
+                  class="container mx-auto flex px-5 py-12 lg:flex-row flex-col items-center"
+                >
+                  <div
+                    class="boxZ lg:flex-grow w-full lg:w-1/2 lg:pr-36 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+                  >
+                    <h1
+                      class="title-font sm:text-3xl text-3xl mb-9 font-medium text-gray-900"
+                    >
+                      Lorem ipsum dolor sit amet consectetur dicta.
+                    </h1>
+                    <p x-show="!openReadMore" class="leading-relaxed text-read">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque cupiditate magni quas fugiat aperiam repudiandae
+                      nostrum, alias, animi consectetur porro necessitatibus
+                      tempore soluta dolores ut atque corporis aliquam
+                      distinctio, ullam excepturi quidem! Exercitationem
+                      quibusdam cum sunt voluptatibus saepe, minus maiores alias
+                      neque assumenda, incidunt aliquam labore! Aperiam, veniam
+                      accusantium! Qui.
+                    </p>
+                  </div>
+                  <div
+                    class="lg:perspect lg:max-w-lg mt-10 lg:mt-0 lg:w-1/2 relative w-72 left-10 -z-10"
+                  >
+                    <img
+                      class="object-cover lg:rota object-center rounded-2xl -left-20 shadow-xl"
+                      alt="hero"
+                      src="https://dummyimage.com/600x400"
+                    />
+                    <div
+                      class="lg:perspect1 w-full h-full -left-20 top-0 absolute -z-50"
+                    >
+                      <div
+                        class="lg:toro bg-gray-400 rounded-xl w-full h-full border-b-2 border-gray-400 shadow-xl"
+                      ></div>
                     </div>
-                    <div class="flex items-center space-x-2 sm:space-x-3">
-                        <button type="button" id="toggleButton"
-                            class="flex items-center px-4 py-2 space-x-3 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:text-gray-200 dark:border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"
-                            onclick="toggleDivs()">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                </path>
-                            </svg>
-                            <span id="buttonText1" class="hidden md:inline">Show Code</span>
-                        </button>
-                        <button type="button1"
-                            class="px-4 py-2 text-gray-500 transition-colors duration-300 transform border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200 dark:border-gray-200 focus:outline-none focus:border-teal-500 focus:ring focus:ring-primary focus:ring-opacity-40"
-                            id="copyButton" data-tippy-content="Code Copied">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
+                  </div>
                 </div>
-
-                <div class="relative z-0 flex justify-center h-full overflow-hidden bg-gray-100">
-                    <div class="border" id="divA">
-                        <!-- section -->
-                        <section class=" body-font md:px-32" id="about">
-                            <div class="container mx-auto flex px-5 py-12 lg:flex-row flex-col items-center ">
-                                <div
-                                    class="boxZ lg:flex-grow w-full lg:w-1/2 lg:pr-36 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                                    <h1 class="title-font sm:text-3xl text-3xl mb-9 font-medium text-gray-900">Lorem
-                                        ipsum
-                                        dolor sit
-                                        amet consectetur dicta.
-                                    </h1>
-                                    <p x-show="!openReadMore" class=" leading-relaxed text-read">Lorem, ipsum dolor sit
-                                        amet
-                                        consectetur
-                                        adipisicing elit. Cumque cupiditate magni quas fugiat aperiam repudiandae
-                                        nostrum,
-                                        alias, animi
-                                        consectetur porro necessitatibus tempore soluta dolores ut atque corporis
-                                        aliquam
-                                        distinctio,
-                                        ullam excepturi quidem! Exercitationem quibusdam cum sunt voluptatibus saepe,
-                                        minus
-                                        maiores
-                                        alias neque assumenda, incidunt aliquam labore! Aperiam, veniam accusantium!
-                                        Qui.
-                                    </p>
-                                </div>
-                                <div class="lg:perspect lg:max-w-lg mt-10 lg:mt-0 lg:w-1/2 relative w-72 left-10 -z-10">
-                                    <img class="object-cover lg:rota object-center rounded-2xl -left-20 shadow-xl"
-                                        alt="hero" src="https://dummyimage.com/600x400">
-                                    <div class="lg:perspect1 w-full  h-full -left-20 top-0 absolute -z-50">
-                                        <div
-                                            class="lg:toro bg-gray-400 rounded-xl w-full h-full border-b-2 border-gray-400 shadow-xl">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- section -->
-                    </div>
-                    <div id="divB" class="hidden container">
-                        <!-- Content for divB -->
-                        <div class="code-wrapper overflow-x-auto max-w-full">
-                            <pre><code class="language-html">
+              </section>
+              <!-- section -->
+            </div>
+            <div id="divB" class="hidden container">
+              <!-- Content for divB -->
+              <div class="code-wrapper overflow-x-auto max-w-full">
+                <pre><code class="language-html">
                             &lt;style&gt;
                             .perspect1 {
                                 perspective: 1200px;
@@ -350,141 +445,227 @@
                             &lt;/div&gt;
                         &lt;/section&gt;
                     </code></pre>
-                        </div>
-                    </div>
-
-
-                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div id="component" class="flex flex-col my-20 mx-10">
-            <div
-                class="relative flex flex-col h-full border border-gray-200 opacity-100 dark:border-gray-700 overflow-hidden rounded-lg">
-                <div
-                    class="flex flex-col items-end justify-between p-2 pr-4 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800 sm:flex-row sm:items-center">
-                    <div class="hidden xl:block">
-                        <button type="button" id="btn50"
-                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none  active">
-                            <svg width="8.57142857142857" height="24" viewBox="0 0 10 28"
-                                xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
-                                <path
-                                    d="M1.5 12h7a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 8.5 28h-7A1.5 1.5 0 0 1 0 26.5v-13A1.5 1.5 0 0 1 1.5 12zM1 15v10h8V15H1zm4 12.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM4 13v1h2v-1H4z"
-                                    fill-rule="evenodd"></path>
-                            </svg>xs
-                        </button>
-                        <button type="button" id="btn60"
-                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none ">
-                            <svg width="11.999999999999998" height="24" viewBox="0 0 14 28"
-                                xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
-                                <path
-                                    d="M1.5 6h11A1.5 1.5 0 0 1 14 7.5v19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 0 26.5v-19A1.5 1.5 0 0 1 1.5 6zM1 9v16h12V9H1zm6 18.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"
-                                    fill-rule="evenodd"></path>
-                            </svg>sm
-                        </button>
-                        <button type="button" id="btn70"
-                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none ">
-                            <svg width="22.28571428571428" height="24" viewBox="0 0 26 28"
-                                xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
-                                <path
-                                    d="M26 26.5a1.5 1.5 0 0 1-1.5 1.5h-23A1.5 1.5 0 0 1 0 26.5v-14A1.5 1.5 0 0 1 1.5 11h23a1.5 1.5 0 0 1 1.5 1.5v14zm-3 .5V12H3v15h20zm1.5-6.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-23-.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"
-                                    fill-rule="evenodd"></path>
-                            </svg>md
-                        </button>
-                        <button type="button" id="btn80"
-                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none ">
-                            <svg width="32.57142857142856" height="24" viewBox="0 0 38 28"
-                                xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
-                                <path
-                                    d="M34 26h4v1c-1.333.667-2.667 1-4 1H4c-1.333 0-2.667-.333-4-1v-1h4V7.5A1.5 1.5 0 0 1 5.5 6h27A1.5 1.5 0 0 1 34 7.5V26zM6 8v18h26V8H6z"
-                                    fill-rule="evenodd"></path>
-                            </svg>lg
-                        </button>
-                        <button type="button" id="btn100"
-                            class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none ">
-                            <svg width="30.85714285714285" height="24" viewBox="0 0 36 28"
-                                xmlns="http://www.w3.org/2000/svg" class="block mx-auto mb-1 fill-current">
-                                <path
-                                    d="M20.857 24l.857 3H24v1H12v-1h2.286l.857-3H1.5A1.5 1.5 0 0 1 0 22.5v-21A1.5 1.5 0 0 1 1.5 0h33A1.5 1.5 0 0 1 36 1.5v21a1.5 1.5 0 0 1-1.5 1.5H20.857zM2 2v18h32V2H2z">
-                                </path>
-                            </svg>xl
-                        </button>
-                    </div>
-                    <div class="flex items-center space-x-2 sm:space-x-3">
-                        <button type="button" id="toggleButton1"
-                            class="flex items-center px-4 py-2 space-x-3 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:text-gray-200 dark:border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"
-                            onclick="toggleDivs1()">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                </path>
-                            </svg>
-                            <span id="buttonText" class="hidden md:inline">Show Code</span>
-                        </button>
-                        <button type="button"
-                            class="px-4 py-2 text-gray-500 transition-colors duration-300 transform border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200 dark:border-gray-200 focus:outline-none focus:border-teal-500 focus:ring focus:ring-primary focus:ring-opacity-40"
-                            id="copyButton" data-tippy-content="Code Copied">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+      <div id="component" class="flex flex-col my-20 mx-10">
+        <div
+          class="relative flex flex-col h-full border border-gray-200 opacity-100 dark:border-gray-700 overflow-hidden rounded-lg"
+        >
+          <div
+            class="flex flex-col items-end justify-between p-2 pr-4 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800 sm:flex-row sm:items-center"
+          >
+            <div class="hidden xl:block">
+              <button
+                type="button"
+                id="btn50"
+                class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none active"
+              >
+                <svg
+                  width="8.57142857142857"
+                  height="24"
+                  viewBox="0 0 10 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="block mx-auto mb-1 fill-current"
+                >
+                  <path
+                    d="M1.5 12h7a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 8.5 28h-7A1.5 1.5 0 0 1 0 26.5v-13A1.5 1.5 0 0 1 1.5 12zM1 15v10h8V15H1zm4 12.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM4 13v1h2v-1H4z"
+                    fill-rule="evenodd"
+                  ></path></svg
+                >xs
+              </button>
+              <button
+                type="button"
+                id="btn60"
+                class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none"
+              >
+                <svg
+                  width="11.999999999999998"
+                  height="24"
+                  viewBox="0 0 14 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="block mx-auto mb-1 fill-current"
+                >
+                  <path
+                    d="M1.5 6h11A1.5 1.5 0 0 1 14 7.5v19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 0 26.5v-19A1.5 1.5 0 0 1 1.5 6zM1 9v16h12V9H1zm6 18.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"
+                    fill-rule="evenodd"
+                  ></path></svg
+                >sm
+              </button>
+              <button
+                type="button"
+                id="btn70"
+                class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none"
+              >
+                <svg
+                  width="22.28571428571428"
+                  height="24"
+                  viewBox="0 0 26 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="block mx-auto mb-1 fill-current"
+                >
+                  <path
+                    d="M26 26.5a1.5 1.5 0 0 1-1.5 1.5h-23A1.5 1.5 0 0 1 0 26.5v-14A1.5 1.5 0 0 1 1.5 11h23a1.5 1.5 0 0 1 1.5 1.5v14zm-3 .5V12H3v15h20zm1.5-6.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-23-.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"
+                    fill-rule="evenodd"
+                  ></path></svg
+                >md
+              </button>
+              <button
+                type="button"
+                id="btn80"
+                class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none"
+              >
+                <svg
+                  width="32.57142857142856"
+                  height="24"
+                  viewBox="0 0 38 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="block mx-auto mb-1 fill-current"
+                >
+                  <path
+                    d="M34 26h4v1c-1.333.667-2.667 1-4 1H4c-1.333 0-2.667-.333-4-1v-1h4V7.5A1.5 1.5 0 0 1 5.5 6h27A1.5 1.5 0 0 1 34 7.5V26zM6 8v18h26V8H6z"
+                    fill-rule="evenodd"
+                  ></path></svg
+                >lg
+              </button>
+              <button
+                type="button"
+                id="btn100"
+                class="px-4 py-2 text-sm text-gray-600 dark:text-gray-200 focus:outline-none"
+              >
+                <svg
+                  width="30.85714285714285"
+                  height="24"
+                  viewBox="0 0 36 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="block mx-auto mb-1 fill-current"
+                >
+                  <path
+                    d="M20.857 24l.857 3H24v1H12v-1h2.286l.857-3H1.5A1.5 1.5 0 0 1 0 22.5v-21A1.5 1.5 0 0 1 1.5 0h33A1.5 1.5 0 0 1 36 1.5v21a1.5 1.5 0 0 1-1.5 1.5H20.857zM2 2v18h32V2H2z"
+                  ></path></svg
+                >xl
+              </button>
+            </div>
+            <div class="flex items-center space-x-2 sm:space-x-3">
+              <button
+                type="button"
+                id="toggleButton1"
+                class="flex items-center px-4 py-2 space-x-3 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:text-gray-200 dark:border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"
+                onclick="toggleDivs1()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  ></path>
+                </svg>
+                <span id="buttonText" class="hidden md:inline">Show Code</span>
+              </button>
+              <button
+                type="button"
+                class="px-4 py-2 text-gray-500 transition-colors duration-300 transform border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200 dark:border-gray-200 focus:outline-none focus:border-teal-500 focus:ring focus:ring-primary focus:ring-opacity-40"
+                id="copyButton"
+                data-tippy-content="Code Copied"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
 
-                <div class="relative z-0  h-full w-full overflow-hidden bg-gray-100" id="divA1">
-                    <div class="border">
-                        <!-- section -->
-                        <section
-                            class="text-gray-600 w-full  group relative body-font object-cover flex overflow-hidden items-center">
-                            <section
-                                class="text-gray-600 group w-full h-[80vh] lg:mt-20 relative body-font object-cover flex overflow-hidden items-center">
-                                <div class="w-full h-full z-10">
-                                    <div
-                                        class="container md:flex md:flex-row flex-col-reverse flex w-full pt-24 lg:pt-0 z-10 ">
-                                        <div class="md:w-3/5 h-4/5 pt-10 lg:pt-20 md:pl-40 px-10 bg-opacity-90 font-Mon js-show-on-scroll"
-                                            data-animate-type="animate-enter-fade-r">
-                                            <h1
-                                                class="title-font text-4xl font-bold text-blu border-b-2 border-gray-200">
-                                                ACL Specialists</h1>
-                                            <div class="py-8">
-                                                <h1 class="text-xl font-medium pb-5">What to expect?</h1>
-                                                <ul class="underline-offset-1 list-outside list-disc">
-                                                    <li class="font-light text-lg leading-8">Full return to sport/play
-                                                        testing monthly.</li>
-                                                    <li class="font-light text-lg leading-8">Treatment on an Isokinetic
-                                                        for
-                                                        treatment for fast progress.
-                                                    </li>
-                                                    <li class="font-light text-lg leading-8">Blood flow restriction
-                                                        therapy!
-                                                    </li>
-                                                    <li class="font-light text-lg leading-8">Coordination of care with
-                                                        coaches, physicians, and schools.
-                                                    </li>
-                                                    <li class="font-light text-lg leading-8">Treatment on an isokinetic
-                                                        machine for fast progress.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="sm:w-2/5 bg-gradient-to-t from-gray-700 via-gray-600 to-gray-500 transition-all duration-700 sm:absolute lg:h-[30em] rounded-3xl p-3 lg:p-7 lg:group-hover:p-8 -right-10">
-                                            <img class="object-cover lg:w-4/5 lg:mt-6 sm:h-5/6 lg:m-10 left-0 lg:absolute shadow-xl lg:group-hover:-left-24 transition-all duration-700 rounded-3xl"
-                                                alt="hero" src="https://dummyimage.com/600x400">
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </section>
-                        <!-- section -->
+          <div
+            class="relative z-0 h-full w-full overflow-hidden bg-gray-100"
+            id="divA1"
+          >
+            <div class="border">
+              <!-- section -->
+              <section
+                class="text-gray-600 w-full group relative body-font object-cover flex overflow-hidden items-center"
+              >
+                <section
+                  class="text-gray-600 group w-full h-[80vh] lg:mt-20 relative body-font object-cover flex overflow-hidden items-center"
+                >
+                  <div class="w-full h-full z-10">
+                    <div
+                      class="container md:flex md:flex-row flex-col-reverse flex w-full pt-24 lg:pt-0 z-10"
+                    >
+                      <div
+                        class="md:w-3/5 h-4/5 pt-10 lg:pt-20 md:pl-40 px-10 bg-opacity-90 font-Mon js-show-on-scroll"
+                        data-animate-type="animate-enter-fade-r"
+                      >
+                        <h1
+                          class="title-font text-4xl font-bold text-blu border-b-2 border-gray-200"
+                        >
+                          ACL Specialists
+                        </h1>
+                        <div class="py-8">
+                          <h1 class="text-xl font-medium pb-5">
+                            What to expect?
+                          </h1>
+                          <ul class="underline-offset-1 list-outside list-disc">
+                            <li class="font-light text-lg leading-8">
+                              Full return to sport/play testing monthly.
+                            </li>
+                            <li class="font-light text-lg leading-8">
+                              Treatment on an Isokinetic for treatment for fast
+                              progress.
+                            </li>
+                            <li class="font-light text-lg leading-8">
+                              Blood flow restriction therapy!
+                            </li>
+                            <li class="font-light text-lg leading-8">
+                              Coordination of care with coaches, physicians, and
+                              schools.
+                            </li>
+                            <li class="font-light text-lg leading-8">
+                              Treatment on an isokinetic machine for fast
+                              progress.
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="sm:w-2/5 bg-gradient-to-t from-gray-700 via-gray-600 to-gray-500 transition-all duration-700 sm:absolute lg:h-[30em] rounded-3xl p-3 lg:p-7 lg:group-hover:p-8 -right-10"
+                      >
+                        <img
+                          class="object-cover lg:w-4/5 lg:mt-6 sm:h-5/6 lg:m-10 left-0 lg:absolute shadow-xl lg:group-hover:-left-24 transition-all duration-700 rounded-3xl"
+                          alt="hero"
+                          src="https://dummyimage.com/600x400"
+                        />
+                      </div>
                     </div>
-                    <div id="divB1" class="hidden container">
-                        <!-- Content for divB -->
-                        <div class="code-wrapper overflow-x-auto max-w-full">
-                            <pre><code class="language-html">
+                  </div>
+                </section>
+              </section>
+              <!-- section -->
+            </div>
+            <div id="divB1" class="hidden container">
+              <!-- Content for divB -->
+              <div class="code-wrapper overflow-x-auto max-w-full">
+                <pre><code class="language-html">
               &lt;section class="text-gray-600 w-full group relative body-font object-cover flex overflow-hidden items-center"&gt;
                 &lt;section class="text-gray-600 group w-full h-screen lg:mt-20 relative body-font object-cover flex overflow-hidden items-center"&gt;
                   &lt;div class="w-full h-full z-10"&gt;
@@ -510,76 +691,129 @@
                 &lt;/section&gt;
               &lt;/section&gt;
                         </code></pre>
-                        </div>
-                        <button type="button"
-                            class="mt-4 px-4 py-2 text-gray-500 transition-colors duration-300 transform border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200 dark:border-gray-200 focus:outline-none focus:border-teal-500 focus:ring focus:ring-primary focus:ring-opacity-40"
-                            id="copyButton">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
+              </div>
+              <button
+                type="button"
+                class="mt-4 px-4 py-2 text-gray-500 transition-colors duration-300 transform border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200 dark:border-gray-200 focus:outline-none focus:border-teal-500 focus:ring focus:ring-primary focus:ring-opacity-40"
+                id="copyButton"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  ></path>
+                </svg>
+              </button>
             </div>
+          </div>
         </div>
+      </div>
 
-
-        <!-- footer -->
-        <footer class="text-gray-600 body-font">
-            <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                    <span>
-                        <img src="assets/img/avtar/avtar_4.png" alt="" class="w-10">
-                    </span>
-                    <span class="font-bold">Syed Faiz</span>
-                </a>
-                <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">©
-                    2020
-                    My portfolio -
-                    <a href="#" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@faizmiya</a>
-                </p>
-                <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-                    <a class="text-gray-500">
-                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            class="w-5 h-5" viewBox="0 0 24 24">
-                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                        </svg>
-                    </a>
-                    <a class="ml-3 text-gray-500">
-                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            class="w-5 h-5" viewBox="0 0 24 24">
-                            <path
-                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a class="ml-3 text-gray-500">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                        </svg>
-                    </a>
-                    <a class="ml-3 text-gray-500">
-                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                            <path stroke="none"
-                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
-                            </path>
-                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                        </svg>
-                    </a>
-                </span>
-            </div>
-        </footer>
+      <!-- footer -->
+      <footer class="text-gray-600 body-font">
+        <div
+          class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+        >
+          <a
+            class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+          >
+            <span>
+              <img src="assets/img/avtar/avtar_4.png" alt="" class="w-10" />
+            </span>
+            <span class="font-bold">Syed Faiz</span>
+          </a>
+          <p
+            class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+          >
+            © 2020 My portfolio -
+            <a
+              href="#"
+              class="text-gray-600 ml-1"
+              rel="noopener noreferrer"
+              target="_blank"
+              >@faizmiya</a
+            >
+          </p>
+          <span
+            class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+          >
+            <a class="text-gray-500">
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                ></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                ></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="none"
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
     </div>
     <!-- footer -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>;
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    ;
 
     <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
@@ -589,79 +823,77 @@
     <script src="https://unpkg.com/@popperjs/core@2.11.4/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.2/dist/tippy-bundle.umd.min.js"></script>
 
-
-
     <script>
-        function toggleDivs() {
-            var divA = document.getElementById("divA");
-            var divB = document.getElementById("divB");
-            var buttonText = document.getElementById("buttonText");
+      function toggleDivs() {
+        var divA = document.getElementById("divA");
+        var divB = document.getElementById("divB");
+        var buttonText = document.getElementById("buttonText");
 
-            if (divA.style.display === "none") {
-                divA.style.display = "block";
-                divB.style.display = "none";
-                buttonText.textContent = "Show Code";
-            } else {
-                divA.style.display = "none";
-                divB.style.display = "block";
-                buttonText.textContent = " Preview";
-            }
+        if (divA.style.display === "none") {
+          divA.style.display = "block";
+          divB.style.display = "none";
+          buttonText.textContent = "Show Code";
+        } else {
+          divA.style.display = "none";
+          divB.style.display = "block";
+          buttonText.textContent = " Preview";
         }
+      }
 
+      function toggleDivs1() {
+        var divA1 = document.getElementById("divA1");
+        var divB1 = document.getElementById("divB1");
+        var buttonText1 = document.getElementById("buttonText1");
 
-        function toggleDivs1() {
-            var divA1 = document.getElementById("divA1");
-            var divB1 = document.getElementById("divB1");
-            var buttonText1 = document.getElementById("buttonText1");
-
-            if (divA1.style.display === "none") {
-                divA1.style.display = "block";
-                divB1.style.display = "none";
-                buttonText1.textContent = "Show Code";
-            } else {
-                divA1.style.display = "none";
-                divB1.style.display = "block";
-                buttonText1.textContent = " Preview";
-            }
+        if (divA1.style.display === "none") {
+          divA1.style.display = "block";
+          divB1.style.display = "none";
+          buttonText1.textContent = "Show Code";
+        } else {
+          divA1.style.display = "none";
+          divB1.style.display = "block";
+          buttonText1.textContent = " Preview";
         }
+      }
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            Prism.highlightAll();
-        });
-        const copyButton = document.getElementById('copyButton');
-        tippy(copyButton);
+      document.addEventListener("DOMContentLoaded", function () {
+        Prism.highlightAll();
+      });
+      const copyButton = document.getElementById("copyButton");
+      tippy(copyButton);
 
-        copyButton.addEventListener('click', () => {
-            const codeElement = document.querySelector('#divB pre code');
-            const code = codeElement.innerText;
+      copyButton.addEventListener("click", () => {
+        const codeElement = document.querySelector("#divB pre code");
+        const code = codeElement.innerText;
 
-            navigator.clipboard.writeText(code)
-                .then(() => {
-                    copyButton._tippy.show();
-                })
-                .catch((error) => {
-                    console.error('Failed to copy code: ', error);
-                });
-        });
+        navigator.clipboard
+          .writeText(code)
+          .then(() => {
+            copyButton._tippy.show();
+          })
+          .catch((error) => {
+            console.error("Failed to copy code: ", error);
+          });
+      });
 
-        const copyButton1 = document.getElementById('copyButton1');
-        tippy(copyButton);
+      const copyButton1 = document.getElementById("copyButton1");
+      tippy(copyButton);
 
-        copyButton.addEventListener('click', () => {
-            const codeElement1 = document.querySelector('#divB1 pre code');
-            const code1 = codeElement1.innerText;
+      copyButton.addEventListener("click", () => {
+        const codeElement1 = document.querySelector("#divB1 pre code");
+        const code1 = codeElement1.innerText;
 
-            navigator.clipboard.writeText(code1)
-                .then(() => {
-                    copyButton._tippy.show();
-                })
-                .catch((error) => {
-                    console.error('Failed to copy code: ', error);
-                });
-        });
+        navigator.clipboard
+          .writeText(code1)
+          .then(() => {
+            copyButton._tippy.show();
+          })
+          .catch((error) => {
+            console.error("Failed to copy code: ", error);
+          });
+      });
     </script>
-</body>
-
+  </body>
 </html>

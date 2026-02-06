@@ -6,7 +6,8 @@
   @font-face {
     font-family: "pano";
     src: url("https://carbonmadeassets.b-cdn.net/wp-content/uploads/2019/04/pano_bold.eot");
-    src: url("https://carbonmadeassets.b-cdn.net/wp-content/uploads/2019/04/pano_bold.eot?#iefix")
+    src:
+      url("https://carbonmadeassets.b-cdn.net/wp-content/uploads/2019/04/pano_bold.eot?#iefix")
         format("embedded-opentype"),
       url("https://carbonmadeassets.b-cdn.net/wp-content/uploads/2019/04/pano_bold.woff2")
         format("woff2"),
@@ -310,7 +311,9 @@
     will-change: transform;
     transition: box-shadow 280ms ease;
     /* subtle 3D lighting */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      0 2px 6px rgba(0, 0, 0, 0.08);
     background: linear-gradient(180deg, #fafafa, #fff);
   }
 
@@ -333,7 +336,11 @@
     z-index: 9999;
     left: 2px;
     top: 2px;
-    transition: transform 0.07s, width 0.3s, height 0.3s, background 0.3s;
+    transition:
+      transform 0.07s,
+      width 0.3s,
+      height 0.3s,
+      background 0.3s;
     pointer-events: none;
   }
 
@@ -364,5 +371,74 @@
 
   .dark .outline-text {
     -webkit-text-stroke: 2px #057a50;
+  }
+
+  /* ================= GLASS ================= */
+  .glass {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    transition: all 0.4s ease;
+  }
+  .glass-scrolled {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(26px);
+    -webkit-backdrop-filter: blur(26px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  }
+
+  /* ================= DESKTOP TABS ================= */
+  .skill-tab {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+    background: white;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .skill-tab:hover {
+    border-color: #22c55e;
+    transform: translateY(-2px);
+  }
+  .skill-tab.active {
+    background: #ecfdf5;
+    border-color: #22c55e;
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(34, 197, 94, 0.25);
+  }
+
+  .icon-box {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    background: #4e78cd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: 0.3s;
+  }
+  .skill-tab.active .icon-box {
+    background: #dcfce7;
+    transform: rotate(-6deg);
+  }
+
+  .arrow {
+    margin-left: auto;
+    font-size: 1.2rem;
+    color: #9ca3af;
+    transition: 0.3s;
+  }
+  .skill-tab.active .arrow {
+    transform: rotate(90deg);
+    color: #16a34a;
   }
 }
