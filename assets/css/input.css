@@ -419,7 +419,7 @@
     width: 3rem;
     height: 3rem;
     border-radius: 0.75rem;
-    background: #f3f4f6;
+    background: #4e78cd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -443,17 +443,16 @@
   }
 
   /* ================= DETAIL CARD ================= */
-  .detail-card {
-    transition:
-      transform 0.25s ease,
+  /* .detail-card {
+    transition: transform 0.25s ease,
       box-shadow 0.25s ease;
     will-change: transform;
-  }
+  } */
 
   /* ================= TOOLS ================= */
-  .tool-pill {
+  /* .tool-pill {
     padding: 0.5rem 1rem;
-    background: rgba(243, 244, 246, 0.9);
+    background: rgba(17, 65, 160, 0.9);
     border-radius: 0.75rem;
     font-size: 0.875rem;
     transition: 0.3s;
@@ -461,5 +460,5 @@
   }
   .tool-pill:hover {
     background: #dcfce7;
-  }
+  } */
 }

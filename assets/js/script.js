@@ -568,16 +568,17 @@ let active = "frontend";
 /* render */
 Object.keys(skills).forEach((key) => {
   const b = document.createElement("button");
-  b.className = "skill-tab";
+  b.className =
+    "skill-tab border-2 flex px-5 py-8 gap-8 justify-between w-full rounded-3xl";
   b.dataset.key = key;
-  b.innerHTML = `<div class="icon-box">${skills[key].icon}</div>
-               <span class="font-semibold">${skills[key].title}</span>
+  b.innerHTML = `<div class="flex gap-3"><div class="icon-box">${skills[key].icon}</div>
+               <span class="font-semibold text-left">${skills[key].title}</span></div>
                <span class="arrow">›</span>`;
   b.onclick = () => setActive(key);
   tabs.appendChild(b);
 
   const m = document.createElement("button");
-  m.className = "w-full flex gap-4 p-4 hover:bg-green-50";
+  m.className = "w-full flex gap-4 p-4 hover:bg-green-500";
   m.innerHTML = `<div class="icon-box">${skills[key].icon}</div><span>${skills[key].title}</span>`;
   m.onclick = () => {
     setActive(key);
@@ -601,7 +602,7 @@ function setActive(key) {
   tools.innerHTML = "";
   skills[key].tools.forEach((t, i) => {
     const s = document.createElement("span");
-    s.className = "tool-pill";
+    s.className = "tool-pill bg-green-100 rounded-3xl px-3 py-2";
     s.innerText = t;
     s.dataset.dir = i % 2 ? 1 : -1;
     tools.appendChild(s);

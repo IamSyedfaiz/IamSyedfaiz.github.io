@@ -132,263 +132,140 @@
   <body class="">
     <div class="bg-myWhite dark:bg-myGray">
       <!-- --=-=- -->
-      <div
-        class="fixed lg:top-4 top-2 left-0 w-full lg:h-16 h-12 z-50 transform transition-transform duration-300"
+      <nav
         id="navbar"
+        class="fixed top-6 left-0 z-50 transition-all duration-500 w-full flex justify-center items-center"
       >
         <div
-          class="mx-auto flex lg:max-w-xl w-1/2 backdrop-blur-md lg:p-4 p-2 text-white border-4 border-black dark:border-white rounded-full items-center justify-between"
+          class="boreder-4 rounded-full w-[90%] border-emerald-600 max-w-4xl px-6 py-3 flex items-center backdrop-blur-md justify-between shadow-lg shadow-black/5"
         >
-          <div class="inline-flex items-center relative">
+          <a href="index.html" class="flex items-center gap-3 group">
             <img
-              src="assets/img/avtar/icon.png"
-              alt
-              class="w-10 z-10 border-2 rounded-full"
+              src="assets/img/avtar_11.png"
+              alt="Logo"
+              class="w-10 h-10 rounded-full object-cover border-2 border-primary/20 group-hover:scale-110 transition-transform"
             />
-          </div>
-          <div class="hidden grow items-start lg:flex">
-            <ul class="ml-12 inline-flex space-x-8">
-              <li>
-                <a
-                  href="index.html"
-                  class="text-sm font-semibold font-MaisonNeueExtended text-myGray dark:text-myWhite hover:text-myGray"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about.html"
-                  class="text-sm font-semibold font-MaisonNeueExtended text-myGray dark:text-myWhite hover:text-myGray"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/component.html"
-                  class="text-sm font-semibold font-MaisonNeueExtended text-myGray dark:text-myWhite hover:text-myGray"
-                >
-                  Components
-                </a>
-              </li>
-            </ul>
-          </div>
+            <span
+              class="font-outfit font-pano font-bold text-xl tracking-tight hidden sm:block dark:text-white"
+              >Syed Faiz</span
+            >
+          </a>
+
           <div
-            id="mobileMenu"
-            class="fixed top-20 left-0 w-full bg-white dark:bg-myGray backdrop-blur-md border border-white/30 dark:border-white/10 text-myGray dark:text-white p-4 rounded-3xl z-40 opacity-0 scale-90 pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+            class="hidden md:flex items-center gap-8 font-MaisonNeueExtended"
           >
-            <ul class="flex flex-col gap-1 font-semibold text-lg">
-              <a class="w-full p-2 rounded-xl" href="index.html">Home</a>
-              <a class="w-full p-2 rounded-xl" href="about.html">About</a>
-              <a class="w-full p-2 rounded-xl" href="component.html"
-                >Components</a
-              >
-
-              <button
-                id="darkModeToggleMobile"
-                class="bg-myGray dark:bg-myWhite text-myWhite p-1 rounded-full group block"
-              >
-                <div class="dark:hidden">
-                  <svg
-                    class="w-7 h-7 transition-transform duration-300 group-hover:rotate-90"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M12 16C9.7944 16 8 14.2056 8 12C8 9.7944 9.7944 8 12 8C14.2056 8 16 9.7944 16 12C16 14.2056 14.2056 16 12 16Z"
-                        stroke="#fff"
-                      ></path>
-                      <path
-                        d="M12 3.5V5.5"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                      ></path>
-                      <path
-                        d="M20.5 12H18.5"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                      ></path>
-                      <path
-                        d="M5.5 12H3.5"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                      ></path>
-                      <path
-                        d="M12 18.5V20.5"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                      ></path>
-                      <path
-                        d="M16.5 7.5L18 6"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                      ></path>
-                      <path
-                        d="M6 18L7.5 16.5"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                      ></path>
-                      <path
-                        d="M6 6L7.5 7.5"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                      ></path>
-                      <path
-                        d="M16.5 16.5L18 18"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                      ></path>
-                    </g>
-                  </svg>
-                </div>
-                <div class="dark:block hidden">
-                  <svg
-                    fill="#000000"
-                    class="w-6 h-6 transition-transform duration-300 group-hover:rotate-90"
-                    viewBox="0 0 32 32"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <title>moon</title>
-                      <path
-                        d="M29.223 24.178l-0.021-0.057c-0.116-0.274-0.383-0.463-0.694-0.463-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002c-1.272 0.542-2.752 0.857-4.306 0.857-6.213 0-11.25-5.037-11.25-11.25 0-4.66 2.833-8.658 6.871-10.366l0.074-0.028 0.211-0.089c0.267-0.118 0.45-0.381 0.45-0.687 0-0.375-0.276-0.686-0.635-0.74l-0.004-0.001c-0.653-0.103-1.407-0.161-2.174-0.161-8.145 0-14.748 6.603-14.748 14.748s6.603 14.748 14.748 14.748c4.748 0 8.973-2.244 11.67-5.73l0.025-0.034c0.097-0.125 0.155-0.285 0.155-0.458 0-0.127-0.031-0.246-0.086-0.351l0.002 0.004zM22.518 28.24c-1.497 0.637-3.238 1.007-5.066 1.007-7.317 0-13.249-5.932-13.249-13.249 0-7.074 5.543-12.853 12.523-13.23l0.034-0.001c-3.395 2.326-5.594 6.183-5.594 10.554 0 7.043 5.709 12.752 12.752 12.752 0.85 0 1.681-0.083 2.485-0.242l-0.081 0.013c-1.081 0.976-2.339 1.783-3.716 2.364l-0.087 0.033z"
-                      ></path>
-                    </g>
-                  </svg>
-                </div>
-              </button>
-            </ul>
+            <a
+              href="index.html"
+              class="group text-sm font-medium dark:text-gray-300 transition-colors relative"
+              >Home
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="about.html"
+              class="group text-sm font-medium dark:text-myPurple transition-colors relative"
+            >
+              About
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="component.html"
+              class="group text-sm font-medium dark:text-gray-300 transition-colors relative"
+              >Components
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"
+              ></span
+            ></a>
           </div>
 
-          <div class="hidden lg:block">
+          <div class="flex items-center gap-4">
             <button
               id="darkModeToggle"
-              class="bg-myGray dark:bg-myWhite text-myWhite p-1 rounded-full group"
+              class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors group"
             >
-              <div class="dark:hidden">
-                <svg
-                  class="w-7 h-7 transition-transform duration-300 group-hover:rotate-90"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M12 16C9.7944 16 8 14.2056 8 12C8 9.7944 9.7944 8 12 8C14.2056 8 16 9.7944 16 12C16 14.2056 14.2056 16 12 16Z"
-                      stroke="#fff"
-                    ></path>
-                    <path
-                      d="M12 3.5V5.5"
-                      stroke="#fff"
-                      stroke-linecap="round"
-                    ></path>
-                    <path
-                      d="M20.5 12H18.5"
-                      stroke="#fff"
-                      stroke-linecap="round"
-                    ></path>
-                    <path
-                      d="M5.5 12H3.5"
-                      stroke="#fff"
-                      stroke-linecap="round"
-                    ></path>
-                    <path
-                      d="M12 18.5V20.5"
-                      stroke="#fff"
-                      stroke-linecap="round"
-                    ></path>
-                    <path
-                      d="M16.5 7.5L18 6"
-                      stroke="#fff"
-                      stroke-linecap="round"
-                    ></path>
-                    <path
-                      d="M6 18L7.5 16.5"
-                      stroke="#fff"
-                      stroke-linecap="round"
-                    ></path>
-                    <path
-                      d="M6 6L7.5 7.5"
-                      stroke="#fff"
-                      stroke-linecap="round"
-                    ></path>
-                    <path
-                      d="M16.5 16.5L18 18"
-                      stroke="#fff"
-                      stroke-linecap="round"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-              <div class="dark:block hidden">
-                <svg
-                  fill="#000000"
-                  class="w-6 h-6 transition-transform duration-300 group-hover:rotate-90"
-                  viewBox="0 0 32 32"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <title>moon</title>
-                    <path
-                      d="M29.223 24.178l-0.021-0.057c-0.116-0.274-0.383-0.463-0.694-0.463-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002c-1.272 0.542-2.752 0.857-4.306 0.857-6.213 0-11.25-5.037-11.25-11.25 0-4.66 2.833-8.658 6.871-10.366l0.074-0.028 0.211-0.089c0.267-0.118 0.45-0.381 0.45-0.687 0-0.375-0.276-0.686-0.635-0.74l-0.004-0.001c-0.653-0.103-1.407-0.161-2.174-0.161-8.145 0-14.748 6.603-14.748 14.748s6.603 14.748 14.748 14.748c4.748 0 8.973-2.244 11.67-5.73l0.025-0.034c0.097-0.125 0.155-0.285 0.155-0.458 0-0.127-0.031-0.246-0.086-0.351l0.002 0.004zM22.518 28.24c-1.497 0.637-3.238 1.007-5.066 1.007-7.317 0-13.249-5.932-13.249-13.249 0-7.074 5.543-12.853 12.523-13.23l0.034-0.001c-3.395 2.326-5.594 6.183-5.594 10.554 0 7.043 5.709 12.752 12.752 12.752 0.85 0 1.681-0.083 2.485-0.242l-0.081 0.013c-1.081 0.976-2.339 1.783-3.716 2.364l-0.087 0.033z"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
+              <svg
+                class="w-6 h-6 dark:hidden block text-slate-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M16.071 16.071l.707.707M7.757 7.757l.707.707M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                />
+              </svg>
             </button>
-          </div>
-          <div
-            class="lg:hidden text-myGray dark:text-myWhite"
-            id="hamburgerBtn"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="h-6 w-6 cursor-pointer"
+
+            <button
+              id="hamburgerBtn"
+              class="md:hidden p-2 rounded-lg text-slate-700 dark:text-gray-300"
             >
-              <line x1="4" y1="12" x2="20" y2="12"></line>
-              <line x1="4" y1="6" x2="20" y2="6"></line>
-              <line x1="4" y1="18" x2="20" y2="18"></line>
-            </svg>
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+
+            <a
+              href="#contact"
+              class="hidden sm:inline-flex items-center px-5 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-emerald-700 transition-all shadow-md shadow-primary/20"
+              >Let's Talk</a
+            >
           </div>
         </div>
-      </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="absolute top-20 left-0 w-full rounded-3xl backdrop-blur-md p-6 opacity-0 scale-95 pointer-events-none transition-all duration-300 md:hidden"
+        >
+          <div class="flex flex-col gap-4 font-MaisonNeueExtended">
+            <a href="index.html" class="text-lg font-semibold dark:text-white"
+              >Home</a
+            >
+            <a href="about.html" class="text-lg font-semibold dark:text-white"
+              >About</a
+            >
+            <a
+              href="component.html"
+              class="text-lg font-semibold dark:text-white"
+              >Components</a
+            >
+            <hr class="border-black/5 dark:border-white/5" />
+            <button
+              id="darkModeToggleMobile"
+              class="flex items-center justify-between w-full"
+            >
+              <span class="font-medium dark:text-white">Theme</span>
+              <div class="dark:hidden">☀️</div>
+              <div class="hidden dark:block">🌙</div>
+            </button>
+          </div>
+        </div>
+      </nav>
 
       <div class="container2 mx-auto relative" data-scroll-container>
         <canvas id="canvas" class="absolute inset-0 z-0"></canvas>
@@ -695,7 +572,7 @@
               <h2
                 data-scroll
                 data-scroll-speed="0.2"
-                class="text-3xl md:text-5xl font-bold leading-tight text-slate-900 dark:text-white font-outfit mb-12"
+                class="text-3xl md:text-5xl font-MaisonNeueExtended font-bold leading-tight text-slate-900 dark:text-white font-outfit mb-12"
               >
                 I’m <span class="text-myPurple italic">Syed Faiz</span>, a
                 design-driven developer crafting digital experiences that people
@@ -704,7 +581,7 @@
                 <span class="text-slate-400">functionality</span>.
               </h2>
               <div
-                class="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-600 dark:text-gray-400 text-lg leading-relaxed font-outfit"
+                class="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-600 dark:text-gray-400 font-MaisonNeueExtended text-lg leading-relaxed font-outfit"
               >
                 <p>
                   I specialize in building modern, responsive interfaces that
@@ -2130,7 +2007,7 @@
                   <div id="tools" class="flex flex-wrap gap-3 mb-8"></div>
 
                   <div
-                    class="glass rounded-2xl p-6 border-l-4 border-green-500"
+                    class="glass rounded-2xl p-6 border-l-4 border-green-500 bg-green-100"
                   >
                     <p id="funText" class="italic text-lg"></p>
                   </div>
