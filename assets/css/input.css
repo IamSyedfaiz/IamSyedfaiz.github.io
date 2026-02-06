@@ -441,24 +441,4 @@
     transform: rotate(90deg);
     color: #16a34a;
   }
-
-  /* ================= DETAIL CARD ================= */
-  /* .detail-card {
-    transition: transform 0.25s ease,
-      box-shadow 0.25s ease;
-    will-change: transform;
-  } */
-
-  /* ================= TOOLS ================= */
-  /* .tool-pill {
-    padding: 0.5rem 1rem;
-    background: rgba(17, 65, 160, 0.9);
-    border-radius: 0.75rem;
-    font-size: 0.875rem;
-    transition: 0.3s;
-    will-change: transform;
-  }
-  .tool-pill:hover {
-    background: #dcfce7;
-  } */
 }
