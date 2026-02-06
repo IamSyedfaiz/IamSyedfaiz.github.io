@@ -268,7 +268,7 @@
       </nav>
 
       <div class="container2 mx-auto relative" data-scroll-container>
-        <canvas id="canvas" class="absolute inset-0 z-0"></canvas>
+        <canvas id="canvas" class="absolute inset-0 z-0 text-red-500"></canvas>
 
         <section class="">
           <div
@@ -1984,7 +1984,7 @@
               <!-- DETAIL CARD -->
               <div
                 id="detailBox"
-                class="lg:col-span-2 relative glass-strong rounded-3xl p-8 border bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600"
+                class="lg:col-span-2 relative glass-strong rounded-3xl p-8 border bg-white dark:bg-myGray/50 backdrop-blur-2xl border-gray-300 dark:border-gray-600"
               >
                 <div
                   class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent"
@@ -1996,13 +1996,19 @@
                       id="skillIcon"
                       class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-indigo-500 flex items-center justify-center text-white text-2xl"
                     ></div>
-                    <h3 id="skillTitle" class="text-3xl font-bold"></h3>
+                    <h3
+                      id="skillTitle"
+                      class="text-3xl font-bold text-black dark:text-white"
+                    ></h3>
                   </div>
 
-                  <p id="skillDesc" class="text-lg text-gray-600 mb-8"></p>
+                  <p
+                    id="skillDesc"
+                    class="text-lg text-gray-600 mb-8 dark:text-gray-300"
+                  ></p>
 
                   <h4
-                    class="text-sm uppercase tracking-wider text-gray-500 mb-4"
+                    class="text-sm uppercase tracking-wider text-gray-500 mb-4 dark:text-gray-300 font-MaisonNeueExtended"
                   >
                     Tools & Technologies
                   </h4>
@@ -2026,10 +2032,7 @@
 
         <!-- footer -->
         <!-- Connect Section -->
-        <section
-          id="connect"
-          class="relative py-32 bg-white dark:bg-slate-950 overflow-hidden"
-        >
+        <section id="connect" class="relative py-32 overflow-hidden">
           <!-- Background elements -->
           <div
             class="absolute top-[20%] left-[10%] w-72 h-72 bg-myPurple/10 rounded-full blur-[100px] animate-pulse"

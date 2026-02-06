@@ -74,9 +74,9 @@ function toggleDarkMode() {
   localStorage.setItem("dark-mode", bodyElement.classList.contains("dark"));
 
   // smooth reload for icon animation + theme apply
-  setTimeout(() => {
-    window.location.reload();
-  }, 150);
+  // setTimeout(() => {
+  //   window.location.reload();
+  // }, 150);
 }
 
 // Add click event on both buttons
@@ -369,6 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// canvas
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 let width,
@@ -474,7 +475,7 @@ function animate(time) {
   requestAnimationFrame(animate);
 }
 init();
-
+// canvas
 // menu
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -514,44 +515,49 @@ const skills = {
   frontend: {
     icon: "⚛️",
     title: "Frontend Development",
-    desc: "React ecosystem mein expert hoon — complex UIs banana mera passion hai.",
+    desc: "I specialize in building scalable, high-performance user interfaces using the modern React ecosystem, with a strong focus on usability and clean architecture.",
     tools: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    fun: "Maine 40+ React projects deliver kiye hain! 🚀",
+    fun: "Proven track record of delivering high-quality, production-ready React applications 🚀",
   },
+
   backend: {
     icon: "🖥️",
     title: "Backend Development",
-    desc: "Scalable APIs aur databases pe strong grip.",
+    desc: "Experienced in designing secure, scalable, and maintainable backend systems, APIs, and data-driven architectures.",
     tools: ["Node.js", "Express", "PostgreSQL", "MongoDB", "GraphQL"],
-    fun: "REST aur GraphQL dono aate hain 💪",
+    fun: "Comfortable with both RESTful and GraphQL-based architectures 💪",
   },
+
   design: {
     icon: "🎨",
-    title: "UI/UX Design",
-    desc: "Pixel-perfect aur user-first design banata hoon.",
+    title: "UI / UX Design",
+    desc: "I design intuitive, user-centric interfaces that balance aesthetics with functionality, ensuring a seamless digital experience.",
     tools: ["Figma", "Adobe XD", "Framer", "Design Systems"],
-    fun: "Design sirf dikhta nahi, feel hota hai 🎨",
+    fun: "Strong belief: great design is not just seen — it’s experienced 🎨",
   },
+
   database: {
     icon: "💾",
     title: "Database Management",
-    desc: "SQL aur NoSQL dono mein expert hoon.",
+    desc: "Proficient in relational and NoSQL databases, with expertise in data modeling, optimization, and performance tuning.",
     tools: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "Supabase"],
-    fun: "Data modeling mein maza aata hai 📊",
+    fun: "I enjoy designing efficient data models and query optimizations 📊",
   },
+
   cloud: {
     icon: "☁️",
     title: "Cloud & DevOps",
-    desc: "AWS certified hoon — CI/CD aur infra handle karta hoon.",
+    desc: "Skilled in cloud infrastructure and DevOps workflows, focusing on automation, reliability, and scalable deployments.",
     tools: ["AWS", "Docker", "GitHub Actions", "Vercel", "Terraform"],
-    fun: "Deployment se darr nahi lagta 😎",
+    fun: "Deployment challenges don’t scare me anymore 😎",
   },
+
   performance: {
     icon: "⚡",
     title: "Performance Optimization",
-    desc: "Slow apps se nafrat hai mujhe!",
+    desc: "Dedicated to improving application speed, responsiveness, and Core Web Vitals through proven optimization techniques.",
     tools: ["Lighthouse", "Web Vitals", "Bundle Analysis", "Caching"],
-    fun: "100 Lighthouse score possible hai ⚡",
+    fun: "Achieving near-perfect Lighthouse scores is always the goal ⚡",
   },
 };
 
@@ -569,7 +575,7 @@ let active = "frontend";
 Object.keys(skills).forEach((key) => {
   const b = document.createElement("button");
   b.className =
-    "skill-tab border-2 flex px-5 py-8 gap-8 justify-between w-full rounded-3xl";
+    "skill-tab border dark:border-gray-600 flex px-5 py-8 gap-8 justify-between w-full rounded-3xl dark:bg-myGray dark:text-white";
   b.dataset.key = key;
   b.innerHTML = `<div class="flex gap-3"><div class="icon-box">${skills[key].icon}</div>
                <span class="font-semibold text-left">${skills[key].title}</span></div>
