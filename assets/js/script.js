@@ -336,42 +336,97 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// navbar
+// navbar & scroll sequence
 document.addEventListener("DOMContentLoaded", () => {
   const scrollContainer = document.querySelector("[data-scroll-container]");
   const navbar = document.getElementById("navbar");
 
-  const scroll = new LocomotiveScroll({
-    el: scrollContainer,
-    smooth: true,
-    smartphone: {
+  let scroll = null;
+  if (scrollContainer && typeof LocomotiveScroll !== "undefined") {
+    scroll = new LocomotiveScroll({
+      el: scrollContainer,
       smooth: true,
-    },
-    tablet: {
-      smooth: true,
-    },
-  });
+      smartphone: {
+        smooth: true,
+      },
+      tablet: {
+        smooth: true,
+      },
+    });
+    window.locomotiveInstance = scroll;
+  }
 
   let lastY = 0;
 
-  scroll.on("scroll", (args) => {
-    const currentY = args.scroll.y;
+  // Frame-by-frame image sequence for about.html
+  const aboutScrollImg = document.getElementById("aboutScrollImg");
+  let updateFrame = null;
 
-    if (currentY > lastY && currentY > 80) {
-      // Scroll down → hide
-      navbar.style.transform = "translateY(-150%)";
-    } else {
-      // Scroll up → show
-      navbar.style.transform = "translateY(0)";
+  if (aboutScrollImg) {
+    const totalFrames = 50;
+    const frameImages = [];
+
+    // Preload 50 images for smooth lag-free performance
+    for (let i = 1; i <= totalFrames; i++) {
+      const img = new Image();
+      img.src = `assets/img/about/${i}.jpg`;
+      frameImages.push(img);
     }
 
-    lastY = currentY;
+    let currentFrame = 1;
+
+    updateFrame = function (progress) {
+      const clamped = Math.max(0, Math.min(1, progress));
+      const targetFrame = Math.min(
+        totalFrames,
+        Math.max(1, Math.floor(clamped * (totalFrames - 1)) + 1)
+      );
+
+      if (targetFrame !== currentFrame) {
+        currentFrame = targetFrame;
+        aboutScrollImg.src = frameImages[currentFrame - 1].src;
+      }
+    };
+  }
+
+  if (scroll) {
+    scroll.on("scroll", (args) => {
+      const currentY = args.scroll.y;
+
+      if (navbar) {
+        if (currentY > lastY && currentY > 80) {
+          // Scroll down → hide
+          navbar.style.transform = "translateY(-150%)";
+        } else {
+          // Scroll up → show
+          navbar.style.transform = "translateY(0)";
+        }
+      }
+
+      if (updateFrame && args.limit && args.limit.y > 0) {
+        updateFrame(currentY / args.limit.y);
+      }
+
+      lastY = currentY;
+    });
+  }
+
+  // Fallback for standard window scroll
+  window.addEventListener("scroll", () => {
+    if (updateFrame && (!scroll || !scroll.scroll)) {
+      const scrollY = window.scrollY || window.pageYOffset;
+      const limitY =
+        document.documentElement.scrollHeight - window.innerHeight;
+      if (limitY > 0) {
+        updateFrame(scrollY / limitY);
+      }
+    }
   });
 });
 
 // canvas
 const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const ctx = canvas ? canvas.getContext("2d") : null;
 let width,
   height,
   particles = [];
@@ -433,6 +488,7 @@ class Particle {
   }
 }
 function init() {
+  if (!canvas || !ctx) return;
   resize();
   updateColors();
   window.addEventListener("resize", resize);
