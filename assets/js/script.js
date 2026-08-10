@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Preload 50 images for smooth lag-free performance
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
-      img.src = `assets/img/about/${i}.jpg`;
+      img.src = `assets/img/about/${i}.png`;
       frameImages.push(img);
     }
 

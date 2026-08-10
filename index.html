@@ -3,7 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZI</title>
+    <title>Syed Faiz | Full Stack Developer & UI Designer</title>
+    <meta name="description" content="Portfolio of Syed Faiz, a design-driven Full Stack Developer and UI Designer crafting digital experiences that bridge aesthetics and functionality." />
+    <meta name="keywords" content="Syed Faiz, Full Stack Developer, UI Designer, Frontend Developer, Web Development, Portfolio, Web Design" />
+    <meta name="author" content="Syed Faiz" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://iamsyedfaiz.github.io/" />
+    <meta property="og:title" content="Syed Faiz | Full Stack Developer & UI Designer" />
+    <meta property="og:description" content="Portfolio of Syed Faiz, a design-driven Full Stack Developer and UI Designer crafting digital experiences that bridge aesthetics and functionality." />
+    <meta property="og:image" content="https://iamsyedfaiz.github.io/assets/img/about.jpeg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://iamsyedfaiz.github.io/" />
+    <meta name="twitter:title" content="Syed Faiz | Full Stack Developer & UI Designer" />
+    <meta name="twitter:description" content="Portfolio of Syed Faiz, a design-driven Full Stack Developer and UI Designer crafting digital experiences that bridge aesthetics and functionality." />
+    <meta name="twitter:image" content="https://iamsyedfaiz.github.io/assets/img/about.jpeg" />
     <link href="assets/css/output.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -130,14 +147,24 @@
   </head>
 
   <body class="">
-    <div class="bg-myWhite dark:bg-myGray">
+    <!-- Fixed Background Image Sequence (stays fixed to screen across full scroll) -->
+    <div
+      class="fixed top-1/2 right-0 -translate-y-1/2 z-0 pointer-events-none w-[600px] max-w-[45vw] h-auto opacity-35 dark:opacity-25 transition-opacity duration-300">
+      <img id="aboutScrollImg" src="assets/img/about/1.jpg" alt="Background Animation"
+        class="w-full h-auto object-contain outline-image" />
+    </div>
+
+    <!-- Fixed Particle Canvas -->
+    <canvas id="canvas" class="fixed inset-0 z-0 pointer-events-none opacity-40 dark:opacity-30"></canvas>
+
+    <div class="bg-myWhite dark:bg-myGray relative z-10">
       <!-- --=-=- -->
       <nav
         id="navbar"
         class="fixed top-6 left-0 z-50 transition-all duration-500 w-full flex justify-center items-center"
       >
         <div
-          class="boreder-4 rounded-full w-[90%] border-emerald-600 max-w-4xl px-6 py-3 flex items-center backdrop-blur-md justify-between shadow-lg shadow-black/5"
+          class="border-2 border-emerald-600/30 rounded-full w-[90%] max-w-4xl px-6 py-3 flex items-center backdrop-blur-md justify-between shadow-lg shadow-black/5"
         >
           <a href="index.html" class="flex items-center gap-3 group">
             <img
@@ -268,7 +295,6 @@
       </nav>
 
       <div class="container2 mx-auto relative" data-scroll-container>
-        <canvas id="canvas" class="absolute inset-0 z-0 text-red-500"></canvas>
 
         <section class="">
           <div
@@ -2315,10 +2341,9 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
