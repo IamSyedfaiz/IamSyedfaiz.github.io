@@ -26,7 +26,39 @@
       sizes="32x32"
       href="assets/img/avtar/icon.png"
     />
-    <title>Div-zi</title>
+    <title>Components | Syed Faiz - UI Elements</title>
+    <meta name="description" content="A collection of reusable UI components and code snippets crafted by Syed Faiz." />
+    <meta name="keywords" content="UI Components, Web Development, TailwindCSS, Frontend, Syed Faiz" />
+    <meta name="author" content="Syed Faiz" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://iamsyedfaiz.github.io/component.html" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://iamsyedfaiz.github.io/component.html" />
+    <meta property="og:title" content="Components | Syed Faiz - UI Elements" />
+    <meta property="og:description" content="A collection of reusable UI components and code snippets crafted by Syed Faiz." />
+    <meta property="og:image" content="https://iamsyedfaiz.github.io/assets/img/about.jpeg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://iamsyedfaiz.github.io/component.html" />
+    <meta name="twitter:title" content="Components | Syed Faiz - UI Elements" />
+    <meta name="twitter:description" content="A collection of reusable UI components and code snippets crafted by Syed Faiz." />
+    <meta name="twitter:image" content="https://iamsyedfaiz.github.io/assets/img/about.jpeg" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Components | Syed Faiz - UI Elements",
+      "description": "A collection of reusable UI components and code snippets crafted by Syed Faiz.",
+      "url": "https://iamsyedfaiz.github.io/component.html",
+      "publisher": {
+        "@id": "https://iamsyedfaiz.github.io/#person"
+      }
+    }
+    </script>
     <!-- cd assets/js && npx tailwindcss -i ../css/input.css -o ../css/output.css --watch -->
 
     <style>
@@ -51,7 +83,7 @@
       class="fixed top-6 left-0 z-50 transition-all duration-500 w-full flex justify-center items-center"
     >
       <div
-        class="boreder-4 rounded-full w-[90%] border-emerald-600 max-w-4xl px-6 py-3 flex items-center backdrop-blur-md justify-between shadow-lg shadow-black/5"
+        class="border-2 border-emerald-600/30 rounded-full w-[90%] max-w-4xl px-6 py-3 flex items-center backdrop-blur-md justify-between shadow-lg shadow-black/5"
       >
         <a href="index.html" class="flex items-center gap-3 group">
           <img
@@ -60,12 +92,14 @@
             class="w-10 h-10 rounded-full object-cover border-2 border-primary/20 group-hover:scale-110 transition-transform"
           />
           <span
-            class="font-outfit font-bold text-xl tracking-tight hidden sm:block dark:text-white"
+            class="font-outfit font-pano font-bold text-xl tracking-tight hidden sm:block dark:text-white"
             >Syed Faiz</span
           >
         </a>
 
-        <div class="hidden md:flex items-center gap-8">
+        <div
+          class="hidden md:flex items-center gap-8 font-MaisonNeueExtended"
+        >
           <a
             href="index.html"
             class="group text-sm font-medium dark:text-gray-300 transition-colors relative"
@@ -76,7 +110,7 @@
           </a>
           <a
             href="about.html"
-            class="group text-sm font-medium dark:text-myPurple transition-colors relative"
+            class="group text-sm font-medium dark:text-gray-300 transition-colors relative"
           >
             About
             <span
@@ -85,7 +119,7 @@
           </a>
           <a
             href="component.html"
-            class="group text-sm font-medium dark:text-gray-300 transition-colors relative"
+            class="group text-sm font-medium text-myPurple dark:text-myPurple transition-colors relative"
             >Components
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"
@@ -154,14 +188,16 @@
         id="mobileMenu"
         class="absolute top-20 left-0 w-full rounded-3xl backdrop-blur-md p-6 opacity-0 scale-95 pointer-events-none transition-all duration-300 md:hidden"
       >
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 font-MaisonNeueExtended">
           <a href="index.html" class="text-lg font-semibold dark:text-white"
             >Home</a
           >
           <a href="about.html" class="text-lg font-semibold dark:text-white"
             >About</a
           >
-          <a href="component.html" class="text-lg font-semibold dark:text-white"
+          <a
+            href="component.html"
+            class="text-lg font-semibold dark:text-white"
             >Components</a
           >
           <hr class="border-black/5 dark:border-white/5" />
@@ -182,6 +218,7 @@
       class="container2 mx-auto relative bg-myWhite dark:bg-myGray"
       data-scroll-container
     >
+      <main id="main-content">
       <div id="component" class="flex flex-col pt-40 mx-10">
         <div
           class="relative flex flex-col h-full border border-gray-200 opacity-100 dark:border-gray-700 overflow-hidden rounded-lg"
@@ -718,97 +755,93 @@
       </div>
 
       <!-- footer -->
-      <footer class="text-gray-600 body-font">
-        <div
-          class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+      <!-- footer -->
+        <footer
+          class="pt-24 pb-12 border-t border-slate-100 dark:border-slate-900"
         >
-          <a
-            class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
-          >
-            <span>
-              <img src="assets/img/avtar/avtar_4.png" alt="" class="w-10" />
-            </span>
-            <span class="font-bold">Syed Faiz</span>
-          </a>
-          <p
-            class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
-          >
-            © 2020 My portfolio -
-            <a
-              href="#"
-              class="text-gray-600 ml-1"
-              rel="noopener noreferrer"
-              target="_blank"
-              >@faizmiya</a
+          <div class="container mx-auto px-6">
+            <div
+              class="flex flex-col md:flex-row justify-between items-center gap-12 mb-16"
             >
-          </p>
-          <span
-            class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
-          >
-            <a class="text-gray-500">
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
+              <div class="flex items-center gap-6">
+                <div
+                  class="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-2 flex items-center justify-center"
+                >
+                  <img
+                    src="assets/img/avtar/avtar_4.png"
+                    alt="Syed Faiz Logo"
+                    class="w-full h-full object-contain filter grayscale dark:invert"
+                  />
+                </div>
+                <div>
+                  <h3
+                    class="text-2xl font-black text-slate-900 dark:text-white font-outfit uppercase tracking-tighter"
+                  >
+                    Syed Faiz
+                  </h3>
+                  <p
+                    class="text-slate-500 dark:text-slate-400 text-sm font-outfit"
+                  >
+                    Full Stack Developer & UI Designer
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-wrap justify-center gap-8 text-sm font-bold uppercase tracking-widest"
               >
-                <path
-                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-                ></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-500">
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
+                <a
+                  href="index.html"
+                  class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                  >Home</a
+                >
+                <a
+                  href="about.html"
+                  class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                  >About</a
+                >
+                <a
+                  href="component.html"
+                  class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                  >Components</a
+                >
+              </div>
+
+              <button
+                onclick="window.locomotiveInstance.scrollTo(0)"
+                class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
               >
-                <path
-                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-                ></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-500">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path
-                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
-                ></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-500">
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="0"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="none"
-                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                ></path>
-                <circle cx="4" cy="4" r="2" stroke="none"></circle>
-              </svg>
-            </a>
-          </span>
-        </div>
-      </footer>
+                <i class="fa-solid fa-arrow-up"></i>
+              </button>
+            </div>
+
+            <div
+              class="pt-12 border-t border-slate-100 dark:border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6"
+            >
+              <p class="text-slate-500 dark:text-slate-500 text-sm font-outfit">
+                © 2026 Syed Faiz. Built with Passion.
+              </p>
+              <div class="flex gap-6">
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                  ><i class="fa-brands fa-dribbble"></i
+                ></a>
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                  ><i class="fa-brands fa-behance"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
     </div>
     <!-- footer -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

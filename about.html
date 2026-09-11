@@ -9,7 +9,8 @@
   <meta name="description" content="Learn more about Syed Faiz, a passionate Full Stack Developer and UI Designer. Discover my journey, skills, and the human behind the code." />
   <meta name="keywords" content="About Syed Faiz, Syed Faiz, Full Stack Developer, UI Designer, Frontend Developer, Web Development, Software Engineer, Portfolio" />
   <meta name="author" content="Syed Faiz" />
-
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://iamsyedfaiz.github.io/about.html" />
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://iamsyedfaiz.github.io/about.html" />
@@ -62,6 +63,24 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://iamsyedfaiz.github.io/#person",
+      "name": "Syed Faiz",
+      "url": "https://iamsyedfaiz.github.io/about.html",
+      "image": "https://iamsyedfaiz.github.io/assets/img/about.jpeg",
+      "jobTitle": "Full Stack Developer & UI Designer",
+      "sameAs": [
+        "https://github.com/IamSyedfaiz",
+        "https://www.linkedin.com/in/syed-faiz-068051239/"
+      ]
+    }
+  }
+  </script>
 </head>
 
 <body class="">
@@ -78,67 +97,133 @@
     <canvas id="canvas" class="fixed inset-0 z-0 pointer-events-none opacity-40 dark:opacity-30"></canvas>
 
     <!-- header  -->
-    <nav id="navbar"
-      class="fixed top-6 left-0 z-50 transition-all duration-500 w-full flex justify-center items-center">
+    <nav
+      id="navbar"
+      class="fixed top-6 left-0 z-50 transition-all duration-500 w-full flex justify-center items-center"
+    >
       <div
-        class="border-2 border-emerald-600/30 rounded-full w-[90%] max-w-4xl px-6 py-3 flex items-center backdrop-blur-md justify-between shadow-lg shadow-black/5">
+        class="border-2 border-emerald-600/30 rounded-full w-[90%] max-w-4xl px-6 py-3 flex items-center backdrop-blur-md justify-between shadow-lg shadow-black/5"
+      >
         <a href="index.html" class="flex items-center gap-3 group">
-          <img src="assets/img/avtar_11.png" alt="Logo"
-            class="w-10 h-10 rounded-full object-cover border-2 border-primary/20 group-hover:scale-110 transition-transform" />
-          <span class="font-outfit font-bold text-xl tracking-tight hidden sm:block dark:text-white">Syed Faiz</span>
+          <img
+            src="assets/img/avtar_11.png"
+            alt="Logo"
+            class="w-10 h-10 rounded-full object-cover border-2 border-primary/20 group-hover:scale-110 transition-transform"
+          />
+          <span
+            class="font-outfit font-pano font-bold text-xl tracking-tight hidden sm:block dark:text-white"
+            >Syed Faiz</span
+          >
         </a>
 
-        <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="group text-sm font-medium dark:text-gray-300 transition-colors relative">Home
+        <div
+          class="hidden md:flex items-center gap-8 font-MaisonNeueExtended"
+        >
+          <a
+            href="index.html"
+            class="group text-sm font-medium dark:text-gray-300 transition-colors relative"
+            >Home
             <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"></span>
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"
+            ></span>
           </a>
-          <a href="about.html"
-            class="group text-sm font-medium dark:text-myPurple text-myPurple transition-colors relative">
+          <a
+            href="about.html"
+            class="group text-sm font-medium text-myPurple dark:text-myPurple transition-colors relative"
+          >
             About
             <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"></span>
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"
+            ></span>
           </a>
-          <a href="component.html"
-            class="group text-sm font-medium dark:text-gray-300 transition-colors relative">Components
+          <a
+            href="component.html"
+            class="group text-sm font-medium dark:text-gray-300 transition-colors relative"
+            >Components
             <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"></span></a>
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-myPurple group-hover:w-full transition-all duration-300"
+            ></span
+          ></a>
         </div>
 
         <div class="flex items-center gap-4">
-          <button id="darkModeToggle"
-            class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors group">
-            <svg class="w-6 h-6 dark:hidden block text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M16.071 16.071l.707.707M7.757 7.757l.707.707M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+          <button
+            id="darkModeToggle"
+            class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors group"
+          >
+            <svg
+              class="w-6 h-6 dark:hidden block text-slate-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M16.071 16.071l.707.707M7.757 7.757l.707.707M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+            <svg
+              class="w-5 h-5 hidden dark:block text-yellow-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              />
             </svg>
           </button>
 
-          <button id="hamburgerBtn" class="md:hidden p-2 rounded-lg text-slate-700 dark:text-gray-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          <button
+            id="hamburgerBtn"
+            class="md:hidden p-2 rounded-lg text-slate-700 dark:text-gray-300"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
             </svg>
           </button>
 
-          <a href="#contact"
-            class="hidden sm:inline-flex items-center px-5 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-emerald-700 transition-all shadow-md shadow-primary/20">Let's
-            Talk</a>
+          <a
+            href="#contact"
+            class="hidden sm:inline-flex items-center px-5 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-emerald-700 transition-all shadow-md shadow-primary/20"
+            >Let's Talk</a
+          >
         </div>
       </div>
 
       <!-- Mobile Menu -->
-      <div id="mobileMenu"
-        class="absolute top-20 left-0 w-full rounded-3xl backdrop-blur-md p-6 opacity-0 scale-95 pointer-events-none transition-all duration-300 md:hidden">
-        <div class="flex flex-col gap-4">
-          <a href="index.html" class="text-lg font-semibold dark:text-white">Home</a>
-          <a href="about.html" class="text-lg font-semibold dark:text-white">About</a>
-          <a href="component.html" class="text-lg font-semibold dark:text-white">Components</a>
+      <div
+        id="mobileMenu"
+        class="absolute top-20 left-0 w-full rounded-3xl backdrop-blur-md p-6 opacity-0 scale-95 pointer-events-none transition-all duration-300 md:hidden"
+      >
+        <div class="flex flex-col gap-4 font-MaisonNeueExtended">
+          <a href="index.html" class="text-lg font-semibold dark:text-white"
+            >Home</a
+          >
+          <a href="about.html" class="text-lg font-semibold dark:text-white"
+            >About</a
+          >
+          <a
+            href="component.html"
+            class="text-lg font-semibold dark:text-white"
+            >Components</a
+          >
           <hr class="border-black/5 dark:border-white/5" />
-          <button id="darkModeToggleMobile" class="flex items-center justify-between w-full">
+          <button
+            id="darkModeToggleMobile"
+            class="flex items-center justify-between w-full"
+          >
             <span class="font-medium dark:text-white">Theme</span>
             <div class="dark:hidden">☀️</div>
             <div class="hidden dark:block">🌙</div>
@@ -148,7 +233,7 @@
     </nav>
     <!-- header  -->
     <div class="2xl:container mx-auto relative" data-scroll-container>
-
+      <main id="main-content">
       <div class="relative z-10 w-full pt-40 pb-24 overflow-hidden">
         <!-- Floating Decorative Background Text -->
         <div
@@ -398,6 +483,7 @@
           </div>
         </div>
       </div>
+      </main>
 
       <!-- footer -->
       <!-- Connect Section -->
